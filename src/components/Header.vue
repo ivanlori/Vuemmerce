@@ -27,7 +27,9 @@
                   <i class="icon icon-user"></i>
                 </li>
                 <li>
-                  <i class="icon icon-shopping-cart"></i>
+                  <at-badge :value="2">
+                    <i class="icon icon-shopping-cart"></i>
+                  </at-badge>
                 </li>
               </ul>
             </div>
@@ -89,13 +91,13 @@
     height: 34px;
     position: absolute;
     left: 0;
-    top: 12px;
+    top: 15px;
     padding-left: 85px;
     padding-right: 35px;
     color: #3f536e;
     font-size: 12px;
     border: 1px solid #c5d9e8;
-    border-radius: 4px;
+    border-radius: 20px;
     outline: none;
   }
   .user-menu-container li:nth-child(1) {
@@ -122,10 +124,14 @@
   }
   .select {
     position: absolute;
-    left: 0;
+    top: 20px;
+    left: 5px;
     z-index: 1;
-    top: 16px;
+    border: 0;
     width: 0;
+    color: #339CDD;
+    font-weight: 600;
+    font-size: 14px;
   }
   .welcome-msg,
   .access-link {
@@ -140,9 +146,11 @@
   }
   .icon-search {
     position: absolute;
-    top: 21px;
+    top: 23px;
     right: 12px;
     font-size: 17px;
+    font-weight: 600;
+    color: #339CDD;
   }
   .icon-shopping-cart,
   .icon-user {
