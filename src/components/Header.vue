@@ -1,46 +1,83 @@
 <template>
-  <div class="row at-row no-gutter flex-center">
-    <div class="col-md-8">
-      <h1>Vuemmerce</h1>
-    </div>
-    <div class="col-md-8 search-container">
-      <form>
-        <at-select class="select" size="small">
-          <at-option value="1">Shenzhen</at-option>
-          <at-option value="2">Guangzhou</at-option>
-          <at-option value="3">Shanghai</at-option>
-          <at-option value="4">Beijing</at-option>
-          <at-option value="5">chengdu</at-option>
-        </at-select>
-        <input class="search-input" placeholder="Search..."/>
-        <i class="icon icon-search"></i>
-      </form>
-    </div>
-    <div id="user-menu" class="col-md-8">
-      <div id="account">
-        <span>Welcome to Vuemmerce</span>
-        <a href="#">Login/Register</a>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="container">
+        <div class="row flex-center no-gutter">
+          <div class="col-md-4">
+            <h1>Vuemmerce</h1>
+          </div>
+          <div class="col-md-10 search-container">
+            <form>
+              <at-select class="select" v-model="selected" size="small">
+                <at-option v-for="item in lists" :value="item.id">{{ item.category }}</at-option>
+              </at-select>
+              <input class="search-input" placeholder="Search..."/>
+              <i class="icon icon-search"></i>
+            </form>
+          </div>
+          <div id="user-menu" class="col-md-7 user-menu-container">
+            <div id="account">
+              <ul>
+                <li>
+                  <span class="welcome-msg">Welcome to Vuemmerce</span>
+                  <br />
+                  <a class="access-link" href="#">Login/Register</a>
+                </li>
+                <li>
+                  <i class="icon icon-user"></i>
+                </li>
+                <li>
+                  <i class="icon icon-shopping-cart"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <i class="icon icon-shopping-cart"></i>
-      </div>
+    </div>
+    <div class="container">
+      <header-tabs></header-tabs>
     </div>
   </div>
 </template>
 
 <script>
+  import HeaderTabs from './HeaderTabs';
+
   export default {
     name: 'search-menu',
+    components: {
+      'header-tabs': HeaderTabs,
+    },
+    data() {
+      return {
+        selected: 1,
+        lists: [
+          {
+            id: 1,
+            category: 'all',
+          },
+          {
+            id: 2,
+            category: 'Cat 1',
+          },
+          {
+            id: 3,
+            category: 'Cat 2',
+          },
+        ],
+      };
+    },
   };
 </script>
 
 <style scoped>
   .row {
     padding: 10px 0;
-    background: #00b0ff;
+    background: #339CDD;
   }
   h1 {
-    color: #000;
+    color: #fff;
     font-size: 27px;
     line-height: 62px;
   }
@@ -61,6 +98,28 @@
     border-radius: 4px;
     outline: none;
   }
+  .user-menu-container li:nth-child(1) {
+    float: left;
+    display: inline;
+    text-align: right;
+    padding: 10px;
+  }
+  .user-menu-container li:nth-child(2) {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    width: 50px;
+    display: inline;
+    float: left;
+    padding: 15px 0;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  .user-menu-container li:nth-child(3) {
+    padding: 15px 0;
+    margin: 0 20px;
+    text-align: left;
+    cursor: pointer;
+  }
   .select {
     position: absolute;
     left: 0;
@@ -68,10 +127,25 @@
     top: 16px;
     width: 0;
   }
+  .welcome-msg,
+  .access-link {
+    color: #fff;
+    text-align: right;
+  }
+  .access-link {
+    font-weight: 600;
+  }
+  .icon {
+    font-size: 27px;
+  }
   .icon-search {
     position: absolute;
     top: 21px;
     right: 12px;
     font-size: 17px;
+  }
+  .icon-shopping-cart,
+  .icon-user {
+    color: #fff;
   }
 </style>
