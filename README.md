@@ -1,10 +1,18 @@
-# vuemmerce
+# Vuemmerce - Ecommerce Template
 
-> Ecommerce template made with vue.js
+Responsive ecommerce template built with Vue.js and AT UIKIT
 
-## Build Setup
+### Prerequisites
 
-``` bash
+- [Node.js](https://nodejs.org/en/) (>=4.x or 6.x preferred)
+- npm version 3+ and [Git](https://git-scm.com/).
+
+### Installing
+
+```
+# clone repository
+git clone https://github.com/ivanlori/Vuemmerce.git
+
 # install dependencies
 npm install
 
@@ -18,4 +26,16 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Authors
+
+* **Ivan Lori** - *Initial work* - [ivanlori](https://github.com/ivanlori)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone who's code was used
+* Inspiration
+* etc
