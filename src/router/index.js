@@ -4,6 +4,7 @@ import Homepage from '@/components/Homepage';
 import TabSell from '@/components/TabSell';
 import TabDeals from '@/components/TabDeals';
 import TabGiftCards from '@/components/TabGiftCards';
+import ProductItemDetail from '@/components/ProductItemDetail';
 
 Vue.use(Router);
 
@@ -28,6 +29,12 @@ export default new Router({
       path: '/deals',
       name: 'Deals',
       component: TabDeals,
+    },
+    {
+      path: '/product-detail/:id',
+      name: 'product-item-detail',
+      props: true,
+      component: ProductItemDetail,
     },
   ],
 });

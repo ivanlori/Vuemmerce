@@ -5,7 +5,7 @@
         <h3><strong>{{ sectionTitle }}</strong></h3>
         <hr />
       </div>
-      <div class="product">
+      <div class="container">
         <products-item></products-item>
       </div>
     </div>

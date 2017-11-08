@@ -127,8 +127,8 @@
     top: 20px;
     left: 5px;
     z-index: 1;
-    border: 0;
     width: 0;
+    border: 0!important;
     color: #339CDD;
     font-weight: 600;
     font-size: 14px;
