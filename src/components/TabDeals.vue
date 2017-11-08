@@ -5,24 +5,16 @@
         <h3><strong>{{ sectionTitle }}</strong></h3>
         <hr />
       </div>
-      <div class="product">
-        <products-item></products-item>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-  import ProductsItem from './ProductsItem';
-
   export default {
-    name: 'homepage',
-    components: {
-      'products-item': ProductsItem,
-    },
+    name: 'tab-deals',
     data() {
       return {
-        sectionTitle: 'Tech',
+        sectionTitle: 'Deals',
       };
     },
   };

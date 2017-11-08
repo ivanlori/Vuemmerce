@@ -5,27 +5,19 @@
         <h3><strong>{{ sectionTitle }}</strong></h3>
         <hr />
       </div>
-      <div class="product">
-        <products-item></products-item>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
-  import ProductsItem from './ProductsItem';
-
-  export default {
-    name: 'homepage',
-    components: {
-      'products-item': ProductsItem,
-    },
-    data() {
-      return {
-        sectionTitle: 'Tech',
-      };
-    },
-  };
+export default {
+  name: 'tab-gift-card',
+  data() {
+    return {
+      sectionTitle: 'Gift Cards',
+    };
+  },
+};
 </script>
 
 <style scoped>

@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row flex-center no-gutter">
           <div class="col-md-4">
-            <h1>Vuemmerce</h1>
+            <h1><router-link to="/">Vuemmerce</router-link></h1>
           </div>
           <div class="col-md-10 search-container">
             <form>
@@ -78,7 +78,7 @@
     padding: 10px 0;
     background: #339CDD;
   }
-  h1 {
+  h1 a {
     color: #fff;
     font-size: 27px;
     line-height: 62px;
