@@ -42,78 +42,26 @@
         </div>
         <div class="row inner-footer">
           <div class="col-md-8">
+            <h3 class="logo">Vuemmerce</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            </p>
+          </div>
+          <div class="col-md-8">
+            <h3>Stay connected</h3>
             <ul>
-              <li v-for="item in footerListOne">
-                <strong>{{ item.title }}</strong>
-                <ul>
-                  <li v-for="link in item.links">
-                    {{ link }}
-                  </li>
-                </ul>
+              <li v-for="social in footerListSocial">
+                {{ social.facebook }}
               </li>
             </ul>
           </div>
           <div class="col-md-8">
-            <ul>
-              <li v-for="item in footerListOne">
-                <strong>{{ item.title }}</strong>
-                <ul>
-                  <li v-for="link in item.links">
-                    {{ link }}
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-8">
-            <ul>
-              <li v-for="item in footerListOne">
-                <strong>{{ item.title }}</strong>
-                <ul>
-                  <li v-for="link in item.links">
-                    {{ link }}
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="row inner-footer">
-          <div class="col-md-8">
-            <ul>
-              <li v-for="item in footerListOne">
-                <strong>{{ item.title }}</strong>
-                <ul>
-                  <li v-for="link in item.links">
-                    {{ link }}
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-8">
-            <ul>
-              <li v-for="item in footerListOne">
-                <strong>{{ item.title }}</strong>
-                <ul>
-                  <li v-for="link in item.links">
-                    {{ link }}
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-8">
-            <ul>
-              <li v-for="item in footerListOne">
-                <strong>{{ item.title }}</strong>
-                <ul>
-                  <li v-for="link in item.links">
-                    {{ link }}
-                  </li>
-                </ul>
-              </li>
-            </ul>
+            <h3>Newsletter</h3>
+            <at-input v-model="inputValue4" placeholder="Email" size="small" append-button>
+              <template slot="append">
+                <i class="icon icon-chevron-right"></i>
+              </template>
+            </at-input>
           </div>
         </div>
       </div>
@@ -144,6 +92,15 @@
             links: ['iOS', 'Android', 'Windows Phone'],
           },
         ],
+        footerListSocial: [
+          {
+            facebook: '',
+            twitter: '',
+            instagram: '',
+            linkedin: '',
+            youtube: '',
+          },
+        ],
       };
     },
   };
@@ -156,6 +113,11 @@
     padding: 20px 0;
   }
   .inner-footer {
-    border-top: 1px solid #000;
+    border-top: 1px solid #E7E7E7;
+    margin-top: 20px;
+    padding: 15px 0;
+  }
+  .inner-footer .logo {
+    font-size: 30px;
   }
 </style>
