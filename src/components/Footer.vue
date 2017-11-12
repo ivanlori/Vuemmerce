@@ -57,7 +57,7 @@
           </div>
           <div class="col-md-8">
             <h3>Newsletter</h3>
-            <at-input v-model="inputValue4" placeholder="Email" size="small" append-button>
+            <at-input placeholder="Email" size="small" append-button>
               <template slot="append">
                 <i class="icon icon-chevron-right"></i>
               </template>
@@ -69,55 +69,26 @@
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'footer',
-    data() {
-      return {
-        footerListOne: [
-          {
-            title: 'Customer care',
-            links: ['Link1', 'Link2', 'Link3'],
-          },
-        ],
-        footerListTwo: [
-          {
-            title: 'Corporate',
-            links: ['Link1', 'Link2', 'Link3'],
-          },
-        ],
-        footerListThree: [
-          {
-            title: 'Mobile Apps',
-            links: ['iOS', 'Android', 'Windows Phone'],
-          },
-        ],
-        footerListSocial: [
-          {
-            facebook: '',
-            twitter: '',
-            instagram: '',
-            linkedin: '',
-            youtube: '',
-          },
-        ],
-      };
-    },
-  };
-</script>
+<script src="./script/footer.js"></script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+  @import 'style/_base.scss';
+
   .container-fluid {
-    border-top: 2px solid #000;
+    border-top: 2px solid $black;
     margin-top: 20px;
     padding: 20px 0;
+
+    .inner-footer {
+      border-top: 1px solid #E7E7E7;
+      margin-top: 20px;
+      padding: 15px 0;
+
+      .logo {
+        font-size: 30px;
+      }
+    }
   }
-  .inner-footer {
-    border-top: 1px solid #E7E7E7;
-    margin-top: 20px;
-    padding: 15px 0;
-  }
-  .inner-footer .logo {
-    font-size: 30px;
-  }
+
 </style>

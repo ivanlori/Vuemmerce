@@ -6,19 +6,19 @@
         <hr />
       </div>
       <div class="container">
-        <products-item></products-item>
+        <products-list></products-list>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import ProductsItem from './ProductsItem';
+  import ProductsList from './ProductsList';
 
   export default {
     name: 'homepage',
     components: {
-      'products-item': ProductsItem,
+      'products-list': ProductsList,
     },
     data() {
       return {
@@ -28,7 +28,7 @@
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .row {
     margin-top: 20px;
   }
