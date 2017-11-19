@@ -57,11 +57,7 @@
           </div>
           <div class="col-md-8">
             <h3>Newsletter</h3>
-            <at-input placeholder="Email" size="small" append-button>
-              <template slot="append">
-                <i class="icon icon-chevron-right"></i>
-              </template>
-            </at-input>
+
           </div>
         </div>
       </div>
@@ -69,26 +65,6 @@
   </div>
 </template>
 
-<script src="./script/footer.js"></script>
+<script src="./footer.js"></script>
 
-<style lang="scss" scoped>
-
-  @import 'style/_base.scss';
-
-  .container-fluid {
-    border-top: 2px solid $black;
-    margin-top: 20px;
-    padding: 20px 0;
-
-    .inner-footer {
-      border-top: 1px solid #E7E7E7;
-      margin-top: 20px;
-      padding: 15px 0;
-
-      .logo {
-        font-size: 30px;
-      }
-    }
-  }
-
-</style>
+<style lang="scss" src="./footer.scss" scoped></style>

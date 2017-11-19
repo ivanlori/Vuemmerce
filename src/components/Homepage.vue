@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import ProductsList from './ProductsList';
+  import ProductsList from './product_list/ProductsList';
 
   export default {
     name: 'homepage',

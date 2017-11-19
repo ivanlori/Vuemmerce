@@ -7,8 +7,8 @@
 </template>
 
 <script>
-  import SearchMenu from './components/Header';
-  import Footer from './components/Footer';
+  import SearchMenu from './components/header/Header';
+  import Footer from './components/footer/Footer';
 
   export default {
     name: 'app',

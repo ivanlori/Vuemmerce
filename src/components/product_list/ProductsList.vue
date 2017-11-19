@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="col-md-7 product" v-for="product in productsList" :id="product.id">
+    <div class="four product columns" v-for="product in productsList" :id="product.id">
       <div class="image">
         <img :src="product.image" alt="" title="" />
       </div>
@@ -14,15 +14,15 @@
 
       </div>
       <div class="btn-action">
-        <at-button type="primary">Add to Cart</at-button>
+        <button type="primary">Add to Cart</button>
         <router-link :to="{ path: '/product-detail', name: 'product-item-detail', params: { id: product.id } }">
-          <at-button type="secondary">Details</at-button>
+          <button type="secondary">Details</button>
         </router-link>
       </div>
     </div>
   </div>
 </template>
 
-<script src="./script/products-list.js"></script>
+<script src="./products-list.js"></script>
 
-<style lang="scss" scoped src="./style/products-list.scss" />
+<style lang="scss" scoped src="./products-list.scss" />

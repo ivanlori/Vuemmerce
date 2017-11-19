@@ -15,7 +15,7 @@
             <p class="description">{{ product.description }}</p>
             <span class="price"><strong>{{ product.price }}&euro;</strong></span>
             <br />
-            <at-button type="primary">Add to Cart</at-button>
+            <button type="primary">Add to Cart</button>
           </div>
         </div>
       </div>
