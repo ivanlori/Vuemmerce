@@ -22,7 +22,7 @@
     },
     data() {
       return {
-        sectionTitle: 'Tech',
+        sectionTitle: 'Category',
       };
     },
   };

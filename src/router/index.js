@@ -4,7 +4,7 @@ import Homepage from '@/components/Homepage';
 import TabSell from '@/components/TabSell';
 import TabDeals from '@/components/TabDeals';
 import TabGiftCards from '@/components/TabGiftCards';
-import ProductItemDetail from '@/components/ProductItemDetail';
+import ProductDetail from '@/components/product_detail/ProductDetail';
 
 Vue.use(Router);
 
@@ -32,9 +32,9 @@ export default new Router({
     },
     {
       path: '/product-detail/:id',
-      name: 'product-item-detail',
+      name: 'product-detail',
       props: true,
-      component: ProductItemDetail,
+      component: ProductDetail,
     },
   ],
 });

@@ -1,15 +1,32 @@
-.product {
-  border: 1px solid #E7E7E7;
-  padding: 0;
-  margin: 20px;
-}
-.description {
-  span {
-    font-size: 20px;
-  }
-}
-.price {
-  span {
-    font-size: 28px;
+@import '../../assets/scss/base';
+
+.block {
+  &__product {
+    border: 1px solid #E7E7E7;
+    padding: 0;
+    margin: 10px;
+
+    &:hover {
+
+    }
+    &__img {
+      background: $light-grey;
+      width: 100%;
+      height: 200px;
+    }
+    &__content {
+      padding: 10px;
+
+      &__description {
+        span {
+          font-size: 20px;
+        }
+      }
+      &__price {
+        span {
+          font-size: 28px;
+        }
+      }
+    }
   }
 }

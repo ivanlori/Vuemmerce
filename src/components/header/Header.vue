@@ -1,11 +1,11 @@
 <template>
   <div class="container-fluid">
-    <div class="container">
-      <div class="row">
-        <div class="logo-container two columns">
+    <div class="row">
+      <div class="container box__header">
+        <div class="box__header__logo two columns">
           <h1 class="text-center"><router-link to="/">Vuemmerce</router-link></h1>
         </div>
-        <div class="search-container text-center six columns">
+        <div class="box__header__search text-center six columns">
           <form>
             <select>
               <option>All</option>
@@ -16,7 +16,7 @@
             <i class="ion-ios-search"></i>
           </form>
         </div>
-        <div class="menu-container four columns">
+        <div class="box__header__menu four columns">
           <ul>
             <li>
               <span class="welcome-msg">Welcome to Vuemmerce</span>
@@ -32,9 +32,6 @@
           </ul>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <header-tabs></header-tabs>
     </div>
   </div>
 </template>

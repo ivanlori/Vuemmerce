@@ -4,61 +4,81 @@
 .container-fluid {
   background: $blue;
 
-  .logo-container {
-    a {
-      color: $white;
-      @include fontSize(30px);
-    }
-  }
-  .search-container {
-    position: relative;
-    display: flex;
-    height: 90px;
+  .box {
+    &__header {
+      &__logo {
+        line-height: 0;
+        margin-right: 60px;
 
-    .search-input {
-      padding: 10px 35px 10px 85px;
-      color: #3f536e;
-      border: 1px solid #c5d9e8;
-      margin: auto;
-    }
-    select {
-      position: absolute;
-      z-index: 1;
-      border: 0!important;
-      color: #339CDD;
-      font-weight: 600;
-      font-size: 14px;
-      margin: auto;
-    }
-    .ion-ios-search {
-      position: absolute;
-      top: 7px;
-      right: 10px;
-      font-weight: 600;
-      color: $blue;
-      margin: auto;
-      @include fontSize(30px);
-    }
-  }
-  .menu-container {
-    li:nth-child(1) {
-      float: left;
-      display: inline;
-      text-align: right;
-      padding: 10px;
-    }
-    li:nth-child(2) {
-      border-right: 1px solid $white;
-      border-left: 1px solid $white;
-      width: 50px;
-      display: inline;
-      float: left;
-      padding: 15px 0;
-      cursor: pointer;
-    }
-    li:nth-child(3) {
-      padding: 15px 0;
-      cursor: pointer;
+        a {
+          color: $white;
+          font-weight: $weight-bold;
+          @include fontSize(30px);
+        }
+      }
+      &__search {
+        position: relative;
+        margin: 20px 0;
+        height: 39px;
+
+        .search-input {
+          padding: 10px 35px 10px 85px;
+          color: #3f536e;
+          border: 1px solid #c5d9e8;
+          margin: auto;
+        }
+        select {
+          position: absolute;
+          z-index: 1;
+          border: 0!important;
+          color: #339CDD;
+          font-weight: 600;
+          font-size: 14px;
+          margin: auto;
+        }
+        .ion-ios-search {
+          position: absolute;
+          top: 0;
+          right: 10px;
+          font-weight: 600;
+          color: $blue;
+          margin: auto;
+          @include fontSize(27px);
+        }
+      }
+      &__menu {
+        margin: 3px 10px;
+
+        ul {
+          margin: 0;
+
+          li {
+            margin: 0;
+
+            &:nth-child(1) {
+              float: left;
+              display: inline;
+              text-align: right;
+              padding: 10px;
+            }
+            &:nth-child(2) {
+              border-right: 1px solid $white;
+              border-left: 1px solid $white;
+              width: 50px;
+              display: inline;
+              float: left;
+              padding: 15px 0;
+              cursor: pointer;
+            }
+            &:nth-child(3) {
+              display: inline-block;
+              width: 50px;
+              padding: 15px 0;
+              cursor: pointer;
+            }
+          }
+        }
+      }
     }
   }
 }
