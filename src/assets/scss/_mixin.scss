@@ -22,6 +22,12 @@
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
+@mixin borderRadius($size) {
+  -moz-border-radius: $size;
+  -webkit-border-radius: $size;
+  border-radius: $size;
+}
+
 %clearfix {
   *zoom: 1;
   &:before, &:after {

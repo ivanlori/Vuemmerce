@@ -17,11 +17,11 @@
           </form>
         </div>
         <div class="box__header__menu four columns">
-          <ul>
+          <ul class="u-pull-right">
             <li>
-              <span class="welcome-msg">Welcome to Vuemmerce</span>
+              <span class="welcome-msg text-right">Welcome to Vuemmerce</span>
               <br />
-              <a class="access-link" href="#">Login/Register</a>
+              <a class="access-link text-right" href="#">Login/Register</a>
             </li>
             <li class="text-center">
               <i class="ion-ios-person"></i>

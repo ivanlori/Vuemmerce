@@ -26,6 +26,7 @@
           color: #3f536e;
           border: 1px solid #c5d9e8;
           margin: auto;
+          @include borderRadius(3px);
         }
         select {
           position: absolute;
@@ -35,6 +36,7 @@
           font-weight: 600;
           font-size: 14px;
           margin: auto;
+          cursor: pointer;
         }
         .ion-ios-search {
           position: absolute;
@@ -78,24 +80,21 @@
             }
           }
         }
+        .welcome-msg,
+        .access-link {
+          color: $white;
+        }
+        .access-link {
+          font-weight: $weight-bold;
+        }
+        i {
+          font-size: 27px;
+        }
+        .ion-ios-cart-outline,
+        .ion-ios-person {
+          color: $white;
+        }
       }
     }
   }
-}
-
-
-.welcome-msg,
-.access-link {
-  color: $white;
-  text-align: right;
-}
-.access-link {
-  font-weight: 600;
-}
-i {
-  font-size: 27px;
-}
-.ion-ios-cart-outline,
-.ion-ios-person {
-  color: $white;
 }

@@ -2,16 +2,18 @@
 @import '../../assets/scss/common';
 
 .container-fluid {
+  border-top: 1px solid #E7E7E7;
   margin-top: 20px;
   padding: 20px 0;
 
-  .inner-footer {
-    border-top: 1px solid #E7E7E7;
-    margin-top: 20px;
-    padding: 15px 0;
+  .box {
+    &__footer {
+      margin-top: 20px;
+      padding: 15px 0;
 
-    .logo {
-      font-size: 30px;
+      &__logo {
+        @include fontSize(30px);
+      }
     }
   }
 }

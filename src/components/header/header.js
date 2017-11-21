@@ -1,10 +1,5 @@
-import HeaderTabs from '../HeaderTabs';
-
 export default {
   name: 'search-menu',
-  components: {
-    'header-tabs': HeaderTabs,
-  },
   data() {
     return {
       selected: 1,

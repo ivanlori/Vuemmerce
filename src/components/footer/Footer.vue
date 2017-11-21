@@ -2,11 +2,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="container">
-        <div class="row inner-footer">
-          <div class="eight columns">
-            <h3 class="logo">Vuemmerce</h3>
-            <p>Created by Ivan Lori</p>
-          </div>
+        <div class="row box__footer text-center">
+          <span>Created by Ivan Lori</span>
         </div>
       </div>
     </div>

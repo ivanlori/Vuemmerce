@@ -14,9 +14,9 @@
           </span>
         </div>
         <div class="block__product__content__actions">
-          <button type="primary">Add to Cart</button>
+          <button class="btn btn-primary">Add to Cart</button>
           <router-link :to="{ path: '/product-detail', name: 'product-detail', params: { id: product.id } }">
-            <button type="secondary">Details</button>
+            <button btn btn-secondary>Details</button>
           </router-link>
         </div>
       </div>
