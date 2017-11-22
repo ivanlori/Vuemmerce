@@ -21,13 +21,13 @@
             <li>
               <span class="welcome-msg text-right">Welcome to Vuemmerce</span>
               <br />
-              <a class="access-link text-right" href="#">Login/Register</a>
+              <router-link class="access-link text-right" to="/register">Login/Register</router-link>
             </li>
             <li class="text-center">
-              <i class="ion-ios-person"></i>
+              <router-link to="/login"><i class="ion-ios-person"></i></router-link>
             </li>
             <li class="text-center">
-              <i class="ion-ios-cart-outline"></i>
+              <router-link to="/cart"><i class="ion-ios-cart-outline"></i></router-link>
             </li>
           </ul>
         </div>

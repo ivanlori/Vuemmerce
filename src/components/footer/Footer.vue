@@ -3,7 +3,7 @@
     <div class="row">
       <div class="container">
         <div class="row box__footer text-center">
-          <span>Created by Ivan Lori</span>
+          <span>Made with ❤ by Ivan Lori</span>
         </div>
       </div>
     </div>

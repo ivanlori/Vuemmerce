@@ -1,6 +1,6 @@
 # Vuemmerce - Ecommerce Template
 
-Responsive ecommerce template built with Vue.js and AT UIKIT
+Responsive ecommerce template built with Vue.js
 
 ### Prerequisites
 
