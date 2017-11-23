@@ -1,3 +1,5 @@
+![Vuemmerce ecommerce template](http://svilpress.altervista.org/vuemmerce.jpg)
+
 # Vuemmerce - Ecommerce Template
 
 Responsive ecommerce template built with Vue.js
