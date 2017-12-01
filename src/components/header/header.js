@@ -1,5 +1,5 @@
 export default {
-  name: 'search-menu',
+  name: 'header-menu',
   data() {
     return {
       selected: 1,

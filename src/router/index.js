@@ -10,7 +10,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
+      name: 'home',
       component: Homepage,
     },
     {
@@ -26,12 +26,12 @@ export default new Router({
     },
     {
       path: '/register',
-      name: 'login',
+      name: 'register',
       component: WorkInProgress,
     },
     {
       path: '/cart',
-      name: 'login',
+      name: 'cart',
       component: WorkInProgress,
     },
   ],

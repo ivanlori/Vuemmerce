@@ -7,14 +7,14 @@
 </template>
 
 <script>
-  import Header from './components/header/Header.vue';
-  import Footer from './components/footer/Footer.vue';
+  import HeaderMenu from './components/header/Header';
+  import FooterMenu from './components/footer/Footer';
 
   export default {
-    name: 'app',
+    name: 'App',
     components: {
-      'header-menu': Header,
-      'footer-menu': Footer,
+      'header-menu': HeaderMenu,
+      'footer-menu': FooterMenu,
     },
   };
 </script>

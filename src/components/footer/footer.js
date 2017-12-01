@@ -1,5 +1,5 @@
 export default {
-  name: 'footer',
+  name: 'footer-menu',
   data() {
     return {
       footerListOne: [

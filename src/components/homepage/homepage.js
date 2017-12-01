@@ -1,7 +1,7 @@
 import ProductsList from '../product_list/ProductsList';
 
 export default {
-  name: 'homepage',
+  name: 'home',
   components: {
     'products-list': ProductsList,
   },
