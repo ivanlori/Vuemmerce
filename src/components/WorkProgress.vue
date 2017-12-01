@@ -1,14 +1,10 @@
 <template>
-  <div class="container">
+  <section class="container">
     <div class="row text-center">
       <p>Work in progress...</p>
     </div>
-  </div>
+  </section>
 </template>
-
-<script>
-
-</script>
 
 <style lang="scss" scoped>
   @import '../assets/scss/_base.scss';

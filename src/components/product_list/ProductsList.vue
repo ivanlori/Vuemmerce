@@ -26,4 +26,4 @@
 
 <script src="./products-list.js"></script>
 
-<style lang="scss" scoped src="./products-list.scss" />
+<style src="./products-list.scss" lang="scss" scoped></style>

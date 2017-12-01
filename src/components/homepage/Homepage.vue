@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <section class="container">
     <div class="row">
       <div class="box__section__title">
         <h3><strong>{{ sectionTitle }}</strong></h3>
@@ -8,9 +8,9 @@
         <products-list></products-list>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script src="./homepage.js"></script>
 
-<style lang="scss" scoped src="./homepage.scss"></style>
+<style src="./homepage.scss" lang="scss" scoped></style>

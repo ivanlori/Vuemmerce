@@ -28,4 +28,4 @@
 
 <script src="./product-detail.js"></script>
 
-<style lang="scss" scoped src="./product-detail.scss"></style>
+<style src="./product-detail.scss" lang="scss" scoped></style>
