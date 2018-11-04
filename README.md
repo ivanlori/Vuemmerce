@@ -6,7 +6,7 @@ Responsive ecommerce template built with Vue.js
 
 [![Build Status](https://travis-ci.org/ivanlori/Vuemmerce.svg)](https://travis-ci.org/ivanlori/Vuemmerce)
 [![devDependency Status](https://david-dm.org/ivanlori/Vuemmerce/dev-status.svg)](https://david-dm.org/ivanlori/Vuemmerce#info=devDependencies)
-[![vue](https://img.shields.io/badge/vue-2.5.10-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
+[![vue](https://img.shields.io/badge/vue-2.5.17-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 ### Prerequisites
