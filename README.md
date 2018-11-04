@@ -36,7 +36,7 @@ npm run build --report
 ![Vuemmerce - Ecommerce Template](http://svilpress.altervista.org/screen.png 
 "Vuemmerce - Ecommerce Browser Preview")
 
-**[Template Demo](https://colorlib.com/polygon/gentelella/index.html)**
+**[Template Demo](http://svilpress.altervista.org/)**
 
 ## Authors
 
