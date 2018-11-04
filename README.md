@@ -9,7 +9,7 @@ Responsive ecommerce template built with Vue.js
 [![vue](https://img.shields.io/badge/vue-2.5.17-brightgreen.svg)](https://github.com/vuejs/vue)
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 
-[Bulma](http://svilpress.altervista.org/made-with-bulma.png)
+![Bulma](http://svilpress.altervista.org/made-with-bulma.png "Made with Bulma")
 
 ### Prerequisites
 
@@ -35,8 +35,7 @@ npm run build
 npm run build --report
 ```
 ## Theme Demo
-![Vuemmerce - Ecommerce Template](http://svilpress.altervista.org/screen.png 
-"Vuemmerce - Ecommerce Browser Preview")
+![Vuemmerce - Ecommerce Template](http://svilpress.altervista.org/screen.png "Vuemmerce - Ecommerce Browser Preview")
 
 **[Template Demo](http://svilpress.altervista.org/)**
 
