@@ -43,6 +43,20 @@ npm run build --report
 
 * **Ivan Lori** - *Initial work* - [ivanlori](https://github.com/ivanlori)
 
+## Contributing on Vuemmerce
+
+Thanks for your interest!
+
+To contribute, please ensure that you have stable Node.js and npm installed.
+
+Follow the steps below.
+
+1. Fork and clone the repo.
+2. Follow the [Installing](#installing) instructions
+3. Code!
+4. Submit a pull request
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
