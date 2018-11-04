@@ -1,0 +1,13 @@
+# For more information about the configurations used
+# in this file, please see the Travis CI documentation:
+# https://docs.travis-ci.com
+
+language: node_js
+
+node_js:
+  - 6
+  - 8
+  - 9
+
+dist: trusty
+sudo: false
