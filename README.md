@@ -3,12 +3,15 @@
 # Vuemmerce - Ecommerce Template
 
 Responsive ecommerce template built with Vue.js
+
 [![Build Status](https://travis-ci.org/ivanlori/Vuemmerce.svg)](https://travis-ci.org/ivanlori/Vuemmerce)
 [![devDependency Status](https://david-dm.org/ivanlori/Vuemmerce/dev-status.svg)](https://david-dm.org/ivanlori/Vuemmerce#info=devDependencies)
+[![vue](https://img.shields.io/badge/vue-2.5.10-brightgreen.svg?style=flat-square)](https://github.com/vuejs/vue)
+![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/en/) (>=4.x or 6.x preferred)
+- [Node.js](https://nodejs.org/en/) (8.x preferred)
 - npm version 3+ and [Git](https://git-scm.com/).
 
 ### Installing
@@ -29,6 +32,11 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+## Theme Demo
+![Vuemmerce - Ecommerce Template](http://svilpress.altervista.org/screen.png 
+"Vuemmerce - Ecommerce Browser Preview")
+
+**[Template Demo](https://colorlib.com/polygon/gentelella/index.html)**
 
 ## Authors
 
