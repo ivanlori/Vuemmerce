@@ -9,7 +9,7 @@ Responsive ecommerce template built with Vue.js
 [![vue](https://img.shields.io/badge/vue-2.5.17-brightgreen.svg)](https://github.com/vuejs/vue)
 ![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
 ![Made with Bulma](http://svilpress.altervista.org/made-with-bulma.png)
-Format: ![Made with Bulma](https://bulma.io/)
+[Bulma](https://bulma.io/)
 
 ### Prerequisites
 
