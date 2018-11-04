@@ -1,16 +1,27 @@
 <template>
-  <section class="container">
-    <div class="row">
-      <div class="box__section__title">
-        <h3><strong>{{ sectionTitle }}</strong></h3>
-      </div>
-      <div class="container">
-        <products-list></products-list>
-      </div>
-    </div>
-  </section>
+  <div>
+    <hero></hero>
+    <products-list></products-list>
+  </div>
 </template>
 
-<script src="./homepage.js"></script>
+<script>
+import ProductsList from '../product_list/ProductsList';
+import HeroSection from '../hero/Hero';
 
-<style src="./homepage.scss" lang="scss" scoped></style>
+export default {
+  name: 'home',
+  components: {
+    'products-list': ProductsList,
+    'hero': HeroSection
+  },
+  data() {
+    return {
+      
+    };
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+</style>

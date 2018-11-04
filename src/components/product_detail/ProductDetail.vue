@@ -1,16 +1,17 @@
 <template>
-  <div class="container">
-    <div class="box__section__title row">
-      <h3><strong>{{ sectionTitle }}</strong></h3>
-    </div>
-    <div class="box__preview row">
-      <div class="box__preview__img four columns"></div>
-      <div class="box__preview__content eight columns">
-        <h2>{{ product.title }}</h2>
+  <div class="section">
+    <div class="columns">
+      <div class="column is-one-third">
+        <figure class="levle-item image">
+          <img src="https://placeimg.com/400/200/any">
+        </figure>
+      </div>
+      <div class="column is-two-third">
+        <h2 class="title is-4">{{ product.title }}</h2>
         <p>{{ product.description }}</p>
-        <span class="box__preview__content__price"><strong>{{ product.price }}&euro;</strong></span>
-        <div class="u-pull-right row">
-          <button class="btn btn-primary">Add to Cart</button>
+        <span class="title is-3"><strong>{{ product.price }}&euro;</strong></span>
+        <div class="is-pulled-right">
+          <button class="button is-primary">Add to Cart</button>
         </div>
       </div>
     </div>
@@ -26,6 +27,21 @@
   </div>
 </template>
 
-<script src="./product-detail.js"></script>
+<script>
+export default {
+  name: 'product-detail',
+  props: ['id', 'img', 'price', 'description'],
+  data() {
+    return {
+      sectionTitle: 'Product Detail',
+      product: {
+        title: 'Product 1',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+        price: 50,
+      },
+    };
+  },
+};
+</script>
 
-<style src="./product-detail.scss" lang="scss" scoped></style>
+<style lang="scss" scoped></style>

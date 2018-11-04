@@ -3,6 +3,8 @@
 # Vuemmerce - Ecommerce Template
 
 Responsive ecommerce template built with Vue.js
+[![Build Status](https://travis-ci.org/ivanlori/Vuemmerce.svg)](https://travis-ci.org/ivanlori/Vuemmerce)
+[![devDependency Status](https://david-dm.org/ivanlori/Vuemmerce/dev-status.svg)](https://david-dm.org/ivanlori/Vuemmerce#info=devDependencies)
 
 ### Prerequisites
 
@@ -19,7 +21,7 @@ git clone https://github.com/ivanlori/Vuemmerce.git
 npm install
 
 # serve with hot reload at localhost:8080
-npm run dev
+npm run serve
 
 # build for production with minification
 npm run build

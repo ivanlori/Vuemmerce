@@ -1,15 +1,21 @@
 <template>
-  <footer class="container-fluid">
-    <div class="row">
-      <div class="container">
-        <div class="row box__footer text-center">
-          <span>Made with ❤ by Ivan Lori</span>
-        </div>
+  <div class="footer has-text-centered">
+    <div class="columns ">
+      <div class="column">
+        <p>Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.</p>
       </div>
+    <div class="column">
+      <p>Vuemmerce | Made with ❤</p>
     </div>
-  </footer>
+    </div>
+  </div>
 </template>
 
-<script src="./footer.js"></script>
+<script>
+export default {
+  name: 'footer-component',
+}
+</script>
 
-<style src="./footer.scss" lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

@@ -1,20 +1,21 @@
 <template>
-  <div id="app">
-    <header-menu></header-menu>
-    <router-view />
-    <footer-menu></footer-menu>
+  <div>
+    <header-component></header-component>
+    <router-view></router-view>
+    <footer-component></footer-component>
   </div>
 </template>
 
 <script>
-  import HeaderMenu from './components/header/Header';
-  import FooterMenu from './components/footer/Footer';
+  import Header from './components/header/Header';
+  import Footer from './components/footer/Footer';
 
   export default {
-    name: 'App',
+    name: 'app',
+    
     components: {
-      'header-menu': HeaderMenu,
-      'footer-menu': FooterMenu,
+      'header-component': Header,
+      'footer-component': Footer
     },
   };
 </script>
