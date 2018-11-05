@@ -59,7 +59,7 @@ Follow the steps below.
 
 ## Changelog
 
-See the release notes into [CHANGELOG.md](CHANGELOG.md)
+See the release notes into [changelog.md](changelog.md)
 
 ## License
 
