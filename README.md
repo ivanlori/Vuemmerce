@@ -12,11 +12,6 @@ Responsive ecommerce template built with Vue.js
 
 ![Bulma](http://svilpress.altervista.org/made-with-bulma.png)
 
-### Prerequisites
-
-- [Node.js](https://nodejs.org/en/) (8.x preferred)
-- npm version 3+ and [Git](https://git-scm.com/).
-
 ### Installing
 
 ```
