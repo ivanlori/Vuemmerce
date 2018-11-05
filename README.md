@@ -7,9 +7,10 @@ Responsive ecommerce template built with Vue.js
 [![Build Status](https://travis-ci.org/ivanlori/Vuemmerce.svg)](https://travis-ci.org/ivanlori/Vuemmerce)
 [![devDependency Status](https://david-dm.org/ivanlori/Vuemmerce/dev-status.svg)](https://david-dm.org/ivanlori/Vuemmerce#info=devDependencies)
 [![vue](https://img.shields.io/badge/vue-2.5.17-brightgreen.svg)](https://github.com/vuejs/vue)
-![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+[![GitHub license](https://img.shields.io/github/license/ivanlori/Vuemmerce.svg)](https://github.com/ivanlori/Vuemmerce/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/ivanlori/Vuemmerce.svg)](https://github.com/ivanlori/Vuemmerce/issues)
 
-![Bulma](http://svilpress.altervista.org/made-with-bulma.png "Made with Bulma")
+![Bulma](http://svilpress.altervista.org/made-with-bulma.png)
 
 ### Prerequisites
 
@@ -56,6 +57,9 @@ Follow the steps below.
 3. Code!
 4. Submit a pull request
 
+## Changelog
+
+See the release notes into [CHANGELOG.md](CHANGELOG.md)
 
 ## License
 
