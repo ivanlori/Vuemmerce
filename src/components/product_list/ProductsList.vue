@@ -1,6 +1,6 @@
 <template>
   <div class="columns is-centered is-multiline">
-      <div class="card column is-one-quarter" v-for="product in productsList" :key="product.id">
+      <div class="card column is-one-quarter" v-for="product in products" :key="product.id">
         <div class="card-image">
           <figure class="image is-4by3">
             <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
@@ -36,7 +36,8 @@
           </div>
           <div class="card-footer btn-actions">
             <div class="card-footer-item">
-              <button class="button is-primary">Add to cart</button>
+              <button class="button is-primary" v-if="!product.isAddedToCart" @click="addToCart(product.id)">Add to cart</button>
+              <button class="button is-text" v-if="product.isAddedToCart" @click="removeFromCart(product.id)">Remove from cart</button>
               <router-link :to="{ path: '/product-detail', name: 'product-detail', params: { id: product.id } }">
                 <button class="button is-primary is-inverted">Details</button>
               </router-link>
@@ -59,84 +60,24 @@ export default {
   
   data() {
     return {
-      id: '',
-      categoryTitle: 'Phone',
-      productsList: [
-        {
-          id: 1,
-          title: 'Product 1',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          price: 50,
-          ratings: 3,
-          reviews: 5
-        },
-        {
-          id: 2,
-          title: 'Product 2',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          price: 35,
-          ratings: 5,
-          reviews: 10
-        },
-        {
-          id: 3,
-          title: 'Product 3',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          price: 110,
-          ratings: 2,
-          reviews: 3
-        },
-        {
-          id: 4,
-          title: 'Product 4',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          price: 50,
-          ratings: 1,
-          reviews: 0
-        },
-        {
-          id: 5,
-          title: 'Product 5',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          price: 35,
-          ratings: 4,
-          reviews: 2
-        },
-        {
-          id: 6,
-          title: 'Product 6',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          price: 110,
-          ratings: 5,
-          reviews: 1
-        },
-        {
-          id: 7,
-          title: 'Product 7',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          price: 50,
-          ratings: 5,
-          reviews: 7
-        },
-        {
-          id: 8,
-          title: 'Product 8',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          price: 35,
-          ratings: 3,
-          reviews: 0
-        },
-        {
-          id: 9,
-          title: 'Product 9',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-          price: 110,
-          ratings: 4,
-          reviews: 2
-        },
-      ],
+      id: ''
     };
   },
+
+  computed: {
+    products () {
+      return this.$store.state.products;
+    } 
+  },
+
+  methods: {
+    addToCart (id) {
+      this.$store.commit('addToCart', id);
+    },
+    removeFromCart (id) {
+      this.$store.commit('removeFromCart', id);
+    }
+  }
 
 };
 </script>

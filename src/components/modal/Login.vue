@@ -3,7 +3,7 @@
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
-                <p class="modal-card-title">Log in</p>
+                <p class="modal-card-title">{{ modalTitle }}</p>
                 <button class="delete" aria-label="close" @click="closeModal"></button>
             </header>
             <section class="modal-card-body">
@@ -25,7 +25,7 @@
                 </div>
             </section>
             <footer class="modal-card-foot">
-                <button class="button is-success">Log in</button>
+                <button class="button is-success">{{ primaryBtnLabel }}</button>
             </footer>
         </div>
     </div>
@@ -35,6 +35,13 @@
 export default {
     name: 'login-component',
     props: ['isLoginActive'],
+
+    data () {
+        return {
+            modalTitle: 'Log in',
+            primaryBtnLabel: 'Log in'
+        }
+    },
 
     methods: {
         closeModal () {

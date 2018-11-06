@@ -7,10 +7,11 @@ import WorkInProgress from '../src/components/WorkProgress';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history', // removes hashbang from url
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'homepage-component',
       component: Homepage,
     },
     {

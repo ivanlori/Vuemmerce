@@ -10,16 +10,21 @@ import ProductsList from '../product_list/ProductsList';
 import HeroSection from '../hero/Hero';
 
 export default {
-  name: 'home',
+  name: 'homepage-component',
   components: {
     'products-list': ProductsList,
     'hero': HeroSection
   },
+  
   data() {
     return {
       
     };
   },
+
+  methods: {
+    
+  }
 };
 </script>
 

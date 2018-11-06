@@ -3,7 +3,7 @@
       <div class="modal-background"></div>
       <div class="modal-card">
         <header class="modal-card-head">
-          <p class="modal-card-title">Sign up</p>
+          <p class="modal-card-title">{{ modalTitle }}</p>
           <button class="delete" aria-label="close" @click="closeModal"></button>
         </header>
         <section class="modal-card-body">
@@ -41,7 +41,7 @@
           </div>
         </section>
         <footer class="modal-card-foot">
-          <button class="button is-success">Sign up</button>
+          <button class="button is-success">{{ primaryBtnLabel }}</button>
         </footer>
       </div>
     </div>
@@ -51,6 +51,13 @@
 export default {
   name: 'registration-component',
   props: ['isRegistrationActive'],
+
+  data () {
+        return {
+            modalTitle: 'Sign up',
+            primaryBtnLabel: 'Sign up'
+        }
+    },
 
   methods: {
     closeModal () {
