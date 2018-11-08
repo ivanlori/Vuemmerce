@@ -11,6 +11,9 @@
                     <p>{{ product.title }}</p>
                     <p>{{ product.price }} &euro;</p>
                 </div>
+                <div v-if="products.length === 0">
+                    <p>Your cart is empty</p>
+                </div>
             </section>
             <footer class="modal-card-foot">
                 <button class="button is-success">{{ primaryBtnLabel }}</button>
@@ -33,7 +36,6 @@ export default {
 
     computed: {
         products () {
-
             return this.$store.getters.productsAdded;
         }
     },

@@ -13,7 +13,8 @@ export default new Vuex.Store({
         price: 50,
         ratings: 3,
         reviews: 5,
-        isAddedToCart: false
+        isAddedToCart: false,
+        isAddedBtn: false
       },
       {
         id: 2,
@@ -22,7 +23,8 @@ export default new Vuex.Store({
         price: 35,
         ratings: 5,
         reviews: 10,
-        isAddedToCart: false
+        isAddedToCart: false,
+        isAddedBtn: false
       },
       {
         id: 3,
@@ -31,7 +33,8 @@ export default new Vuex.Store({
         price: 110,
         ratings: 2,
         reviews: 3,
-        isAddedToCart: false
+        isAddedToCart: false,
+        isAddedBtn: false
       },
       {
         id: 4,
@@ -40,7 +43,8 @@ export default new Vuex.Store({
         price: 50,
         ratings: 1,
         reviews: 0,
-        isAddedToCart: false
+        isAddedToCart: false,
+        isAddedBtn: false
       },
       {
         id: 5,
@@ -49,7 +53,8 @@ export default new Vuex.Store({
         price: 35,
         ratings: 4,
         reviews: 2,
-        isAddedToCart: false
+        isAddedToCart: false,
+        isAddedBtn: false
       },
       {
         id: 6,
@@ -58,7 +63,8 @@ export default new Vuex.Store({
         price: 110,
         ratings: 5,
         reviews: 1,
-        isAddedToCart: false
+        isAddedToCart: false,
+        isAddedBtn: false
       },
       {
         id: 7,
@@ -67,7 +73,8 @@ export default new Vuex.Store({
         price: 50,
         ratings: 5,
         reviews: 7,
-        isAddedToCart: false
+        isAddedToCart: false,
+        isAddedBtn: false
       },
       {
         id: 8,
@@ -76,7 +83,8 @@ export default new Vuex.Store({
         price: 35,
         ratings: 3,
         reviews: 0,
-        isAddedToCart: false
+        isAddedToCart: false,
+        isAddedBtn: false
       },
       {
         id: 9,
@@ -85,7 +93,8 @@ export default new Vuex.Store({
         price: 110,
         ratings: 4,
         reviews: 2,
-        isAddedToCart: false
+        isAddedToCart: false,
+        isAddedBtn: false
       },
     ],
   },
@@ -95,21 +104,31 @@ export default new Vuex.Store({
       return state.products.filter(el => {
         return el.isAddedToCart;
       });
+    },
+    getProductById: (state) => (id) => {
+      return state.products.find(product => product.id === id)
     }
   },
   
   mutations: {
     addToCart: (state, id) => {
-      state.products.forEach(element => {
-        if (id === element.id) {
-          element.isAddedToCart = true;
+      state.products.forEach(el => {
+        if (id === el.id) {
+          el.isAddedToCart = true;
+        }
+      });
+    },
+    setAddedBtn: (state, data) => {
+      state.products.forEach(el => {
+        if (data.id === el.id) {
+          el.isAddedBtn = data.status;
         }
       });
     },
     removeFromCart: (state, id) => {
-      state.products.forEach(element => {
-        if (id === element.id) {
-          element.isAddedToCart = false;
+      state.products.forEach(el => {
+        if (id === el.id) {
+          el.isAddedToCart = false;
         }
       });
     }

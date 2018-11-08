@@ -36,10 +36,10 @@
           </div>
           <div class="card-footer btn-actions">
             <div class="card-footer-item">
-              <button class="button is-primary" v-if="!product.isAddedToCart" @click="addToCart(product.id)">Add to cart</button>
-              <button class="button is-text" v-if="product.isAddedToCart" @click="removeFromCart(product.id)">Remove from cart</button>
-              <router-link :to="{ path: '/product-detail', name: 'product-detail', params: { id: product.id } }">
-                <button class="button is-primary is-inverted">Details</button>
+              <button class="button is-primary" v-if="!product.isAddedToCart" @click="addToCart(product.id)">{{ addToCartLabel }}</button>
+              <button class="button is-text" v-if="product.isAddedToCart" @click="removeFromCart(product.id, false)">{{ removeFromCartLabel }}</button>
+              <router-link :to="{ path: '/product-detail', name: 'product-detail-component', params: { id: product.id, title: product.title, price: product.price, isAddedBtn: product.isAddedBtn } }">
+                <button class="button is-primary is-inverted">{{ viewDetailsLabel }}</button>
               </router-link>
             </div>
           </div>
@@ -52,7 +52,7 @@
 import ProductDetail from '../product_detail/ProductDetail';
 
 export default {
-  name: 'products-list',
+  name: 'products-list-component',
   
   components: {
     'product-detail': ProductDetail
@@ -60,22 +60,35 @@ export default {
   
   data() {
     return {
-      id: ''
+      id: '',
+      addToCartLabel: 'Add to cart',
+      viewDetailsLabel: 'Details',
+      removeFromCartLabel: 'Remove from cart'
     };
   },
 
   computed: {
     products () {
       return this.$store.state.products;
-    } 
+    }
   },
 
   methods: {
     addToCart (id) {
+      let data = {
+        id: id,
+        status: true
+      }
       this.$store.commit('addToCart', id);
+      this.$store.commit('setAddedBtn', data);
     },
     removeFromCart (id) {
+      let data = {
+        id: id,
+        status: false
+      }
       this.$store.commit('removeFromCart', id);
+      this.$store.commit('setAddedBtn', data);
     }
   }
 

@@ -7,11 +7,11 @@
         </figure>
       </div>
       <div class="column is-two-third">
-        <h2 class="title is-4">{{ product.title }}</h2>
-        <p>{{ product.description }}</p>
-        <span class="title is-3"><strong>{{ product.price }}&euro;</strong></span>
+        <h2 class="title is-4">{{ title }}</h2>
+        <span class="title is-3"><strong>{{ price }}&euro;</strong></span>
         <div class="is-pulled-right">
-          <button class="button is-primary">Add to Cart</button>
+          <button class="button is-primary" v-if="!isAddedBtn" @click="addToCart(id)">{{ addToCartLabel }}</button>
+          <button class="button is-text" v-if="isAddedBtn" @click="removeFromCart(id)">{{ removeFromCartLabel }}</button>
         </div>
       </div>
     </div>
@@ -25,22 +25,46 @@
       </div>
     </div>
   </div>
-</template>
+</template>l
 
 <script>
 export default {
-  name: 'product-detail',
-  props: ['id', 'img', 'price', 'description'],
-  data() {
+  name: 'product-detail-component',
+  props: ['id', 'title', 'price'],
+  
+  data () {
     return {
-      sectionTitle: 'Product Detail',
-      product: {
-        title: 'Product 1',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
-        price: 50,
-      },
+      addToCartLabel: 'Add to cart',
+      removeFromCartLabel: 'Remove from cart'
     };
   },
+
+  computed: {
+    isAddedBtn () {
+      let product = this.$store.getters.getProductById(this.$props.id)
+      return product.isAddedBtn;
+    }
+  },
+
+  methods: {
+    addToCart (id) {
+      let data = {
+        id: id,
+        status: true
+      }
+      this.$store.commit('addToCart', id);
+      this.$store.commit('setAddedBtn', data);
+    },
+    removeFromCart (id) {
+      let data = {
+        id: id,
+        status: false
+      }
+      this.$store.commit('removeFromCart', id);
+      this.$store.commit('setAddedBtn', data);
+    },
+    
+  }
 };
 </script>
 
