@@ -28,12 +28,30 @@
             <i class="fa fa-shopping-cart"></i> {{ numProductsAdded }}
           </div>
           <div class="buttons">
-            <a class="button is-primary" @click="showRegistrationModal">
+            <a v-if="!isUserLoggedIn" class="button is-primary" @click="showRegistrationModal">
               <strong>Sign up</strong>
             </a>
-            <a class="button is-light" @click="showLoginModal">
+            <a v-if="!isUserLoggedIn" class="button is-light" @click="showLoginModal">
               Log in
             </a>
+            <div v-if="isUserLoggedIn" class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link has-text-white">
+                Welcome User
+              </a>
+
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  My account
+                </a>
+                <a class="navbar-item">
+                  Wishlist
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Log out
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -63,6 +81,9 @@
     computed: {
       numProductsAdded () {
         return this.$store.getters.productsAdded.length;
+      },
+      isUserLoggedIn () {
+        return this.$store.getters.isUserLoggedIn;
       }
     },
 
@@ -93,14 +114,18 @@
 
     .control { width: 100%; }
   }
-  .title { color: #fff; }
+  .title { color: white; }
   .navbar {
     background: rgb(46, 149, 212);
   }
   .shopping-cart {
     position: relative;
     right: 50px;
-    color: #fff;
+    color: white;
     cursor: pointer;
   }
+  .has-text-white:hover,
+  .navbar-item.has-dropdown:hover .navbar-link {
+    color: black!important;
+  } 
 </style>

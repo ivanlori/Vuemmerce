@@ -95,8 +95,11 @@ export default new Vuex.Store({
         reviews: 2,
         isAddedToCart: false,
         isAddedBtn: false
-      },
+      }
     ],
+    userInfo: {
+      isLoggedIn: false
+    }
   },
   
   getters: {
@@ -107,7 +110,10 @@ export default new Vuex.Store({
     },
     getProductById: (state) => (id) => {
       return state.products.find(product => product.id === id)
-    }
+    },
+    isUserLoggedIn: (state) => {
+      return state.userInfo.isLoggedIn;
+    },
   },
   
   mutations: {
@@ -131,6 +137,9 @@ export default new Vuex.Store({
           el.isAddedToCart = false;
         }
       });
+    },
+    setIsUserLoggedIn: (state, isUserLoggedIn) => {
+      state.userInfo.isLoggedIn = isUserLoggedIn;
     }
   },
   

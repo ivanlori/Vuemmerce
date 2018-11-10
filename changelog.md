@@ -1,5 +1,10 @@
 # Vuemmerce Changelog
 
+#### 0.5.7 - 10.11.2018
+
+* Inserted validation in login modal
+* Now it is possible to log in
+
 #### 0.5.6 - 08.11.2018
 
 * Fixed bug on add/remove button into product detail
