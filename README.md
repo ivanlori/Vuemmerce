@@ -15,6 +15,9 @@ Responsive ecommerce template built with Vue.js
 ### Installing
 
 ```
+# install Vue cli
+npm install -g @vue/cli
+
 # clone repository
 git clone https://github.com/ivanlori/Vuemmerce.git
 
