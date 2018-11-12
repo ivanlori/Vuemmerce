@@ -2,14 +2,14 @@
     <div :class="[ isLoginActive ? 'is-active' : '', 'modal' ]">
         <div class="modal-background"></div>
         <div class="modal-card">
-            <form id="js-login-form" @submit="checkForm" action="#" method="post">
-                <header class="modal-card-head">
-                    <p v-if="!isFormSuccess" class="modal-card-title">{{ modalTitle }}</p>
-                    <p v-if="isFormSuccess" class="modal-card-title">{{ modalTitleLoggedIn }}</p>
-                    <button class="delete" aria-label="close" @click="closeModal"></button>
-                </header>
+            <header class="modal-card-head">
+                <p v-if="!isUserLoggedIn" class="modal-card-title">{{ modalTitle }}</p>
+                <p v-if="isUserLoggedIn" class="modal-card-title">{{ modalTitleLoggedIn }}</p>
+                <button class="delete" aria-label="close" @click="closeModal"></button>
+            </header>
+            <form @submit="checkForm" action="#" method="post">
                 <section class="modal-card-body">
-                    <div v-if="!isFormSuccess">
+                    <div v-if="!isUserLoggedIn">
                         <div class="field">
                             <p class="control has-icons-left has-icons-right">
                                 <input
@@ -49,7 +49,7 @@
                             <p v-if="highlightPasswordWithError" class="help is-danger">{{ passwordRequiredLabel }}</p>
                         </div>
                     </div>
-                    <div v-if="isFormSuccess" class="level">
+                    <div v-if="isUserLoggedIn" class="level">
                         <div class="level-item has-text-centered">
                             <div>
                             <p class="title">Welcome!</p>
@@ -59,8 +59,8 @@
                     </div>
                 </section>
                 <footer class="modal-card-foot">
-                    <button v-if="!isFormSuccess" type="submit" class="button is-info">{{ primaryBtnLabel }}</button>
-                    <button v-if="isFormSuccess" type="button" class="button is-info" @click="closeModal">{{ btnLoggedInLable }}</button>
+                    <button v-if="!isUserLoggedIn" type="submit" class="button is-info">{{ primaryBtnLabel }}</button>
+                    <button v-if="isUserLoggedIn" type="button" class="button is-info" @click="closeModal">{{ btnLoggedInLable }}</button>
                 </footer>
             </form>
         </div>
@@ -83,11 +83,17 @@ export default {
             passwordRequiredLabel: 'Password required',
             emailNotValidLabel: 'Valid email required',
             btnLoggedInLable: 'Close',
-            email: null,
-            password: null,
+            email: '',
+            password: '',
             highlightEmailWithError: null,
             highlightPasswordWithError: null,
             isFormSuccess: false
+        }
+    },
+
+    computed: {
+        isUserLoggedIn () {
+            return this.$store.getters.isUserLoggedIn;
         }
     },
 

@@ -3,7 +3,7 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            Ecommerce Template for Vue.js projects
+            Free ecommerce template for Vue.js projects
           </h1>
           <h2 class="subtitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt

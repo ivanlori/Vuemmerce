@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Homepage from '../src/components/homepage/Homepage';
 import ProductDetail from '../src/components/product_detail/ProductDetail';
-import WorkInProgress from '../src/components/WorkProgress';
+import Wishlist from '../src/components/user/Wishlist';
 
 Vue.use(Router);
 
@@ -19,6 +19,11 @@ export default new Router({
       name: 'product-detail-component',
       props: true,
       component: ProductDetail,
+    },
+    {
+      path: '/wishlist',
+      name: 'wishlist-component',
+      component: Wishlist,
     }
   ],
 });

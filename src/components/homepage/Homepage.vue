@@ -14,19 +14,6 @@ export default {
   components: {
     'products-list': ProductsList,
     'hero': HeroSection
-  },
-  
-  data() {
-    return {
-      
-    };
-  },
-
-  methods: {
-    
   }
 };
 </script>
-
-<style lang="scss" scoped>
-</style>

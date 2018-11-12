@@ -35,12 +35,30 @@
             <p class="is-pulled-right"><span class="title is-4"><strong>&euro; {{ product.price }}</strong></span></p>
           </div>
           <div class="card-footer btn-actions">
-            <div class="card-footer-item">
-              <button class="button is-primary" v-if="!product.isAddedToCart" @click="addToCart(product.id)">{{ addToCartLabel }}</button>
-              <button class="button is-text" v-if="product.isAddedToCart" @click="removeFromCart(product.id, false)">{{ removeFromCartLabel }}</button>
-              <router-link :to="{ path: '/product-detail', name: 'product-detail-component', params: { id: product.id, title: product.title, price: product.price, isAddedBtn: product.isAddedBtn } }">
-                <button class="button is-primary is-inverted">{{ viewDetailsLabel }}</button>
-              </router-link>
+            <div class="card-footer-item field is-grouped">
+              <p class="control">
+                <button class="button is-primary" v-if="!product.isAddedToCart" @click="addToCart(product.id)">{{ addToCartLabel }}</button>
+                <button class="button is-text" v-if="product.isAddedToCart" @click="removeFromCart(product.id, false)">{{ removeFromCartLabel }}</button>
+              </p>
+              <p class="control">
+                <router-link
+                  class="button is-link is-outlined"
+                  :to="{
+                    path: '/product-detail',
+                    name: 'product-detail-component',
+                    params: {
+                      id: product.id,
+                      title: product.title,
+                      price: product.price,
+                      rating: product.ratings,
+                      reviews: product.reviews,
+                      isAddedBtn: product.isAddedBtn
+                    }
+                  }"
+                >
+                  {{ viewDetailsLabel }}
+                </router-link>
+              </p>
             </div>
           </div>
         </div>
