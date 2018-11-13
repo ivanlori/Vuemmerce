@@ -1,5 +1,10 @@
 # Vuemmerce Changelog
 
+#### 0.5.9 - 13.11.2018
+
+* Now it's possible to remove products directly from checkout modal
+* minor fix
+
 #### 0.5.8 - 12.11.2018
 
 * npm packages updated

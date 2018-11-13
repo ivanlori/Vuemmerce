@@ -21,14 +21,14 @@
             </div>
         </div>
         <div v-if="isUserLoggedIn" class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link has-text-white">
+            <a class="navbar-link">
             Welcome User
             </a>
 
-            <div class="navbar-dropdown">
-                <a class="navbar-item">
+            <div class="navbar-dropdown is-boxed">
+                <router-link class="navbar-item" :to="{ path: '/account', name: 'account-component' }">
                     {{ accountLabel }}
-                </a>
+                </router-link>
                 <router-link class="navbar-item" :to="{ path: '/wishlist', name: 'wishlist-component' }">
                     {{ wishlistLabel }}
                 </router-link>

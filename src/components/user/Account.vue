@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'wishlist-component',
+    name: 'account-component',
     data () {
         return {
 

@@ -7,16 +7,23 @@
                 <button class="delete" aria-label="close" @click="closeModal"></button>
             </header>
             <section class="modal-card-body">
-                <div class="box" v-for="product in products" :key="product.id">
-                    <p>{{ product.title }}</p>
-                    <p>{{ product.price }} &euro;</p>
+                <div v-if="!isCheckoutSection">
+                    <div class="box" v-for="product in products" :key="product.id">
+                        <button class="is-pulled-right button is-info is-inverted" @click="removeFromCart(product.id)">{{ remove }}</button>
+                        <p>{{ product.title }}</p>
+                        <p>{{ product.price }} &euro;</p>
+                    </div>
+                    <div v-if="products.length === 0">
+                        <p>Your cart is empty</p>
+                    </div>
                 </div>
-                <div v-if="products.length === 0">
-                    <p>Your cart is empty</p>
+                <div v-if="isCheckoutSection">
+                    <p>This section is coming soon</p>
                 </div>
             </section>
             <footer class="modal-card-foot">
-                <button class="button is-success">{{ primaryBtnLabel }}</button>
+                <button v-show="products.length > 0 && !isCheckoutSection" class="button is-success" @click="onNextBtn">{{ primaryBtnLabel }}</button>
+                <button v-show="isCheckoutSection" class="button is-success" @click="onPrevBtn">Return to the checkout's list</button>
             </footer>
         </div>
     </div>
@@ -30,7 +37,9 @@ export default {
     data () {
         return {
             modalTitle: 'Checkout',
-            primaryBtnLabel: 'next'
+            primaryBtnLabel: 'Next',
+            remove: 'Remove from cart',
+            isCheckoutSection: false
         }
     },
 
@@ -43,6 +52,20 @@ export default {
     methods: {
         closeModal () {
             this.$emit('update:isCheckoutActive', false);
+        },
+        removeFromCart (id) {
+            let data = {
+                id: id,
+                status: false
+            }
+            this.$store.commit('removeFromCart', id);
+            this.$store.commit('setAddedBtn', data);
+        },
+        onNextBtn () {
+            this.isCheckoutSection = true;
+        },
+        onPrevBtn () {
+            this.isCheckoutSection = false;
         }
     }
 }
