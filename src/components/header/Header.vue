@@ -16,12 +16,7 @@
       <div class="navbar-menu is-active">
         <div class="navbar-start">
           <div class="navbar-item field">
-            <p class="control has-icons-left">
-              <input class="input is-rounded" type="text" placeholder="Search...">
-              <span class="icon is-small is-left">
-                <i class="fas fa-search"></i>
-              </span>
-            </p>
+            <search-component></search-component>
           </div>
         </div>
         
@@ -52,6 +47,7 @@
 <script>
   import CheckoutModal from '../modal/Checkout';
   import Menu from '../menu/Menu';
+  import Search from '../search/Search';
 
   export default {
     name: 'header-component',
@@ -70,7 +66,7 @@
     },
 
     components: {
-     
+      'search-component': Search,
       'checkout-modal-component': CheckoutModal,
       'menu-component': Menu
     },

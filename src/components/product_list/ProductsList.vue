@@ -63,11 +63,15 @@
           </div>
         </div>
       </div>
+      <div class="section" v-if="products.length === 0">
+        <p>{{ noProductLabel }}</p>
+      </div>
     </div>
 </template>
 
 <script>
 import ProductDetail from '../product_detail/ProductDetail';
+import { getByTitle } from '../../filters';
 
 export default {
   name: 'products-list-component',
@@ -81,13 +85,19 @@ export default {
       id: '',
       addToCartLabel: 'Add to cart',
       viewDetailsLabel: 'Details',
-      removeFromCartLabel: 'Remove from cart'
+      removeFromCartLabel: 'Remove from cart',
+      noProductLabel: 'No product found',
+      productsFiltered: []
     };
   },
 
   computed: {
     products () {
-      return this.$store.state.products;
+      if (this.$store.state.userInfo.hasSearched) {
+        return this.getProductByTitle();
+      } else {
+        return this.$store.state.products;
+      }
     }
   },
 
@@ -107,6 +117,12 @@ export default {
       }
       this.$store.commit('removeFromCart', id);
       this.$store.commit('setAddedBtn', data);
+    },
+    getProductByTitle () {
+      let listOfProducts = this.$store.state.products,
+          titleSearched = this.$store.state.userInfo.productTitleSearched;
+      
+      return this.productsFiltered = getByTitle (listOfProducts, titleSearched);
     }
   }
 

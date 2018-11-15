@@ -98,7 +98,9 @@ export default new Vuex.Store({
       }
     ],
     userInfo: {
-      isLoggedIn: false
+      isLoggedIn: false,
+      hasSearched: false,
+      productTitleSearched: ''
     }
   },
   
@@ -108,12 +110,12 @@ export default new Vuex.Store({
         return el.isAddedToCart;
       });
     },
-    getProductById: (state) => (id) => {
-      return state.products.find(product => product.id === id)
+    getProductById: state => id => {
+      return state.products.find(product => product.id === id);
     },
-    isUserLoggedIn: (state) => {
+    isUserLoggedIn: state => {
       return state.userInfo.isLoggedIn;
-    },
+    }
   },
   
   mutations: {
@@ -140,6 +142,12 @@ export default new Vuex.Store({
     },
     setIsUserLoggedIn: (state, isUserLoggedIn) => {
       state.userInfo.isLoggedIn = isUserLoggedIn;
+    },
+    setHasUserSearched: (state, hasSearched) => {
+      state.userInfo.hasSearched = hasSearched;
+    },
+    setProductTitleSearched: (state, titleSearched) => {
+      state.userInfo.productTitleSearched = titleSearched;
     }
   },
   

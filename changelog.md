@@ -1,5 +1,9 @@
 # Vuemmerce Changelog
 
+## 0.6.0 - 15.11.2018
+
+* Added search functionality, now it's possible filters by product title
+
 #### 0.5.9 - 13.11.2018
 
 * Now it's possible to remove products directly from checkout modal
