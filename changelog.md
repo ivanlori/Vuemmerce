@@ -1,5 +1,12 @@
 # Vuemmerce Changelog
 
+## 0.7.0 - 17.11.2018
+
+* added validation for sign up modal form
+* added wishlist functionality
+* npm packages updated
+* minor fix
+
 ## 0.6.0 - 15.11.2018
 
 * Added search functionality, now it's possible filters by product title

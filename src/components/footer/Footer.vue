@@ -1,10 +1,10 @@
 <template>
-  <div class="footer has-text-centered">
-    <div class="columns ">
+  <div class="footer">
+    <div class="columns container">
       <div class="column">
         <p>Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.</p>
       </div>
-    <div class="column">
+    <div class="column has-text-right">
       <p>Vuemmerce | Made with ❤</p>
     </div>
     </div>
@@ -18,4 +18,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ .footer {
+   background: #b9e2fc;
+   color: black;
+ }
 </style>

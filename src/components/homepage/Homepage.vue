@@ -1,18 +1,18 @@
 <template>
   <div>
     <hero></hero>
-    <products-list></products-list>
+    <products-list-container></products-list-container>
   </div>
 </template>
 
 <script>
-import ProductsList from '../product_list/ProductsList';
+import ProductsListContainer from '../products_list/ProductsListContainer';
 import HeroSection from '../hero/Hero';
 
 export default {
   name: 'homepage-component',
   components: {
-    'products-list': ProductsList,
+    'products-list-container': ProductsListContainer,
     'hero': HeroSection
   }
 };

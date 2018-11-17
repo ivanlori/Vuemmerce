@@ -73,7 +73,7 @@
 
     methods: {
       showCheckoutModal () {
-          this.isCheckoutActive = true;
+        this.isCheckoutActive = true;
       }
     }
   };
@@ -86,5 +86,8 @@
     background-size: 165px;
     width: 175px;
     height: 35px;
+  }
+  .shopping-cart {
+    cursor: pointer;
   }
 </style>

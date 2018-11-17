@@ -14,7 +14,8 @@ export default new Vuex.Store({
         ratings: 3,
         reviews: 5,
         isAddedToCart: false,
-        isAddedBtn: false
+        isAddedBtn: false,
+        isFavourite: false
       },
       {
         id: 2,
@@ -24,7 +25,8 @@ export default new Vuex.Store({
         ratings: 5,
         reviews: 10,
         isAddedToCart: false,
-        isAddedBtn: false
+        isAddedBtn: false,
+        isFavourite: false
       },
       {
         id: 3,
@@ -34,7 +36,8 @@ export default new Vuex.Store({
         ratings: 2,
         reviews: 3,
         isAddedToCart: false,
-        isAddedBtn: false
+        isAddedBtn: false,
+        isFavourite: false
       },
       {
         id: 4,
@@ -44,7 +47,8 @@ export default new Vuex.Store({
         ratings: 1,
         reviews: 0,
         isAddedToCart: false,
-        isAddedBtn: false
+        isAddedBtn: false,
+        isFavourite: false
       },
       {
         id: 5,
@@ -54,7 +58,8 @@ export default new Vuex.Store({
         ratings: 4,
         reviews: 2,
         isAddedToCart: false,
-        isAddedBtn: false
+        isAddedBtn: false,
+        isFavourite: false
       },
       {
         id: 6,
@@ -64,7 +69,8 @@ export default new Vuex.Store({
         ratings: 5,
         reviews: 1,
         isAddedToCart: false,
-        isAddedBtn: false
+        isAddedBtn: false,
+        isFavourite: false
       },
       {
         id: 7,
@@ -74,7 +80,8 @@ export default new Vuex.Store({
         ratings: 5,
         reviews: 7,
         isAddedToCart: false,
-        isAddedBtn: false
+        isAddedBtn: false,
+        isFavourite: false
       },
       {
         id: 8,
@@ -84,7 +91,8 @@ export default new Vuex.Store({
         ratings: 3,
         reviews: 0,
         isAddedToCart: false,
-        isAddedBtn: false
+        isAddedBtn: false,
+        isFavourite: false
       },
       {
         id: 9,
@@ -94,13 +102,20 @@ export default new Vuex.Store({
         ratings: 4,
         reviews: 2,
         isAddedToCart: false,
-        isAddedBtn: false
+        isAddedBtn: false,
+        isFavourite: false
       }
     ],
     userInfo: {
       isLoggedIn: false,
+      isSignedUp: false,
       hasSearched: false,
+      name: '',
       productTitleSearched: ''
+    },
+    systemInfo: {
+      openLoginModal: false,
+      openSignupModal: false
     }
   },
   
@@ -110,11 +125,28 @@ export default new Vuex.Store({
         return el.isAddedToCart;
       });
     },
+    productsAddedToFavourite: state => {
+      return state.products.filter(el => {
+        return el.isFavourite;
+      });
+    },
     getProductById: state => id => {
       return state.products.find(product => product.id === id);
     },
     isUserLoggedIn: state => {
       return state.userInfo.isLoggedIn;
+    },
+    isUserSignedUp: state => {
+      return state.userInfo.isSignedUp;
+    },
+    getUserName: state => {
+      return state.userInfo.name;
+    },
+    isLoginModalOpen: state => {
+      return state.systemInfo.openLoginModal;
+    },
+    isSignupModalOpen: state => {
+      return state.systemInfo.openSignupModal;
     }
   },
   
@@ -140,18 +172,49 @@ export default new Vuex.Store({
         }
       });
     },
-    setIsUserLoggedIn: (state, isUserLoggedIn) => {
+    removeProductsFromFavourite: state => {
+      state.products.filter(el => {
+        el.isFavourite = false;
+      });
+    },
+    isUserLoggedIn: (state, isUserLoggedIn) => {
       state.userInfo.isLoggedIn = isUserLoggedIn;
+    },
+    isUserSignedUp: (state, isSignedUp) => {
+      state.userInfo.isSignedUp = isSignedUp;
     },
     setHasUserSearched: (state, hasSearched) => {
       state.userInfo.hasSearched = hasSearched;
     },
+    setUserName: (state, name) => {
+      state.userInfo.name = name;
+    },
     setProductTitleSearched: (state, titleSearched) => {
       state.userInfo.productTitleSearched = titleSearched;
-    }
+    },
+    showLoginModal: (state, show) => {
+      state.systemInfo.openLoginModal = show;
+    },
+    showSignupModal: (state, show) => {
+      state.systemInfo.openSignupModal = show;
+    },
+    addToFavourite: (state, id) => {
+      state.products.forEach(el => {
+        if (id === el.id) {
+          el.isFavourite = true;
+        }
+      });
+    },
+    removeFromFavourite: (state, id) => {
+      state.products.forEach(el => {
+        if (id === el.id) {
+          el.isFavourite = false;
+        }
+      });
+    },
   },
   
   actions: {
 
-  },
+  }
 });

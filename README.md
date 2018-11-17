@@ -25,7 +25,7 @@ git clone https://github.com/ivanlori/Vuemmerce.git
 npm install
 
 # serve with hot reload at localhost:8080
-npm run serve
+npm run dev
 
 # build for production with minification
 npm run build
@@ -50,10 +50,9 @@ To contribute, please ensure that you have stable Node.js and npm installed.
 
 Follow the steps below.
 
-1. Fork and clone the repo.
-2. Follow the [Installing](#installing) instructions
-3. Code!
-4. Submit a pull request
+1. Follow the [Installing](#installing) instructions
+2. Code!
+3. Submit a pull request
 
 ## Changelog
 
