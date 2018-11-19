@@ -21,6 +21,20 @@
         </div>
         
         <div class="navbar-end">
+          <div class="navbar-item social">
+            <a href="#" class="icon" :title="facebookTooltip">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="icon" :title="twitterTooltip">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="icon" :title="instagramTooltip">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="icon" :title="linkedinTooltip">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
           <div class="navbar-item shopping-cart" @click="showCheckoutModal">
             <span class="icon">
               <i class="fa fa-shopping-cart"></i>
@@ -31,21 +45,19 @@
       </div>
 
       <!-- For mobile and tablet -->
-      <div v-show="isMenuOpen" class="navbar-end">
+      <!-- <div v-show="isMenuOpen" class="navbar-end">
         <menu-component></menu-component>
-      </div>
+      </div> -->
 
       <!-- For desktop -->
-      <div class="navbar-end is-hidden-touch">
+      <div class="navbar-end ">
         <menu-component></menu-component>
       </div>
     </nav>
-    <checkout-modal-component :isCheckoutActive.sync="isCheckoutActive"></checkout-modal-component>
   </div>
 </template>
 
 <script>
-  import CheckoutModal from '../modal/Checkout';
   import Menu from '../menu/Menu';
   import Search from '../search/Search';
 
@@ -54,6 +66,10 @@
 
     data () {
       return {
+        linkedinTooltip: 'Follow us on Linkedin',
+        facebookTooltip: 'Follow us on Facebook',
+        twitterTooltip: 'Follow us on Twitter',
+        instagramTooltip: 'Follow us on Instagram',
         isCheckoutActive: false,
         isMenuOpen: false
       }
@@ -67,13 +83,12 @@
 
     components: {
       'search-component': Search,
-      'checkout-modal-component': CheckoutModal,
       'menu-component': Menu
     },
 
     methods: {
       showCheckoutModal () {
-        this.isCheckoutActive = true;
+        this.$store.commit('showCheckoutModal', true);
       }
     }
   };
@@ -89,5 +104,8 @@
   }
   .shopping-cart {
     cursor: pointer;
+  }
+  a {
+    color: grey;
   }
 </style>

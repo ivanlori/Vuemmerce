@@ -5,6 +5,7 @@
     <footer-component></footer-component>
     <login-modal-component></login-modal-component>
     <registration-modal-component></registration-modal-component>
+    <checkout-modal-component></checkout-modal-component>
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import LoginModal from './components/modal/Login';
 import RegistrationModal from './components/modal/Registration';
+import CheckoutModal from './components/modal/Checkout';
 
 export default {
   name: 'app',
@@ -21,6 +23,7 @@ export default {
     'footer-component': Footer,
     'login-modal-component': LoginModal,
     'registration-modal-component': RegistrationModal,
+    'checkout-modal-component': CheckoutModal
   }
 };
 </script>

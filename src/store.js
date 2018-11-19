@@ -115,7 +115,8 @@ export default new Vuex.Store({
     },
     systemInfo: {
       openLoginModal: false,
-      openSignupModal: false
+      openSignupModal: false,
+      openCheckoutModal: false
     }
   },
   
@@ -147,6 +148,9 @@ export default new Vuex.Store({
     },
     isSignupModalOpen: state => {
       return state.systemInfo.openSignupModal;
+    },
+    isCheckoutModalOpen: state => {
+      return state.systemInfo.openCheckoutModal;
     }
   },
   
@@ -197,6 +201,9 @@ export default new Vuex.Store({
     },
     showSignupModal: (state, show) => {
       state.systemInfo.openSignupModal = show;
+    },
+    showCheckoutModal: (state, show) => {
+      state.systemInfo.openCheckoutModal = show;
     },
     addToFavourite: (state, id) => {
       state.products.forEach(el => {

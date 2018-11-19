@@ -1,5 +1,11 @@
 # Vuemmerce Changelog
 
+#### 0.7.1 - 19.11.2018
+
+* checkout modal fix
+* inserted social logos
+* minor fix
+
 ## 0.7.0 - 17.11.2018
 
 * added validation for sign up modal form

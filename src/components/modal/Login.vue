@@ -97,10 +97,10 @@ export default {
     },
     openModal () {
       if (this.$store.getters.isLoginModalOpen) {
-          return true;
-        } else {
-          return false;
-        }
+        return true;
+      } else {
+        return false;
+      }
     }
   },
 

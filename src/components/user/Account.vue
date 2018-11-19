@@ -6,17 +6,12 @@
 
 <script>
 export default {
-    name: 'account-component',
-    data () {
-        return {
-
-        }
-    }
-}
+  name: "account-component",
+  data() {
+    return {};
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-
 </style>
-
-
