@@ -27,13 +27,14 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
-npm run build
+# build for development without minification
+npm run development
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# build for production with minification
+npm run production
+
 ```
-## Theme Demo
+## Screenshot
 ![Vuemmerce - Ecommerce Template](http://svilpress.altervista.org/screen.png "Vuemmerce - Ecommerce Browser Preview")
 
 **[Template Demo](http://svilpress.altervista.org/)**
@@ -51,8 +52,10 @@ To contribute, please ensure that you have stable Node.js and npm installed.
 Follow the steps below.
 
 1. Follow the [Installing](#installing) instructions
-2. Code!
-3. Submit a pull request
+2. Create your feature
+3. Commit your changes: git commit -am 'Add some feature'
+4. Push to the branch: git push origin my-new-feature
+5. Submit a pull request
 
 ## Changelog
 

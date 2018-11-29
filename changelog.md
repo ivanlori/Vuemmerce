@@ -1,5 +1,12 @@
 # Vuemmerce Changelog
 
+#### 0.8.0 - 29.11.2018
+
+* possibility to set the product's quantity
+* possibility to build production (npm run production) and development (npm run development) mode
+* minor fix
+* npm packages updated
+
 #### 0.7.1 - 19.11.2018
 
 * checkout modal fix

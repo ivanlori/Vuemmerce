@@ -31,14 +31,16 @@
           <i v-if="product.ratings === 5" class="fa fa-star"></i>
           <p>{{ product.reviews > 0 ? `${product.reviews} Reviews` : 'No reviews' }}</p>
         </div>
-        <p class="is-pulled-right"><span class="title is-4"><strong>&euro; {{ product.price }}</strong></span></p>
+        <p class="is-pulled-right">
+          <span class="title is-4"><strong>&euro; {{ product.price }}</strong></span>
+        </p>
       </div>
       <div class="card-footer btn-actions">
         <div class="card-footer-item field is-grouped">
           <div class="buttons">
             <button class="button is-primary" v-if="!product.isAddedToCart" @click="addToCart(product.id)">{{ addToCartLabel }}</button>
             <button class="button is-text" v-if="product.isAddedToCart" @click="removeFromCart(product.id, false)">{{ removeFromCartLabel }}</button>
-            <div class="is-pulled-right">
+            <div>
               <button class="button is-small" :title="removeFromFavouriteLabel" v-show="product.isFavourite" @click="removeFromFavourite(product.id)">
                 <span class="icon is-small">
                   <i class="fas fa-heart"></i>
@@ -49,6 +51,11 @@
                   <i class="far fa-heart"></i>
                 </span>
               </button>
+              <div class="select is-rounded is-small">
+                <select @change="onSelectQuantity(product.id)" v-model="selected">
+                  <option v-for="quantity in quantityArray" :value="quantity">{{ quantity }}</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
@@ -84,7 +91,19 @@ export default {
       viewDetailsLabel: 'Details',
       removeFromCartLabel: 'Remove from cart',
       addToFavouriteLabel: 'Add to favourite',
-      removeFromFavouriteLabel: 'Remove from favourite'
+      removeFromFavouriteLabel: 'Remove from favourite',
+      selected: 1,
+      quantityArray: []
+    }
+  },
+
+  mounted () {
+    for (let i = 1; i <= 20; i++) {
+      this.quantityArray.push(i);
+    }
+
+    if (this.$props.product.quantity > 1) {
+      this.selected = this.$props.product.quantity;
     }
   },
 
@@ -119,10 +138,16 @@ export default {
       } else {
         this.$store.commit('showLoginModal', true);
       }
-
     },
     removeFromFavourite (id) {
       this.$store.commit('removeFromFavourite', id);
+    },
+    onSelectQuantity (id) {
+      let data = {
+        id: id,
+        quantity: this.selected
+      }
+      this.$store.commit('quantity', data);
     }
   }
 }
@@ -142,8 +167,13 @@ export default {
       border: 1px solid #51bafc;
     }
  }
- .button {
+ .button,
+ .select {
    z-index: 2;
+ }
+ .select {
+   position: absolute;
+   right: 15px;
  }
 </style>
 

@@ -15,7 +15,8 @@ export default new Vuex.Store({
         reviews: 5,
         isAddedToCart: false,
         isAddedBtn: false,
-        isFavourite: false
+        isFavourite: false,
+        quantity: 1
       },
       {
         id: 2,
@@ -26,7 +27,8 @@ export default new Vuex.Store({
         reviews: 10,
         isAddedToCart: false,
         isAddedBtn: false,
-        isFavourite: false
+        isFavourite: false,
+        quantity: 1
       },
       {
         id: 3,
@@ -37,7 +39,8 @@ export default new Vuex.Store({
         reviews: 3,
         isAddedToCart: false,
         isAddedBtn: false,
-        isFavourite: false
+        isFavourite: false,
+        quantity: 1
       },
       {
         id: 4,
@@ -48,7 +51,8 @@ export default new Vuex.Store({
         reviews: 0,
         isAddedToCart: false,
         isAddedBtn: false,
-        isFavourite: false
+        isFavourite: false,
+        quantity: 1
       },
       {
         id: 5,
@@ -59,7 +63,8 @@ export default new Vuex.Store({
         reviews: 2,
         isAddedToCart: false,
         isAddedBtn: false,
-        isFavourite: false
+        isFavourite: false,
+        quantity: 1
       },
       {
         id: 6,
@@ -70,7 +75,8 @@ export default new Vuex.Store({
         reviews: 1,
         isAddedToCart: false,
         isAddedBtn: false,
-        isFavourite: false
+        isFavourite: false,
+        quantity: 1
       },
       {
         id: 7,
@@ -81,7 +87,8 @@ export default new Vuex.Store({
         reviews: 7,
         isAddedToCart: false,
         isAddedBtn: false,
-        isFavourite: false
+        isFavourite: false,
+        quantity: 1
       },
       {
         id: 8,
@@ -92,7 +99,8 @@ export default new Vuex.Store({
         reviews: 0,
         isAddedToCart: false,
         isAddedBtn: false,
-        isFavourite: false
+        isFavourite: false,
+        quantity: 1
       },
       {
         id: 9,
@@ -103,7 +111,8 @@ export default new Vuex.Store({
         reviews: 2,
         isAddedToCart: false,
         isAddedBtn: false,
-        isFavourite: false
+        isFavourite: false,
+        quantity: 1
       }
     ],
     userInfo: {
@@ -132,7 +141,7 @@ export default new Vuex.Store({
       });
     },
     getProductById: state => id => {
-      return state.products.find(product => product.id === id);
+      return state.products.find(product => product.id == id);
     },
     isUserLoggedIn: state => {
       return state.userInfo.isLoggedIn;
@@ -151,6 +160,9 @@ export default new Vuex.Store({
     },
     isCheckoutModalOpen: state => {
       return state.systemInfo.openCheckoutModal;
+    },
+    quantity: state => {
+      return state.products.quantity;
     }
   },
   
@@ -219,6 +231,13 @@ export default new Vuex.Store({
         }
       });
     },
+    quantity: (state, data) => {
+      state.products.forEach(el => {
+        if (data.id === el.id) {
+          el.quantity = data.quantity;
+        }
+      });
+    }
   },
   
   actions: {

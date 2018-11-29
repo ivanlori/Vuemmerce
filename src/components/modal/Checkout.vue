@@ -10,7 +10,7 @@
 				<div v-if="!isCheckoutSection">
 					<div class="box" v-for="product in products" :key="product.id">
 						<button class="is-pulled-right button is-info is-inverted" @click="removeFromCart(product.id)">{{ removeLabel }}</button>
-						<p>{{ product.title }}</p>
+						<p>{{ product.title }}  {{ product.quantity > 0 ?  ` - Quantity: ${product.quantity}` : ''}}</p>
 						<p>{{ product.price }} &euro;</p>
 					</div>
 					<div v-if="products.length === 0">
@@ -59,12 +59,18 @@ export default {
 						productsAdded = this.$store.getters.productsAdded,
 						pricesArray = [],
 						productLabel = '',
-						finalPrice = '';
+						finalPrice = '',
+						quantity = 1;
 
 				productsAdded.forEach(product => {
-					pricesArray.push(product.price); // get the price of every product added
+
+					if (product.quantity >= 1) {
+						quantity = product.quantity;
+					}
+
+					pricesArray.push((product.price * quantity)); // get the price of every product added and multiply quantity
 				});
-						
+
 				finalPrice = pricesArray.reduce((a, b) => a + b, 0); // sum the prices
 				
 				if (totalProducts > 1) { // set plural or singular
