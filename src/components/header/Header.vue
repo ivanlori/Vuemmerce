@@ -45,12 +45,12 @@
       </div>
 
       <!-- For mobile and tablet -->
-      <!-- <div v-show="isMenuOpen" class="navbar-end">
+      <div v-show="isMenuOpen" class="navbar-end">
         <menu-component></menu-component>
-      </div> -->
+      </div>
 
       <!-- For desktop -->
-      <div class="navbar-end ">
+      <div class="navbar-end is-hidden-mobile">
         <menu-component></menu-component>
       </div>
     </nav>

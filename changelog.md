@@ -1,6 +1,12 @@
 # Vuemmerce Changelog
 
-#### 0.8.0 - 29.11.2018
+#### 0.8.1 - 09.12.2018
+
+* fix menu on mobile
+* menu account removed
+* npm packages updated
+
+## 0.8.0 - 29.11.2018
 
 * possibility to set the product's quantity
 * possibility to build production (npm run production) and development (npm run development) mode

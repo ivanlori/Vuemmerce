@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="navbar-item ">
+		<div class="navbar-item">
 			<div class="field is-grouped">
 				<p class="control">
 					<a v-if="!isUserLoggedIn" class="button" @click="showSignupModal">
@@ -25,9 +25,6 @@
 			Welcome {{ getUserName }}
 			</a>
 			<div class="navbar-dropdown is-boxed">
-				<router-link class="navbar-item" :to="{ path: '/account', name: 'account-component' }">
-					{{ accountLabel }}
-				</router-link>
 				<router-link class="navbar-item" :to="{ path: '/wishlist', name: 'wishlist-container-component' }">
 					{{ wishlistLabel }}
 				</router-link>
@@ -47,7 +44,6 @@ export default {
 		return {
 			wishlistLabel: 'Wishlist',
 			logoutLabel: 'Log out',
-			accountLabel: 'My account',
 			loginLabel: 'Log in',
 			signupLabel: 'Sign up'
 		}

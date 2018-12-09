@@ -1,6 +1,6 @@
 {
   "name": "vuemmerce",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Responsive ecommerce template built with Vue.js",
   "author": "ivan lori <ivan.lori@protonmail.com>",
   "private": true,
@@ -28,19 +28,19 @@
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "bulma": "^0.7.2",
-    "vue": "^2.5.17",
+    "vue": "^2.5.18",
     "vue-router": "^3.0.2",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.1.6",
-    "@fortawesome/fontawesome-free": "^5.5.0",
+    "@babel/preset-env": "^7.2.0",
+    "@fortawesome/fontawesome-free": "^5.6.0",
     "@vue/cli-plugin-babel": "^3.2.0",
     "@vue/cli-service": "^3.2.0",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.18"
   },
   "eslintConfig": {
     "root": true,
