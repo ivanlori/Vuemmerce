@@ -1,5 +1,10 @@
 # Vuemmerce Changelog
 
+#### 0.8.2 - 21.12.2018
+
+* added favourite button into product detail
+* minox css fixes into product detail
+
 #### 0.8.1 - 09.12.2018
 
 * fix menu on mobile
