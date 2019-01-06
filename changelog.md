@@ -1,5 +1,8 @@
 # Vuemmerce Changelog
 
+#### 0.8.3 - 06.01.2019
+* npm packages update for security issue
+
 #### 0.8.2 - 21.12.2018
 
 * added favourite button into product detail
