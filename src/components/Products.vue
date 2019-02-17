@@ -14,21 +14,11 @@
       <div class="content is-clearfix">
         <p>{{ product.description }}</p>
         <div class="is-pulled-left">
-          <i v-if="product.ratings === 1" class="fa fa-star"></i>
-          <i v-if="product.ratings === 2" class="fa fa-star"></i>
-          <i v-if="product.ratings === 2" class="fa fa-star"></i>
-          <i v-if="product.ratings === 3" class="fa fa-star"></i>
-          <i v-if="product.ratings === 3" class="fa fa-star"></i>
-          <i v-if="product.ratings === 3" class="fa fa-star"></i>
-          <i v-if="product.ratings === 4" class="fa fa-star"></i>
-          <i v-if="product.ratings === 4" class="fa fa-star"></i>
-          <i v-if="product.ratings === 4" class="fa fa-star"></i>
-          <i v-if="product.ratings === 4" class="fa fa-star"></i>
-          <i v-if="product.ratings === 5" class="fa fa-star"></i>
-          <i v-if="product.ratings === 5" class="fa fa-star"></i>
-          <i v-if="product.ratings === 5" class="fa fa-star"></i>
-          <i v-if="product.ratings === 5" class="fa fa-star"></i>
-          <i v-if="product.ratings === 5" class="fa fa-star"></i>
+          <span v-for="index in product.ratings" :key="index">
+                      <i class="fa fa-star"></i>
+
+          </span>
+
           <p>{{ product.reviews > 0 ? `${product.reviews} Reviews` : 'No reviews' }}</p>
         </div>
         <p class="is-pulled-right">
