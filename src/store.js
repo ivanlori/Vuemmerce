@@ -5,6 +5,26 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    categories: [
+      {
+        id: 1,
+        title: 'Category 1',
+        description: 'Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit',
+        image: 'http://lorempixel.com/640/480/technics/1/'
+      },
+      {
+        id: 2,
+        title: 'Category 2',
+        description: 'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse',
+        image: 'http://lorempixel.com/640/480/technics/2/'
+      },
+      {
+        id: 3,
+        title: 'Category 3',
+        description: 'At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.',
+        image: 'http://lorempixel.com/640/480/technics/3/'
+      },
+    ],
     products: [
       {
         id: 1,
@@ -16,7 +36,8 @@ export default new Vuex.Store({
         isAddedToCart: false,
         isAddedBtn: false,
         isFavourite: false,
-        quantity: 1
+        quantity: 1,
+        category: 1
       },
       {
         id: 2,
@@ -28,7 +49,8 @@ export default new Vuex.Store({
         isAddedToCart: false,
         isAddedBtn: false,
         isFavourite: false,
-        quantity: 1
+        quantity: 1,
+        category: 2
       },
       {
         id: 3,
@@ -40,7 +62,8 @@ export default new Vuex.Store({
         isAddedToCart: false,
         isAddedBtn: false,
         isFavourite: false,
-        quantity: 1
+        quantity: 1,
+        category: 3
       },
       {
         id: 4,
@@ -52,7 +75,8 @@ export default new Vuex.Store({
         isAddedToCart: false,
         isAddedBtn: false,
         isFavourite: false,
-        quantity: 1
+        quantity: 1,
+        category: 1
       },
       {
         id: 5,
@@ -64,7 +88,8 @@ export default new Vuex.Store({
         isAddedToCart: false,
         isAddedBtn: false,
         isFavourite: false,
-        quantity: 1
+        quantity: 1,
+        category: 2
       },
       {
         id: 6,
@@ -76,7 +101,8 @@ export default new Vuex.Store({
         isAddedToCart: false,
         isAddedBtn: false,
         isFavourite: false,
-        quantity: 1
+        quantity: 1,
+        category: 3
       },
       {
         id: 7,
@@ -88,7 +114,8 @@ export default new Vuex.Store({
         isAddedToCart: false,
         isAddedBtn: false,
         isFavourite: false,
-        quantity: 1
+        quantity: 1,
+        category: 1
       },
       {
         id: 8,
@@ -100,7 +127,8 @@ export default new Vuex.Store({
         isAddedToCart: false,
         isAddedBtn: false,
         isFavourite: false,
-        quantity: 1
+        quantity: 1,
+        category: 2
       },
       {
         id: 9,
@@ -112,7 +140,8 @@ export default new Vuex.Store({
         isAddedToCart: false,
         isAddedBtn: false,
         isFavourite: false,
-        quantity: 1
+        quantity: 1,
+        category: 3
       }
     ],
     userInfo: {
@@ -130,6 +159,9 @@ export default new Vuex.Store({
   },
   
   getters: {
+    getCategoryById: state => id => {
+      return state.categories.find(category => category.id == id);
+    },
     productsAdded: state => {
       return state.products.filter(el => {
         return el.isAddedToCart;
