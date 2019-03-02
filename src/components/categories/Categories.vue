@@ -18,7 +18,6 @@
     <router-link
       class="details"
       :to="{
-        path: '/category-products',
         name: 'category-products-component',
         params: {
           id: category.id,
@@ -32,7 +31,12 @@
 <script>
 export default {
   name: 'categories-component',
-  props: ['category'],
+  props: {
+    category: {
+      type: Object,
+      required: true
+    }
+  },
   
   data () {
     return {

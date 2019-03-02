@@ -1,11 +1,6 @@
 <template>
   <div class="top-margin bottom-margin">
-    <nav class="breadcrumb" aria-label="breadcrumbs">
-      <ul>
-        <li><router-link :to="{name: 'homepage-component'}">Home</router-link></li>
-        <li class="is-active"><a>{{ category.title }}</a></li>
-      </ul>
-    </nav>
+    <breadcrumbs-component :items="path" />
     <div class="columns is-centered is-multiline ">
       <div class="card column is-one-quarter" v-for="product in products" :key="product.id">
         <products-component :product="product"></products-component>
@@ -19,15 +14,21 @@
 
 <script>
 import ProductsComponent from '../Products';
-
+import BreadcrumbsComponent from '../Breadcrumbs'
 export default {
   name: 'products-list-component',
   
   components: {
-    'products-component': ProductsComponent
+    ProductsComponent,
+    BreadcrumbsComponent
   },
 
-  props: ['id'],
+  props: {
+    id: {
+      type: [Number, String],
+      required: true
+    }
+  },
   
   data () {
     return {
@@ -41,6 +42,17 @@ export default {
     },
     products () {
       return this.$store.state.products.filter(product => String(product.category) === String(this.$route.params.id));
+    },
+    path () {
+      return [
+        {
+          text: 'Home',
+          to: { path: '/' }
+        },
+        {
+          text: this.category.title,
+        }
+      ]
     }
   }
 
