@@ -1,35 +1,30 @@
 {
   "name": "vuemmerce",
   "version": "0.8.3",
+  "private": true,
   "description": "Responsive ecommerce template built with Vue.js",
   "author": "ivan lori <ivan.lori@protonmail.com>",
-  "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
-    "production": "vue-cli-service build",
-    "development": "vue-cli-service build --mode development"
+    "development": "vue-cli-service build --mode development",
+    "express": "vue-cli-service express:watch",
+    "express:run": "vue-cli-service express:run",
+    "production": "vue-cli-service build"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ivanlori/Vuemmerce.git"
-  },
-  "keywords": [
-    "css",
-    "js",
-    "html",
-    "template",
-    "ecommerce",
-    "vuejs",
-    "theme",
-    "responsive"
-  ],
-  "license": "MIT",
   "dependencies": {
+    "@mdi/font": "^3.5.95",
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
+    "buefy": "^0.7.3",
     "bulma": "^0.7.2",
+    "bulma-helpers": "^0.3.6",
+    "cors": "^2.8.5",
+    "express": "latest",
+    "kladrapi-for-node": "^0.0.2",
     "vue": "^2.5.21",
+    "vue-cli-plugin-express": "^1.0.0",
     "vue-router": "^3.0.2",
+    "vuetify": "^1.5.4",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -59,5 +54,20 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "keywords": [
+    "css",
+    "js",
+    "html",
+    "template",
+    "ecommerce",
+    "vuejs",
+    "theme",
+    "responsive"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivanlori/Vuemmerce.git"
+  }
 }

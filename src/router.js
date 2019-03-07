@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+
 import Homepage from '../src/components/homepage/Homepage';
 import ProductDetail from '../src/components/product_detail/ProductDetail';
 import WishlistContainer from '../src/components/user/WishlistContainer';
+import OrderPage from "./components/order_page/OrderPage";
 
 Vue.use(Router);
 
@@ -19,6 +21,12 @@ export default new Router({
       name: 'product-detail-component',
       props: true,
       component: ProductDetail,
+    },
+    {
+      path: '/order',
+      name: 'order',
+      props: true,
+      component: OrderPage,
     },
     {
       path: '/wishlist',
