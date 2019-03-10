@@ -1,3 +1,4 @@
+<!--suppress XmlUnboundNsPrefix -->
 <template>
     <div class="order-page">
         <custom-stepper
@@ -76,7 +77,7 @@
                     <dotted-row title="Способ оплаты" :value="selectedPayTypeTitle" />
                     <dotted-row title="Город доставки" :value="searchCity" />
                     <dotted-row title="Адрес доставки" :value="address" />
-                    <dotted-row title="Способ оплаты" :value="deliveryDateTime" />
+                    <dotted-row title="Дата доставки" :value="deliveryDateTime" />
                 </div>
             </template>
 
