@@ -6,12 +6,14 @@
                     {title: 'Выбор адреса и времени доставки'},
                     {title: 'Выберите удобное для вас время доставки'},
                 ]"
-                :activeTab="activeTab">
+                submitTitle="Завершить оформление заказа"
+                :submit="checkOrder">
+
             <template v-slot:step1>
                 <p class="content">
                     <b>Выберите способ оплаты:</b>
                 </p>
-                <b-field v-for="payTypeItem in payTypeList">
+                <b-field v-for="payTypeItem in payTypeList" :key="payType.code">
                     <b-radio v-model="payType" size="is-medium" :native-value="payTypeItem.code">
                         <div class="is-flex is-vertical-center">
                             <figure class="image is-64x64">
@@ -21,7 +23,6 @@
                         </div>
                     </b-radio>
                 </b-field>
-                <button class="is-pulled-right button is-primary" @click="toStep(2)">Продолжить</button>
             </template>
 
             <template v-slot:step2>
@@ -67,7 +68,6 @@
                                 placeholder="Кликните для выбора времени..."></b-timepicker>
                     </b-field>
                 </div>
-                <button class="is-pulled-right button is-primary" @click="toStep(3)">Продолжить</button>
             </template>
 
             <template v-slot:step3>
@@ -78,9 +78,6 @@
                     <dotted-row title="Адрес доставки" :value="address" />
                     <dotted-row title="Способ оплаты" :value="deliveryDateTime" />
                 </div>
-                <button class="is-pulled-right button is-primary" @click="checkOrder()">
-                    Завершить оформление заказа
-                </button>
             </template>
 
         </custom-stepper>
@@ -111,8 +108,6 @@
       name: 'order-page',
         data () {
             return {
-                activeTab: 0,
-                finishTab: 3,
                 formNeedValidate: false,
                 payType: "cash",
                 payTypeList: [
@@ -139,10 +134,6 @@
             }
         },
         methods: {
-            toStep: function(stepNum) {
-                this.activeTab = stepNum - 1;
-                this.formNeedValidate = this.finishTab === stepNum;
-            },
             checkOrder: function () {
                 if (!this.selectedPayTypeTitle) return false;
                 if (!this.searchCity) return false;
