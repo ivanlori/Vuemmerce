@@ -1,7 +1,13 @@
 <template>
     <div class="order-page">
-        <b-tabs v-model="activeTab" position="is-centered" class="block" type="is-toggle" expanded>
-            <b-tab-item label="Выбор способа оплаты">
+        <custom-stepper
+                :step-tabs="[
+                    {title: 'Выбор способа оплаты'},
+                    {title: 'Выбор адреса и времени доставки'},
+                    {title: 'Выберите удобное для вас время доставки'},
+                ]"
+                :activeTab="activeTab">
+            <template v-slot:step1>
                 <p class="content">
                     <b>Выберите способ оплаты:</b>
                 </p>
@@ -16,10 +22,9 @@
                     </b-radio>
                 </b-field>
                 <button class="is-pulled-right button is-primary" @click="toStep(2)">Продолжить</button>
-            </b-tab-item>
+            </template>
 
-
-            <b-tab-item label="Выбор адреса и времени доставки" :disabled="orderStep < 2">
+            <template v-slot:step2>
                 <b-field label="Город доставки"
                          :type="formNeedValidate && !searchCity ? 'is-danger' : ''"
                          message="Это поле обязательно к заполнению">
@@ -62,16 +67,11 @@
                                 placeholder="Кликните для выбора времени..."></b-timepicker>
                     </b-field>
                 </div>
-
                 <button class="is-pulled-right button is-primary" @click="toStep(3)">Продолжить</button>
-            </b-tab-item>
+            </template>
 
-
-            <b-tab-item label="Подтверждение выбранных условий"
-                        :disabled="orderStep < 3"
-                        class="content is-medium">
+            <template v-slot:step3>
                 <h3>Проверьте введенные данные: </h3>
-
                 <div class="order-row-list">
                     <dotted-row title="Способ оплаты" :value="selectedPayTypeTitle" />
                     <dotted-row title="Город доставки" :value="searchCity" />
@@ -81,8 +81,10 @@
                 <button class="is-pulled-right button is-primary" @click="checkOrder()">
                     Завершить оформление заказа
                 </button>
-            </b-tab-item>
-        </b-tabs>
+            </template>
+
+        </custom-stepper>
+
         <b-modal :active.sync="isShowModal" @close="() => $router.push('/')">
             <div class="modal-card" style="width: auto">
                 <header class="modal-card-head">
@@ -111,7 +113,6 @@
             return {
                 activeTab: 0,
                 finishTab: 3,
-                orderStep: 1,
                 formNeedValidate: false,
                 payType: "cash",
                 payTypeList: [
@@ -139,9 +140,8 @@
         },
         methods: {
             toStep: function(stepNum) {
-                this.orderStep = stepNum;
                 this.activeTab = stepNum - 1;
-                this.formNeedValidate = this.finishTab === this.orderStep;
+                this.formNeedValidate = this.finishTab === stepNum;
             },
             checkOrder: function () {
                 if (!this.selectedPayTypeTitle) return false;
