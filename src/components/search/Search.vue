@@ -33,7 +33,7 @@ export default {
 	},
 
 	methods: {
-		search (value) {
+		searchCity (value) {
 			if (value.length > 0) {
 				this.$store.commit('setHasUserSearched', true);
 				this.$store.commit('setProductTitleSearched', value);

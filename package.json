@@ -21,6 +21,7 @@
     "cors": "^2.8.5",
     "express": "latest",
     "kladrapi-for-node": "^0.0.2",
+    "moment": "^2.24.0",
     "vue": "^2.5.21",
     "vue-cli-plugin-express": "^1.0.0",
     "vue-router": "^3.0.2",
