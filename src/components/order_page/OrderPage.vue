@@ -30,12 +30,7 @@
                 <b-field label="Город доставки"
                          :type="formNeedValidate && !searchCity ? 'is-danger' : ''"
                          message="Это поле обязательно к заполнению">
-                    <b-autocomplete
-                            v-model="searchCity"
-                            :data="suggestCityList"
-                            placeholder="Начните вводить город...">
-                        <template slot="empty">Ничего не найдено</template>
-                    </b-autocomplete>
+                    <city-autocomplete @select="val => searchCity = val" />
                 </b-field>
                 <b-field label="Адрес доставки"
                          :type="formNeedValidate && !address ? 'is-danger' : ''"
@@ -100,9 +95,11 @@
     import moment from 'moment';
     import DottedRow from "./DottedRow";
     import CustomStepper from "./CustomStepper";
+    import CityAutocomplete from "./CityAutocomplete";
 
     export default {
         components: {
+            CityAutocomplete,
             DottedRow,
             CustomStepper,
         },
@@ -116,7 +113,6 @@
                     { title: "Банковкой картой", code: "card", "icon": "http://city4g.ru/wa-data/public/shop/img/cash_oplata.png" },
                 ],
                 searchCity: '',
-                suggestCityList: [],
                 address: '',
                 dateShipping: moment().toDate(),
                 timeShipping: moment().toDate(),
@@ -151,17 +147,6 @@
                     position: 'is-bottom-right'
                 })
             }
-        },
-        watch: {
-            searchCity(val) {
-                if (this.isLoading) return;
-                this.isLoading = true;
-                fetch(`http://localhost:3001/kladr-api?query=${val}`)
-                    .then(res => res.json())
-                    .then(res => this.suggestCityList = res.result.map(item => item.name))
-                    .catch(err => this.danger(err))
-                    .finally(() => (this.isLoading = false));
-          }
         }
     };
 </script>
@@ -189,4 +174,3 @@
         background: url(https://ideal-garderob.ru/statics/temp/icon-cart-dotted-total.png) repeat-x left 83%;
     }
 </style>
-
