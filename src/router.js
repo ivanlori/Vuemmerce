@@ -25,7 +25,6 @@ export default new Router({
     {
       path: '/order',
       name: 'order',
-      props: true,
       component: OrderPage,
     },
     {

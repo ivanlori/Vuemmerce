@@ -171,6 +171,6 @@
         overflow: visible!important;
     }
     .dotted {
-        background: url(https://ideal-garderob.ru/statics/temp/icon-cart-dotted-total.png) repeat-x left 83%;
+        background: url('/assets/icon-dotted.png') repeat-x left 83%;
     }
 </style>
