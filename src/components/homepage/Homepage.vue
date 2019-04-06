@@ -1,19 +1,19 @@
 <template>
   <div>
-    <hero></hero>
-    <products-list-container></products-list-container>
+    <VmHero></VmHero>
+    <VmProductsList></VmProductsList>
   </div>
 </template>
 
 <script>
-import ProductsListContainer from '../products_list/ProductsListContainer';
-import HeroSection from '../hero/Hero';
+import VmProductsList from '../products_list/ProductsListContainer';
+import VmHero from '../hero/Hero';
 
 export default {
-  name: 'homepage-component',
+  name: 'index',
   components: {
-    'products-list-container': ProductsListContainer,
-    'hero': HeroSection
+    VmProductsList,
+    VmHero
   }
 };
 </script>

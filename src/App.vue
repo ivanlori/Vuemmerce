@@ -1,29 +1,29 @@
 <template>
   <div>
-    <header-component></header-component>
+    <VmHeader></VmHeader>
     <router-view></router-view>
-    <footer-component></footer-component>
-    <login-modal-component></login-modal-component>
-    <registration-modal-component></registration-modal-component>
-    <checkout-modal-component></checkout-modal-component>
+    <VmFooter></VmFooter>
+    <VmLoginModal></VmLoginModal>
+    <VmRegistrationModal></VmRegistrationModal>
+    <VmCheckoutModal></VmCheckoutModal>
   </div>
 </template>
 
 <script>
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import LoginModal from './components/modal/Login';
-import RegistrationModal from './components/modal/Registration';
-import CheckoutModal from './components/modal/Checkout';
+import VmHeader from './components/header/Header';
+import VmFooter from './components/footer/Footer';
+import VmLoginModal from './components/modal/Login';
+import VmRegistrationModal from './components/modal/Registration';
+import VmCheckoutModal from './components/modal/Checkout';
 
 export default {
   name: 'app',
   components: {
-    'header-component': Header,
-    'footer-component': Footer,
-    'login-modal-component': LoginModal,
-    'registration-modal-component': RegistrationModal,
-    'checkout-modal-component': CheckoutModal
+    VmHeader,
+    VmFooter,
+    VmLoginModal,
+    VmRegistrationModal,
+    VmCheckoutModal
   }
 };
 </script>

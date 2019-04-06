@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Homepage from '../src/components/homepage/Homepage';
-import ProductDetail from '../src/components/product_detail/ProductDetail';
-import WishlistContainer from '../src/components/user/WishlistContainer';
+import VmHomepage from '../src/components/homepage/Homepage';
+import VmProductDetail from '../src/components/product_detail/ProductDetail';
+import VmWishlistPage from '../src/components/user/WishlistContainer';
 
 Vue.use(Router);
 
@@ -11,19 +11,19 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'homepage-component',
-      component: Homepage,
+      name: 'index',
+      component: VmHomepage,
     },
     {
       path: '/product-detail/:id',
-      name: 'product-detail-component',
+      name: 'productDetail',
       props: true,
-      component: ProductDetail,
+      component: VmProductDetail,
     },
     {
       path: '/wishlist',
-      name: 'wishlist-container-component',
-      component: WishlistContainer,
+      name: 'wishlistPage',
+      component: VmWishlistPage,
     }
   ],
 });

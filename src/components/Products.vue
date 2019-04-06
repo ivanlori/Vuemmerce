@@ -82,7 +82,7 @@
 
 <script>
 export default {
-  name: 'products-component',
+  name: 'products',
   props: ['product'],
   
   data () {

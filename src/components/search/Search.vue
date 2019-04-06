@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'search-component',
+  name: 'search',
 	data () {
 		return {
 			value: ''

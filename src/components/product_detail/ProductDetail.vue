@@ -74,7 +74,7 @@
 
 <script>
 export default {
-  name: 'product-detail-component',
+  name: 'productDetail',
   
   data () {
     return {

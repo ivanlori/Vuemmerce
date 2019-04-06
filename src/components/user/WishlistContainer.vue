@@ -17,7 +17,7 @@ import ProductsComponent from '../Products';
 import { getByTitle } from '../../filters';
 
 export default {
-  name: 'wishlist-container-component',
+  name: 'wishlistPage',
   data () {
     return {
       pageTitle: 'Your Wishlist',

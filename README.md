@@ -6,7 +6,7 @@ Responsive ecommerce template built with Vue.js
 
 [![Build Status](https://travis-ci.org/ivanlori/Vuemmerce.svg)](https://travis-ci.org/ivanlori/Vuemmerce)
 [![devDependency Status](https://david-dm.org/ivanlori/Vuemmerce/dev-status.svg)](https://david-dm.org/ivanlori/Vuemmerce#info=devDependencies)
-[![vue](https://img.shields.io/badge/vue-2.5.22-brightgreen.svg)](https://github.com/vuejs/vue)
+[![vue](https://img.shields.io/badge/vue-2.6.10-brightgreen.svg)](https://github.com/vuejs/vue)
 [![GitHub license](https://img.shields.io/github/license/ivanlori/Vuemmerce.svg)](https://github.com/ivanlori/Vuemmerce/blob/master/LICENSE)
 [![Donate Badge](https://img.shields.io/badge/buy%20me%20a%20beer-donate-yellow.svg)](https://paypal.me/ivanlori)
 [![](https://img.shields.io/twitter/url/https/github.com/ivanlori/Vuemmerce.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fivanlori%2FVuemmerce)

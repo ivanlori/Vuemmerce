@@ -1,7 +1,7 @@
 <template>
   <div class="columns is-centered is-multiline">
     <div class="card column is-one-quarter" v-for="product in products" :key="product.id">
-      <products-component :product="product"></products-component>
+      <VmProducts :product="product"></VmProducts>
     </div>
     <div class="section" v-if="products.length === 0">
       <p>{{ noProductLabel }}</p>
@@ -10,15 +10,13 @@
 </template>
 
 <script>
-import ProductsComponent from '../Products';
+import VmProducts from '../Products';
 import { getByTitle } from '../../filters';
 
 export default {
-  name: 'products-list-component',
+  name: 'productsList',
   
-  components: {
-    'products-component': ProductsComponent
-  },
+  components: { VmProducts },
   
   data () {
     return {

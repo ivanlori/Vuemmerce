@@ -71,7 +71,7 @@
 import { isValidEmail } from '../../validators';
 
 export default {
-  name: 'login-component',
+  name: 'login',
 
   data () {
     return {

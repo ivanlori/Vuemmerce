@@ -1,16 +1,16 @@
 <template>
-    <div class="hero is-medium is-bold">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            Free ecommerce template for Vue.js projects
-          </h1>
-          <h2 class="subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          </h2>
-        </div>
+  <div class="hero is-medium is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Free ecommerce template for Vue.js projects
+        </h1>
+        <h2 class="subtitle">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        </h2>
       </div>
     </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>

@@ -16,7 +16,7 @@
       <div class="navbar-menu is-active">
         <div class="navbar-start">
           <div class="navbar-item field">
-            <search-component></search-component>
+            <VmSearch></VmSearch>
           </div>
         </div>
         
@@ -46,20 +46,20 @@
 
       <!-- For mobile and tablet -->
       <div v-show="isMenuOpen" class="navbar-end">
-        <menu-component></menu-component>
+        <VmMenu></VmMenu>
       </div>
 
       <!-- For desktop -->
       <div class="navbar-end is-hidden-mobile">
-        <menu-component></menu-component>
+        <VmMenu></VmMenu>
       </div>
     </nav>
   </div>
 </template>
 
 <script>
-  import Menu from '../menu/Menu';
-  import Search from '../search/Search';
+  import VmMenu from '../menu/Menu';
+  import VmSearch from '../search/Search';
 
   export default {
     name: 'header-component',
@@ -75,15 +75,15 @@
       }
     },
 
+    components: {
+      VmSearch,
+      VmMenu
+    },
+
     computed: {
       numProductsAdded () {
         return this.$store.getters.productsAdded.length;
       }
-    },
-
-    components: {
-      'search-component': Search,
-      'menu-component': Menu
     },
 
     methods: {

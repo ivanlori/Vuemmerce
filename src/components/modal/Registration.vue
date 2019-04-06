@@ -106,7 +106,7 @@
 import { isValidEmail } from '../../validators';
 
 export default {
-  name: 'registration-component',
+  name: 'registration',
 
   data () {
     return {

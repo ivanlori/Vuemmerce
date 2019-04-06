@@ -39,7 +39,7 @@
 
 <script>
 export default {
-	name: 'menu-component',
+	name: 'VmMenu',
 	data () {
 		return {
 			wishlistLabel: 'Wishlist',

@@ -1,5 +1,9 @@
 # Vuemmerce Changelog
 
+#### 0.8.4 - 06.04.2019
+* components renamed
+* npm packages updated
+
 #### 0.8.3 - 06.01.2019
 * npm packages update for security issue
 

@@ -31,7 +31,7 @@
 
 <script>
 export default {
-	name: 'checkout-component',
+	name: 'checkout',
     
 	data () {
 		return {
