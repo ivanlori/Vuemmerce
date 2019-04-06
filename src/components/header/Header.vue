@@ -2,7 +2,7 @@
   <div>
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <router-link :to="{ path: '/', name: 'homepage-component' }" class="navbar-item">
+        <router-link :to="{ path: '/', name: 'index' }" class="navbar-item">
           <h1 class="title is-3 is-flex-mobile"></h1>
         </router-link>
 

@@ -65,7 +65,7 @@
       class="details"
       :to="{
         path: '/product-detail',
-        name: 'product-detail-component',
+        name: 'productDetail',
         params: {
           id: product.id,
           title: product.title,
