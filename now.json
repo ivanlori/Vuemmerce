@@ -1,6 +1,4 @@
 {
-  "builds": [
-    { "src": "*.html", "use": "@now/static" },
-    { "src": "date.js", "use": "@now/node" }
-  ]
+  "version": 2,
+  "builds": [{ "src": "package.json", "use": "@now/static-build" }]
 }

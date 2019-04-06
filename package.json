@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "production": "vue-cli-service build",
-    "development": "vue-cli-service build --mode development"
+    "development": "vue-cli-service build --mode development",
+    "now-build": "vue-cli-service build --mode development -o dist"
   },
   "repository": {
     "type": "git",
