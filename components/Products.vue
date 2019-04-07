@@ -10,6 +10,18 @@
         <div class="media-content">
           <p class="title is-4">{{ product.title }}</p>
         </div>
+        <div>
+          <button class="button is-small" :title="removeFromFavouriteLabel" v-show="product.isFavourite" @click="removeFromFavourite(product.id)">
+            <span class="icon is-small">
+              <i class="fa fa-heart"></i>
+            </span>
+          </button>
+          <button class="button is-small" :title="addToFavouriteLabel" v-show="!product.isFavourite" @click="saveToFavorite(product.id)">
+            <span class="icon is-small">
+              <i class="fa fa-heart-o"></i>
+            </span>
+          </button>
+        </div>
       </div>
       <div class="content is-clearfix">
         <p>{{ product.description }}</p>
@@ -40,23 +52,11 @@
           <div class="buttons">
             <button class="button is-primary" v-if="!product.isAddedToCart" @click="addToCart(product.id)">{{ addToCartLabel }}</button>
             <button class="button is-text" v-if="product.isAddedToCart" @click="removeFromCart(product.id, false)">{{ removeFromCartLabel }}</button>
-            <div>
-              <button class="button is-small" :title="removeFromFavouriteLabel" v-show="product.isFavourite" @click="removeFromFavourite(product.id)">
-                <span class="icon is-small">
-                  <i class="fa fa-heart"></i>
-                </span>
-              </button>
-              <button class="button is-small" :title="addToFavouriteLabel" v-show="!product.isFavourite" @click="saveToFavorite(product.id)">
-                <span class="icon is-small">
-                  <i class="fa fa-heart-o"></i>
-                </span>
-              </button>
-              <div class="select is-rounded is-small">
-                <select @change="onSelectQuantity(product.id)" v-model="selected">
-                  <option v-for="quantity in quantityArray" :value="quantity">{{ quantity }}</option>
-                </select>
-              </div>
-            </div>
+          </div>
+           <div class="select is-rounded is-small">
+            <select @change="onSelectQuantity(product.id)" v-model="selected">
+              <option v-for="quantity in quantityArray" :value="quantity">{{ quantity }}</option>
+            </select>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@
 export default {
   name: 'products',
   props: ['product'],
-  
+
   data () {
     return {
       addToCartLabel: 'Add to cart',
@@ -173,6 +173,13 @@ export default {
  .select {
    position: absolute;
    right: 15px;
+   bottom: 35px;
+ }
+ .card-content {
+   padding: 0;
+ }
+ .buttons {
+   margin: 0;
  }
 </style>
 
