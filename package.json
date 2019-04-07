@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "production": "vue-cli-service build",
+    "production": "nuxt build",
     "development": "vue-cli-service build --mode development",
-    "now-build": "vue-cli-service build --mode development -o dist"
+    "now-build": "nuxt build -o dist"
   },
   "repository": {
     "type": "git",
