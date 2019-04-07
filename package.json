@@ -8,7 +8,7 @@
     "dev": "nuxt",
     "production": "nuxt build",
     "development": "vue-cli-service build --mode development",
-    "now-build": "nuxt build -o dist"
+    "now-build": "nuxt generate"
   },
   "repository": {
     "type": "git",
