@@ -2,7 +2,7 @@
 
 # Vuemmerce - Ecommerce Template
 
-Responsive ecommerce template built with Vue.js
+Responsive ecommerce template built with Vue.js and Nuxt.js
 
 [![Build Status](https://travis-ci.org/ivanlori/Vuemmerce.svg)](https://travis-ci.org/ivanlori/Vuemmerce)
 [![devDependency Status](https://david-dm.org/ivanlori/Vuemmerce/dev-status.svg)](https://david-dm.org/ivanlori/Vuemmerce#info=devDependencies)
@@ -12,7 +12,6 @@ Responsive ecommerce template built with Vue.js
 [![](https://img.shields.io/twitter/url/https/github.com/ivanlori/Vuemmerce.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fivanlori%2FVuemmerce)
 
 ![Bulma](http://svilpress.altervista.org/made-with-bulma.png)
-
 ___
 
 ## Installing
@@ -27,7 +26,7 @@ git clone https://github.com/ivanlori/Vuemmerce.git
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:3000
 npm run dev
 
 # build for development without minification
@@ -43,7 +42,7 @@ ___
 ## Screenshot
 ![Vuemmerce - Ecommerce Template](http://svilpress.altervista.org/screen.png "Vuemmerce - Ecommerce Browser Preview")
 
-**[Template Demo](http://svilpress.altervista.org/)**
+**[Template Demo](https://vuemmerce-git-master.ivanlori.now.sh/)**
 
 ___
 

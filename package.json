@@ -1,11 +1,11 @@
 {
   "name": "vuemmerce",
-  "version": "0.8.4",
+  "version": "0.9.0",
   "description": "Responsive ecommerce template built with Vue.js",
   "author": "ivan lori <ivan.lori@protonmail.com>",
   "private": true,
   "scripts": {
-    "dev": "vue-cli-service serve",
+    "dev": "nuxt",
     "production": "vue-cli-service build",
     "development": "vue-cli-service build --mode development",
     "now-build": "vue-cli-service build --mode development -o dist"
@@ -26,16 +26,17 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@nuxtjs/font-awesome": "^1.0.3",
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "bulma": "^0.7.4",
+    "nuxt": "^2.6.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.2",
     "vuex": "^3.1.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.4.3",
-    "@fortawesome/fontawesome-free": "^5.8.1",
     "@vue/cli-plugin-babel": "^3.5.5",
     "@vue/cli-service": "^3.5.3",
     "babel-plugin-transform-runtime": "^6.23.0",
