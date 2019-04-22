@@ -1,13 +1,11 @@
 {
   "name": "vuemmerce",
   "version": "0.9.0",
-  "description": "Responsive ecommerce template built with Vue.js",
+  "description": "Responsive ecommerce template built with Vue.js and Nuxt.js",
   "author": "ivan lori <ivan.lori@protonmail.com>",
-  "private": true,
   "scripts": {
     "dev": "nuxt",
     "production": "nuxt build",
-    "development": "vue-cli-service build --mode development",
     "now-build": "nuxt generate"
   },
   "repository": {
@@ -22,7 +20,8 @@
     "ecommerce",
     "vuejs",
     "theme",
-    "responsive"
+    "responsive",
+    "nuxtjs"
   ],
   "license": "MIT",
   "dependencies": {
@@ -51,11 +50,6 @@
     },
     "extends": "plugin:vue/essential",
     "rules": {}
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
   },
   "browserslist": [
     "> 1%",
