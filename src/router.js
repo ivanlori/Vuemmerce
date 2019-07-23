@@ -6,6 +6,7 @@ import CategoryProducts from '../src/components/categories/CategoryProducts';
 import ProductDetail from '../src/components/product_detail/ProductDetail';
 import WishlistContainer from '../src/components/user/WishlistContainer';
 import OrderPage from "./components/order_page/OrderPage";
+import CartDetail from "./components/cart_detail/CartDetail";
 
 Vue.use(Router);
 
@@ -38,6 +39,11 @@ export default new Router({
       path: '/wishlist',
       name: 'wishlist-container-component',
       component: WishlistContainer,
-    }
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: CartDetail,
+    },
   ],
 });
