@@ -1,5 +1,8 @@
 # Vuemmerce Changelog
 
+#### 0.9.3 - 24.07.2019
+* npm packages updated
+
 #### 0.9.2 - 30.06.2019
 * npm packages updated
 
