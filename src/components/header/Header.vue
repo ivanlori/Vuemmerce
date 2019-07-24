@@ -35,11 +35,13 @@
               <i class="fab fa-linkedin"></i>
             </a>
           </div>
-          <div class="navbar-item shopping-cart" @click="showCheckoutModal">
-            <span class="icon">
-              <i class="fa fa-shopping-cart"></i>
-            </span>
-            <span :class="[numProductsAdded > 0 ? 'tag is-info' : '']">{{ numProductsAdded }}</span>
+          <div class="navbar-item shopping-cart">
+            <router-link to="/cart" class="navbar-item">
+              <span class="icon">
+                <i class="fa fa-shopping-cart"></i>
+              </span>
+              <span :class="{ 'tag is-info' : numProductsAdded > 0 }" >{{ numProductsAdded }}</span>
+            </router-link>
           </div>
         </div>
       </div>
