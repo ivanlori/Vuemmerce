@@ -1,15 +1,15 @@
 <template>
     <div class="container">
         <div v-if="products.length !== 0">
-            <h2>Please confirm your shop cart: </h2>
+            <h2>{{confirmHeaderLabel}} </h2>
             <table class="table"   style="width: 100%;">
                 <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Product name</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">{{productNameLabel}}</th>
+                    <th scope="col">{{priceLabel}}</th>
+                    <th scope="col">{{quantityLabel}}</th>
+                    <th scope="col">{{actionLabel}}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -41,8 +41,8 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="4">Total price: {{sum}}</td>
-                        <td><button class="button is-success" @click="confirmOrder">Confirm</button></td>
+                        <td colspan="4">{{totalPriceLabel}} {{sum}}</td>
+                        <td><button class="button is-success" @click="confirmOrder">{{confirmLabel}}</button></td>
                     </tr>
                 </tfoot>
             </table>
@@ -59,8 +59,14 @@
     name: "CartDetail",
     data(){
       return {
-        removeLabel: 'Remove from cart',
+        actionLabel: 'Action',
+        quantityLabel: 'Quantity',
+        priceLabel: 'Price',
+        productNameLabel: 'Product name',
+        totalPriceLabel: 'Total price:',
         cartEmptyLabel: 'Your cart is empty',
+        confirmLabel: 'Confirm',
+        confirmHeaderLabel: 'Quantity',
       }
     },
     computed:{
