@@ -40,7 +40,7 @@
               <span class="icon">
                 <i class="fa fa-shopping-cart"></i>
               </span>
-              <span :class="[numProductsAdded > 0 ? 'tag is-info' : '']">{{ numProductsAdded }}</span>
+              <span :class="{ 'tag is-info' : numProductsAdded > 0 }" >{{ numProductsAdded }}</span>
             </router-link>
           </div>
         </div>
