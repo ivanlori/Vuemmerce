@@ -1,15 +1,15 @@
 <template>
     <div class="container">
         <div v-if="products.length !== 0">
-            <h2>{{confirmHeaderLabel}} </h2>
+            <h2>{{$t("message.CartDetail.confirmHeader")}} </h2>
             <table class="table"   style="width: 100%;">
                 <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">{{productNameLabel}}</th>
-                    <th scope="col">{{priceLabel}}</th>
-                    <th scope="col">{{quantityLabel}}</th>
-                    <th scope="col">{{actionLabel}}</th>
+                    <th scope="col">{{$t("message.CartDetail.productName")}}</th>
+                    <th scope="col">{{$t("message.CartDetail.price")}}</th>
+                    <th scope="col">{{$t("message.CartDetail.quantity")}}</th>
+                    <th scope="col">{{$t("message.CartDetail.action")}}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -41,14 +41,14 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="4">{{totalPriceLabel}} {{sum}}</td>
-                        <td><button class="button is-success" @click="confirmOrder">{{confirmLabel}}</button></td>
+                        <td colspan="4">{{$t("message.CartDetail.totalPrice")}} {{sum}}</td>
+                        <td><button class="button is-success" @click="confirmOrder">{{$t("message.CartDetail.confirm")}}</button></td>
                     </tr>
                 </tfoot>
             </table>
         </div>
         <div v-else class="has-text-centered">
-            <p>{{ cartEmptyLabel }}</p>
+            <p>{{ $t("message.CartDetail.cartEmpty")}}</p>
         </div>
     </div>
 </template>
@@ -57,18 +57,6 @@
     import {mapMutations, mapGetters} from 'vuex';
   export default {
     name: "CartDetail",
-    data(){
-      return {
-        actionLabel: 'Action',
-        quantityLabel: 'Quantity',
-        priceLabel: 'Price',
-        productNameLabel: 'Product name',
-        totalPriceLabel: 'Total price:',
-        cartEmptyLabel: 'Your cart is empty',
-        confirmLabel: 'Confirm',
-        confirmHeaderLabel: 'Quantity',
-      }
-    },
     computed:{
       products () {
         return this.productsAdded();
