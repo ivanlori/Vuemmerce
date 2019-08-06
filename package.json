@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "production": "vue-cli-service build",
-    "development": "vue-cli-service build --mode development"
+    "development": "vue-cli-service build --mode development",
+    "start": "node index.js",
+    "heroku-postinstall": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "express": "^4.16.4",
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "bulma": "^0.7.2",
