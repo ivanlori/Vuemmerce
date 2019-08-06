@@ -10,7 +10,7 @@
     "build": "vue-cli-service build",
     "development": "vue-cli-service build --mode development",
     "start": "node index.js",
-    "heroku-postinstall": "npm run build && node index.js"
+    "heroku-postinstall": "vue-cli-service build && node index.js"
   },
   "repository": {
     "type": "git",
