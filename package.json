@@ -1,30 +1,40 @@
 {
   "name": "vuemmerce",
   "version": "0.8.3",
-  "private": true,
   "description": "Responsive ecommerce template built with Vue.js",
   "author": "ivan lori <ivan.lori@protonmail.com>",
+  "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
+    "production": "vue-cli-service build",
+    "build": "vue-cli-service build",
     "development": "vue-cli-service build --mode development",
-    "express": "vue-cli-service express:watch",
-    "express:run": "vue-cli-service express:run",
-    "production": "vue-cli-service build"
+    "start": "node index.js",
+    "heroku-postinstall": "npm run build && node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivanlori/Vuemmerce.git"
+  },
+  "keywords": [
+    "css",
+    "js",
+    "html",
+    "template",
+    "ecommerce",
+    "vuejs",
+    "theme",
+    "responsive"
+  ],
+  "license": "MIT",
   "dependencies": {
-    "@mdi/font": "^3.5.95",
+    "@vue/cli": "^3.10.0",
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
-    "buefy": "^0.7.3",
     "bulma": "^0.7.2",
-    "bulma-helpers": "^0.3.6",
-    "cors": "^2.8.5",
-    "express": "latest",
-    "kladrapi-for-node": "^0.0.2",
-    "moment": "^2.24.0",
+    "eslint-plugin-html": "^6.0.0",
+    "express": "^4.16.4",
     "vue": "^2.5.21",
-    "vue-cli-plugin-express": "^1.0.0",
-    "vue-i18n": "^8.12.0",
     "vue-router": "^3.0.2",
     "vuex": "^3.0.1"
   },
@@ -34,7 +44,7 @@
     "@vue/cli-plugin-babel": "^3.2.2",
     "@vue/cli-service": "^3.2.3",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.21"
   },
@@ -55,20 +65,5 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ],
-  "keywords": [
-    "css",
-    "js",
-    "html",
-    "template",
-    "ecommerce",
-    "vuejs",
-    "theme",
-    "responsive"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ivanlori/Vuemmerce.git"
-  }
+  ]
 }
