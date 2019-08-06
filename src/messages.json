@@ -1,0 +1,16 @@
+{
+  "en": {
+    "message": {
+      "CartDetail": {
+        "action": "Action",
+        "quantity": "Quantity",
+        "price": "Price",
+        "productName": "Product name",
+        "totalPrice": "Total price:",
+        "cartEmpty": "Your cart is empty",
+        "confirm": "Confirm",
+        "confirmHeader": "Please confirm your shop cart:"
+      }
+    }
+  }
+}

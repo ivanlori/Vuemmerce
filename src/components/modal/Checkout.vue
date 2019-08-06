@@ -17,13 +17,9 @@
 						<p>{{ cartEmptyLabel }}</p>
 					</div>
 				</div>
-				<div v-if="isCheckoutSection">
-					<p>You bought it :-)</p>
-				</div>
 			</section>
 			<footer class="modal-card-foot">
-				<button v-show="products.length > 0 && !isCheckoutSection" class="button is-success" @click="onNextBtn">{{ buyLabel }}</button>
-				<button v-if="isCheckoutSection" class="button is-success" @click="closeModal(true)">{{ closeLabel }}</button>
+				<button v-show="products.length > 0" class="button is-success" @click="onNextBtn">{{ buyLabel }}</button>
 			</footer>
 		</div>
 	</div>
@@ -32,7 +28,7 @@
 <script>
 export default {
 	name: 'checkout-component',
-    
+
 	data () {
 		return {
 			modalTitle: 'Checkout',
@@ -48,11 +44,7 @@ export default {
 				return this.$store.getters.productsAdded;
 			},
 			openModal () {
-				if (this.$store.getters.isCheckoutModalOpen) {
-					return true;
-				} else {
-					return false;
-				}
+				return !!this.$store.getters.isCheckoutModalOpen;
 			},
 			buyLabel () {
 				let totalProducts = this.products.length,
@@ -72,7 +64,7 @@ export default {
 				});
 
 				finalPrice = pricesArray.reduce((a, b) => a + b, 0); // sum the prices
-				
+
 				if (totalProducts > 1) { // set plural or singular
 					productLabel = 'products';
 				} else {
@@ -86,28 +78,23 @@ export default {
 	},
 
 	methods: {
-		closeModal (reloadPage) {
+		closeModal () {
 			this.$store.commit('showCheckoutModal', false);
-
-			if (reloadPage) {
-				window.location.reload();
-			}
 		},
 		removeFromCart (id) {
-			let data = {
-					id: id,
-					status: false
-			}
+			let data = { id: id, status: false };
 			this.$store.commit('removeFromCart', id);
 			this.$store.commit('setAddedBtn', data);
 		},
 		onNextBtn () {
-			if (this.isUserLoggedIn) {
-				this.isCheckoutSection = true;
-			} else {
+			if (!this.isUserLoggedIn) {
 				this.$store.commit('showCheckoutModal', false);
 				this.$store.commit('showLoginModal', true);
+				return;
 			}
+			this.isCheckoutSection = true;
+			this.closeModal();
+			this.$router.push('/order');
 		},
 		onPrevBtn () {
 			this.isCheckoutSection = false;

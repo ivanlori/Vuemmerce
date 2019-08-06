@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import LoginModal from './components/modal/Login';
@@ -28,6 +29,4 @@ export default {
 };
 </script>
 
-<style lang="scss" src="./global-style.scss">
-
-</style>
+<style lang="scss" src="./global-style.scss"></style>

@@ -28,9 +28,12 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@vue/cli": "^3.10.0",
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "bulma": "^0.7.2",
+    "eslint-plugin-html": "^6.0.0",
+    "express": "^4.16.4",
     "vue": "^2.5.21",
     "vue-router": "^3.0.2",
     "vuex": "^3.0.1"
@@ -44,6 +47,9 @@
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.21"
+  },
+  "engines": {
+    "node": "10.3.0"
   },
   "eslintConfig": {
     "root": true,
