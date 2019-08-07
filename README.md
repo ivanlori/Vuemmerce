@@ -1,8 +1,8 @@
-![Vuemmerce ecommerce template](http://svilpress.altervista.org/vuemmerce.jpg)
+ДЕМО: [https://vuemmerce.herokuapp.com/](https://vuemmerce.herokuapp.com/)
 
 # Vuemmerce - Ecommerce Template
 
-Responsive ecommerce template built with Vue.js
+Форк проекта [Responsive ecommerce template built with Vue.js](https://github.com/ivanlori/Vuemmerce)
 
 Используемые технологии:
 
@@ -31,14 +31,6 @@ npm run development
 npm run production
 
 ```
-
-___
-
-## Screenshot
-![Vuemmerce - Ecommerce Template](http://svilpress.altervista.org/screen.png "Vuemmerce - Ecommerce Browser Preview")
-
-**[Template Demo](http://svilpress.altervista.org/)**
-
 ___
 
 ## Author
