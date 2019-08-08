@@ -141,9 +141,7 @@
   "userInfo": {
     "isLoggedIn": false,
     "isSignedUp": false,
-    "hasSearched": false,
-    "name": "",
-    "productTitleSearched": ""
+    "name": ""
   },
   "systemInfo": {
     "openLoginModal": false,

@@ -79,14 +79,8 @@ export default new Vuex.Store({
     isUserSignedUp: (state, isSignedUp) => {
       state.userInfo.isSignedUp = isSignedUp;
     },
-    setHasUserSearched: (state, hasSearched) => {
-      state.userInfo.hasSearched = hasSearched;
-    },
     setUserName: (state, name) => {
       state.userInfo.name = name;
-    },
-    setProductTitleSearched: (state, titleSearched) => {
-      state.userInfo.productTitleSearched = titleSearched;
     },
     showLoginModal: (state, show) => {
       state.systemInfo.openLoginModal = show;
