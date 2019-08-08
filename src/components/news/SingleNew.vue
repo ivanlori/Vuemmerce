@@ -50,18 +50,6 @@ export default {
   components: {
     SocialSharing
   },
-
-  validate ({ params }) {
-    return /^\d+$/.test(params.id)
-  },
-  
-  data () {
-    return {
-      
-    };
-  },
-
-  
   computed: {
     currentUrl() {
       return `${this.$store.state.url}${this.$route.path}`
@@ -70,10 +58,6 @@ export default {
       return this.$store.getters.getNewsById(this.$route.params.id);
     }
   },
-
-  methods: {
-    
-  }
 };
 </script>
 

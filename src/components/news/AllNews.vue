@@ -17,15 +17,13 @@ export default {
   name: 'news-list',
   data () {
     return {
-      title: 'All news',
+      title: this.$t("news.all")
     };
   },
-
   computed: {
     news() {
       return this.$store.state.news;
     },
-    
   },
   methods: {
     newsUrl(id) {

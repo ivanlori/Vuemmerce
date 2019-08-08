@@ -4,9 +4,6 @@
       <div class="news-header">{{newItem.title}}</div>
     </router-link>
     <div class="news-date">{{date}}</div>
-    
-
-    
   </div>
 </template>
 
@@ -14,17 +11,6 @@
 export default {
   name: "newItem",
   props: ["newItem"],
-
-  data() {
-    return {
-    
-    };
-  },
-
-  mounted() {
-    
-  },
-
   computed: {
     link() {
       return `/news/${this.newItem.id}`;
@@ -45,10 +31,6 @@ export default {
       return dd + '.' + mm + '.' + yyyy;
     }
   },
-
-  methods: {
-
-  }
 };
 </script>
 

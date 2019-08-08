@@ -1,6 +1,8 @@
 <template>
   <div class="container news">
-   <h1 class="title">News</h1>
+   <h1 class="title">
+     {{$t("news.title")}}
+   </h1>
     <div class="news-list">
       <div class="card column is-one-quarter" v-for="n in news" :key="n.id">
         <VmNewItem :newItem="n"></VmNewItem>
@@ -8,16 +10,9 @@
     </div>
     <div class="all-news">
       <router-link to="/news">
-        All news
+        {{$t("news.all")}}
       </router-link>
     </div>
-    
-
-        
-      
-      
-    
-    
   </div>
 </template>
 
@@ -27,28 +22,15 @@ import VmNewItem from './NewItem';
 
 export default {
   name: 'newsList',
-  
   components: { VmNewItem },
-  
-  data () {
-    return {
-      id: '',
-      noProductLabel: 'No product found',
-      productsFiltered: []
-    };
-  },
-
   computed: {
     news () {
-      return this.$store.state.news.slice(0, 3);
+      const news = this.$store.state.news || [];
+      return news && news.slice(0, 3);
     }
   },
-
-  methods: {
-    
-  }
-
 };
+
 </script>
 
 <style lang="scss" scoped>
