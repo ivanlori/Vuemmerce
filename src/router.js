@@ -7,6 +7,7 @@ import ProductDetail from '../src/components/product_detail/ProductDetail';
 import WishlistContainer from '../src/components/user/WishlistContainer';
 import OrderPage from "./components/order_page/OrderPage";
 import CartDetail from "./components/cart_detail/CartDetail";
+import SearchResults from "./components/search_results/SearchResults";
 
 Vue.use(Router);
 
@@ -45,5 +46,10 @@ export default new Router({
       name: 'cart',
       component: CartDetail,
     },
+    {
+      path: '/search-results',
+      name: 'search-results',
+      component: SearchResults,
+    }, 
   ],
 });

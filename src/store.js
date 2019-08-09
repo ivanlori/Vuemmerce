@@ -10,6 +10,11 @@ export default new Vuex.Store({
     getCategoryById: state => id => {
       return state.categories.find(category => category.id == id);
     },
+
+
+    getProductsList: state => {
+      return state.products;
+    },
     productsAdded: state => {
       return state.products.filter(el => {
         return el.isAddedToCart;
@@ -23,6 +28,7 @@ export default new Vuex.Store({
     getProductById: state => id => {
       return state.products.find(product => product.id == id);
     },
+
     isUserLoggedIn: state => {
       return state.userInfo.isLoggedIn;
     },
@@ -32,6 +38,10 @@ export default new Vuex.Store({
     getUserName: state => {
       return state.userInfo.name;
     },
+
+    getSearchParams: state => state.searchParams,
+    getSearchConrolsSate: state => state.searchConrolsSate,
+
     isLoginModalOpen: state => {
       return state.systemInfo.openLoginModal;
     },
@@ -41,6 +51,7 @@ export default new Vuex.Store({
     isCheckoutModalOpen: state => {
       return state.systemInfo.openCheckoutModal;
     },
+
     quantity: state => {
       return state.products.quantity;
     }
@@ -73,6 +84,7 @@ export default new Vuex.Store({
         el.isFavourite = false;
       });
     },
+
     isUserLoggedIn: (state, isUserLoggedIn) => {
       state.userInfo.isLoggedIn = isUserLoggedIn;
     },
@@ -82,6 +94,19 @@ export default new Vuex.Store({
     setUserName: (state, name) => {
       state.userInfo.name = name;
     },
+
+    setSearchParams: (state, searchParams) => {
+      state.searchParams = searchParams
+    },
+
+    setSearchConrolsSateQueryStringInputText: (state, queryStringInputText) => {
+      console.log(queryStringInputText)
+      state.searchConrolsSate.queryStringInputText = queryStringInputText
+    },
+    setSearchConrolsSateSearchInWishListCheckboxValue: (state, searchInWishListCheckboxValue) => {
+      state.searchConrolsSate.searchInWishListCheckboxValue = searchInWishListCheckboxValue
+    },
+
     showLoginModal: (state, show) => {
       state.systemInfo.openLoginModal = show;
     },

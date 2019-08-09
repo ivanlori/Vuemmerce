@@ -143,6 +143,16 @@
     "isSignedUp": false,
     "name": ""
   },
+
+  "searchParams": {
+    "query": "",
+    "searchInWishList": false
+  },
+  "searchConrolsSate": {
+    "queryStringInputText": "",
+    "searchInWishListCheckboxValue": false
+  },
+  
   "systemInfo": {
     "openLoginModal": false,
     "openSignupModal": false,
