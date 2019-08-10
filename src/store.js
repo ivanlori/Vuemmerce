@@ -100,7 +100,6 @@ export default new Vuex.Store({
     },
 
     setSearchConrolsSateQueryStringInputText: (state, queryStringInputText) => {
-      console.log(queryStringInputText)
       state.searchConrolsSate.queryStringInputText = queryStringInputText
     },
     setSearchConrolsSateSearchInWishListCheckboxValue: (state, searchInWishListCheckboxValue) => {

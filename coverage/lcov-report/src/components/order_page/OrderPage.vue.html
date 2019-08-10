@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/order_page/OrderPage.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/components/order_page</a> OrderPage.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>4/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>4/16</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;!--suppress XmlUnboundNsPrefix --&gt;
+&lt;template&gt;
+    &lt;div class="order-page"&gt;
+        &lt;custom-stepper
+                :step-tabs="[
+                    {title: 'Выбор способа оплаты'},
+                    {title: 'Выбор адреса и времени доставки'},
+                    {title: 'Выберите удобное для вас время доставки'},
+                ]"
+                submitTitle="Завершить оформление заказа"
+                :submit="checkOrder"&gt;
+&nbsp;
+            &lt;template v-slot:step1&gt;
+                &lt;p class="content"&gt;
+                    &lt;b&gt;Выберите способ оплаты:&lt;/b&gt;
+                &lt;/p&gt;
+                &lt;b-field v-for="payTypeItem in payTypeList" :key="payType.code"&gt;
+                    &lt;b-radio v-model="payType" size="is-medium" :native-value="payTypeItem.code"&gt;
+                        &lt;div class="is-flex is-vertical-center"&gt;
+                            &lt;figure class="image is-64x64"&gt;
+                                &lt;img :src="payTypeItem.icon"&gt;
+                            &lt;/figure&gt;
+                            &lt;b class="has-margin-left-10"&gt;{{ payTypeItem.title }}&lt;/b&gt;
+                        &lt;/div&gt;
+                    &lt;/b-radio&gt;
+                &lt;/b-field&gt;
+            &lt;/template&gt;
+&nbsp;
+            &lt;template v-slot:step2&gt;
+                &lt;b-field label="Город доставки"
+                         :type="formNeedValidate &amp;&amp; !searchCity ? 'is-danger' : ''"
+                         message="Это поле обязательно к заполнению"&gt;
+                    &lt;city-autocomplete @select="val =&gt; searchCity = val" /&gt;
+                &lt;/b-field&gt;
+                &lt;b-field label="Адрес доставки"
+                         :type="formNeedValidate &amp;&amp; !address ? 'is-danger' : ''"
+                         message="Это поле обязательно к заполнению"&gt;
+                    &lt;b-input v-model="address"&gt;&lt;/b-input&gt;
+                &lt;/b-field&gt;
+                &lt;div class="is-flex is-full-width"&gt;
+                    &lt;b-field label="Выберите дату доставки" class="is-full-width"
+                             :type="formNeedValidate &amp;&amp; !dateShipping ? 'is-danger' : ''"
+                             message="Это поле обязательно к заполнению"&gt;
+                        &lt;b-datepicker v-model="dateShipping"
+                                      :first-day-of-week="1"
+                                      :min-date="new Date()"
+                                      :keep-first="true"
+                                      placeholder="Кликните для выбора даты..."&gt;
+                            &lt;button class="button is-primary"
+                                    @click="dateShipping = new Date()"&gt;
+                                &lt;b-icon icon="calendar-today"&gt;&lt;/b-icon&gt;
+                                &lt;span&gt;Сегодня&lt;/span&gt;
+                            &lt;/button&gt;
+                            &lt;button class="button is-danger"
+                                    @click="dateShipping = null"&gt;
+                                &lt;b-icon icon="close"&gt;&lt;/b-icon&gt;
+                                &lt;span&gt;Очистить&lt;/span&gt;
+                            &lt;/button&gt;
+                        &lt;/b-datepicker&gt;
+                    &lt;/b-field&gt;
+                    &lt;b-field label="Выберите удобное для вас время доставки" class="has-margin-left-20 is-full-width"&gt;
+                        &lt;b-timepicker
+                                v-model="timeShipping"
+                                placeholder="Кликните для выбора времени..."&gt;&lt;/b-timepicker&gt;
+                    &lt;/b-field&gt;
+                &lt;/div&gt;
+            &lt;/template&gt;
+&nbsp;
+            &lt;template v-slot:step3&gt;
+                &lt;h3&gt;Проверьте введенные данные: &lt;/h3&gt;
+                &lt;div class="order-row-list"&gt;
+                    &lt;dotted-row title="Способ оплаты" :value="selectedPayTypeTitle" /&gt;
+                    &lt;dotted-row title="Город доставки" :value="searchCity" /&gt;
+                    &lt;dotted-row title="Адрес доставки" :value="address" /&gt;
+                    &lt;dotted-row title="Дата доставки" :value="deliveryDateTime" /&gt;
+                &lt;/div&gt;
+            &lt;/template&gt;
+&nbsp;
+        &lt;/custom-stepper&gt;
+&nbsp;
+        &lt;b-modal :active.sync="isShowModal" @close="() =&gt; $router.push('/')"&gt;
+            &lt;div class="modal-card" style="width: auto"&gt;
+                &lt;header class="modal-card-head"&gt;
+                    &lt;p class="modal-card-title"&gt;Заказ оформлен&lt;/p&gt;
+                &lt;/header&gt;
+                &lt;section class="modal-card-body"&gt;
+                    Спасибо за заказ!
+                &lt;/section&gt;
+            &lt;/div&gt;
+        &lt;/b-modal&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+    import moment from 'moment';
+    import DottedRow from "./DottedRow";
+    import CustomStepper from "./CustomStepper";
+    import CityAutocomplete from "./CityAutocomplete";
+&nbsp;
+    export default {
+        components: {
+            CityAutocomplete,
+            DottedRow,
+            CustomStepper,
+        },
+      name: 'order-page',
+        data () {
+<span class="cstat-no" title="statement not covered" >            return {</span>
+                formNeedValidate: false,
+                payType: "cash",
+                payTypeList: [
+                    { title: "Наличными", code: "cash",  "icon": "https://rentavto.ru/wp-content/uploads/2017/11/52240963.2yf2mccjit.W665.png" },
+                    { title: "Банковкой картой", code: "card", "icon": "http://city4g.ru/wa-data/public/shop/img/cash_oplata.png" },
+                ],
+                searchCity: '',
+                address: '',
+                dateShipping: moment().toDate(),
+                timeShipping: moment().toDate(),
+                isShowModal: false,
+            };
+        },
+        computed: {
+<span class="fstat-no" title="function not covered" >            selectedPayTypeTitle: function () {</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >                const type = this.payTypeList.find(payTypeItem =&gt; payTypeItem.code === this.payType);</span></span>
+<span class="cstat-no" title="statement not covered" >                return type ? type.title : null;</span>
+            },
+<span class="fstat-no" title="function not covered" >            deliveryDateTime: function () {</span>
+<span class="cstat-no" title="statement not covered" >                const formattedDate = moment(this.dateShipping).format('D/MM/YY');</span>
+<span class="cstat-no" title="statement not covered" >                const formattedTime = moment(this.timeShipping).format('HH:mm');</span>
+<span class="cstat-no" title="statement not covered" >                return `${formattedDate} ${formattedTime}`;</span>
+            }
+        },
+        methods: {
+<span class="fstat-no" title="function not covered" >            checkOrder: function () {</span>
+<span class="cstat-no" title="statement not covered" >                if (!this.selectedPayTypeTitle) return false;</span>
+<span class="cstat-no" title="statement not covered" >                if (!this.searchCity) return false;</span>
+<span class="cstat-no" title="statement not covered" >                if (!this.address) return false;</span>
+<span class="cstat-no" title="statement not covered" >                if (!this.dateShipping) return false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                this.isShowModal = true;</span>
+            },
+            danger(text) {
+<span class="cstat-no" title="statement not covered" >                this.$snackbar.open({</span>
+                    duration: 2000,
+                    message: `Ошибка: ${text}`,
+                    type: 'is-danger',
+                    position: 'is-bottom-right'
+                })
+            }
+        }
+    };
+&lt;/script&gt;
+&nbsp;
+&lt;style lang="scss"&gt;
+    .order-row-list {
+        margin: 40px;
+        &gt; * {
+            margin-bottom: 10px;
+        }
+    }
+    .order-page {
+        width: 60%;
+        min-height: 300px;
+        margin: 40px auto;
+    }
+    .is-vertical-center {
+        display: flex;
+        align-items: center;
+    }
+    .tab-content {
+        overflow: visible!important;
+    }
+    .dotted {
+        background: url('/assets/icon-dotted.png') repeat-x left 83%;
+    }
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 11 2019 01:56:50 GMT+0400 (GMT+04:00)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

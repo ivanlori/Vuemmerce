@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/modal/Checkout.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\..\index.html">All files</a> / <a href="index.html">src/components/modal</a> Checkout.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/26</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+	&lt;div :class="[ openModal ? 'is-active' : '', 'modal' ]"&gt;
+		&lt;div class="modal-background"&gt;&lt;/div&gt;
+		&lt;div class="modal-card"&gt;
+			&lt;header class="modal-card-head"&gt;
+				&lt;p class="modal-card-title"&gt;{{ modalTitle }}&lt;/p&gt;
+				&lt;button class="delete" aria-label="close" @click="closeModal(false)"&gt;&lt;/button&gt;
+			&lt;/header&gt;
+			&lt;section class="modal-card-body"&gt;
+				&lt;div v-if="!isCheckoutSection"&gt;
+					&lt;div class="box" v-for="product in products" :key="product.id"&gt;
+						&lt;button class="is-pulled-right button is-info is-inverted" @click="removeFromCart(product.id)"&gt;{{ removeLabel }}&lt;/button&gt;
+						&lt;p&gt;{{ product.title }}  {{ product.quantity &gt; 0 ?  ` - Quantity: ${product.quantity}` : ''}}&lt;/p&gt;
+						&lt;p&gt;{{ product.price }} &amp;euro;&lt;/p&gt;
+					&lt;/div&gt;
+					&lt;div v-if="products.length === 0"&gt;
+						&lt;p&gt;{{ cartEmptyLabel }}&lt;/p&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/section&gt;
+			&lt;footer class="modal-card-foot"&gt;
+				&lt;button v-show="products.length &gt; 0" class="button is-success" @click="onNextBtn"&gt;{{ buyLabel }}&lt;/button&gt;
+			&lt;/footer&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+export default {
+	name: 'checkout-component',
+&nbsp;
+	data () {
+<span class="cstat-no" title="statement not covered" >		return {</span>
+			modalTitle: 'Checkout',
+			removeLabel: 'Remove from cart',
+			cartEmptyLabel: 'Your cart is empty',
+			closeLabel: 'Close',
+			isCheckoutSection: false
+		}
+	},
+&nbsp;
+	computed: {
+			products () {
+<span class="cstat-no" title="statement not covered" >				return this.$store.getters.productsAdded;</span>
+			},
+			openModal () {
+<span class="cstat-no" title="statement not covered" >				return !!this.$store.getters.isCheckoutModalOpen;</span>
+			},
+			buyLabel () {
+<span class="cstat-no" title="statement not covered" >				let totalProducts = this.products.length,</span>
+						productsAdded = this.$store.getters.productsAdded,
+						pricesArray = [],
+						productLabel = '',
+						finalPrice = '',
+						quantity = 1;
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >				productsAdded.forEach(product =&gt; {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >					if (product.quantity &gt;= 1) {</span>
+<span class="cstat-no" title="statement not covered" >						quantity = product.quantity;</span>
+					}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >					pricesArray.push((product.price * quantity)); // get the price of every product added and multiply quantity</span>
+				});
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >				finalPrice = pricesArray.reduce((a, b) =&gt; a + b, 0); // sum the prices</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >				if (totalProducts &gt; 1) { // set plural or singular</span>
+<span class="cstat-no" title="statement not covered" >					productLabel = 'products';</span>
+				} else {
+<span class="cstat-no" title="statement not covered" >					productLabel = 'product';</span>
+				}
+<span class="cstat-no" title="statement not covered" >				return `Buy ${totalProducts} ${productLabel} at ${finalPrice}€`;</span>
+		},
+		isUserLoggedIn () {
+<span class="cstat-no" title="statement not covered" >			return this.$store.getters.isUserLoggedIn;</span>
+		}
+	},
+&nbsp;
+	methods: {
+		closeModal () {
+<span class="cstat-no" title="statement not covered" >			this.$store.commit('showCheckoutModal', false);</span>
+		},
+		removeFromCart (id) {
+<span class="cstat-no" title="statement not covered" >			let data = { id: id, status: false };</span>
+<span class="cstat-no" title="statement not covered" >			this.$store.commit('removeFromCart', id);</span>
+<span class="cstat-no" title="statement not covered" >			this.$store.commit('setAddedBtn', data);</span>
+		},
+		onNextBtn () {
+<span class="cstat-no" title="statement not covered" >			if (!this.isUserLoggedIn) {</span>
+<span class="cstat-no" title="statement not covered" >				this.$store.commit('showCheckoutModal', false);</span>
+<span class="cstat-no" title="statement not covered" >				this.$store.commit('showLoginModal', true);</span>
+<span class="cstat-no" title="statement not covered" >				return;</span>
+			}
+<span class="cstat-no" title="statement not covered" >			this.isCheckoutSection = true;</span>
+<span class="cstat-no" title="statement not covered" >			this.closeModal();</span>
+<span class="cstat-no" title="statement not covered" >			this.$router.push('/order');</span>
+		},
+		onPrevBtn () {
+<span class="cstat-no" title="statement not covered" >			this.isCheckoutSection = false;</span>
+		}
+	}
+}
+&lt;/script&gt;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Aug 11 2019 01:56:50 GMT+0400 (GMT+04:00)
+</div>
+</div>
+<script src="..\..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\..\sorter.js"></script>
+</body>
+</html>

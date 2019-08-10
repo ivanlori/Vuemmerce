@@ -52,7 +52,7 @@ export default {
 		search () {
 			console.log({query: this.query, searchInWishList: this.searchInWishList})
 			this.setSearchParams({query: this.query, searchInWishList: this.searchInWishList})
-			this.$router.push({ path: 'search-results'})
+			this.$router.push({ path: '/search-results'})
 		}
 	}
 }
