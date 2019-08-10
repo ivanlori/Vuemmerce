@@ -11,6 +11,10 @@
         "confirm": "Confirm",
         "confirmHeader": "Please confirm your shop cart:"
       }
+    },
+    "news": {
+      "title": "News",
+      "all": "All news"
     }
   }
 }
