@@ -7,23 +7,23 @@
             <td colspan="2"><img width="150px" :src="getAvatar"></td>
         <tr><br />
         <tr>
-            <td>Email:</td>
-            <td><input :class="isEmailCorrect ? '' : 'red-border'" type="email" :placeholder="getUserEmail" v-model="email"></td>
+            <td>{{ $t("profile.email") }}:</td>
+            <td><input type="email" :placeholder="getUserEmail" v-model="email" :class="{'red-border': !isEmailCorrect}"></td>
         </tr>
         <tr>
-            <td>Address:</td>
-            <td><input :class="isAddressCorrect ? '' : 'red-border'" :placeholder="getUserAddress" v-model="address"></td>
+            <td>{{ $t("profile.address") }}:</td>
+            <td><input :placeholder="getUserAddress" v-model="address" :class="{'red-border': !isAddressCorrect}"></td>
         </tr>
         <tr>
-            <td>New Password:</td>
-            <td><input :class="isPasswordCorrect ? '' : 'red-border'" type="password" v-model="password"></td>
+            <td>{{ $t("profile.password") }}:</td>
+            <td><input type="password" v-model="password" :class="{'red-border': !isPasswordCorrect}"></td>
         </tr>
         <tr>
-            <td>Confirmation:</td>
-            <td><input :class="isPasswordCorrect ? '' : 'red-border'" type="password" v-model="repeatPassword"></td>
+            <td>{{ $t("profile.confirmation") }}:</td>
+            <td><input type="password" v-model="repeatPassword" :class="{'red-border': !isPasswordCorrect}"></td>
         </tr>
         <tr>
-            <td>Avatar:</td>
+            <td>{{ $t("profile.avatar") }}:</td>
             <td><input type="file" @change="readFile"></td>
         </tr>
         </tbody>
@@ -31,7 +31,7 @@
         <button @click="save">Save</button>
     </div>
     <div class="profile" v-else>
-        Please login to see profile data.
+        {{ $t("profile.pleaseLogin") }}
     </div>
   </div>
 </template>
@@ -61,9 +61,7 @@ export default {
 
   methods: {
     readFile(event) {
-        var image = new Image();
         var reader = new FileReader();
-
         reader.onload = (e) => {
             this.avatarBinary = e.target.result;
         };
@@ -97,6 +95,7 @@ export default {
         if ( this.avatarBinary ) {
             this.$store.commit('saveAvatar', this.avatarBinary);
         }
+        console.log(this.isEmailCorrect, this.isAddressCorrect, this.isPasswordCorrect);
 
         if ( isCorrect ) {
             changes.map(f => f());
@@ -111,9 +110,12 @@ export default {
 margin: 40px;
 }
 .red-border {
-    border-color: red,
+    border-color: red;
 }
 td {
     padding-right: 5px;
+}
+input {
+    margin: 2px;
 }
 </style>

@@ -21,6 +21,7 @@
 			</div>
 		</div>
 		<div v-if="isUserLoggedIn" class="navbar-item has-dropdown is-hoverable">
+            <img :src="getAvatar">
 			<a class="navbar-link">
 			Welcome {{ getUserName }}
 			</a>
@@ -41,6 +42,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
 	name: 'menu-component',
 	data () {
@@ -54,6 +57,7 @@ export default {
 	},
 
 	computed: {
+        ...mapGetters(['getAvatar']),
 		isUserLoggedIn () {
 			return this.$store.getters.isUserLoggedIn;
 		},
