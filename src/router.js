@@ -7,6 +7,7 @@ import ProductDetail from '../src/components/product_detail/ProductDetail';
 import WishlistContainer from '../src/components/user/WishlistContainer';
 import OrderPage from "./components/order_page/OrderPage";
 import CartDetail from "./components/cart_detail/CartDetail";
+import Profile from "./components/profile/Profile";
 import AllNews from "./components/news/AllNews";
 import SingleNew from "./components/news/SingleNew";
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/cart',
       name: 'cart',
       component: CartDetail,
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: Profile,
     },
     {
       path: '/news',

@@ -15,6 +15,14 @@
     "news": {
       "title": "News",
       "all": "All news"
+    },
+    "profile": {
+      "email": "Email",
+      "address": "Address",
+      "password": "New Password",
+      "confirmation": "Confirmation",
+      "avatar": "Avatar",
+      "pleaseLogin": "Please login to see profile data"
     }
   }
 }

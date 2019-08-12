@@ -160,6 +160,8 @@ export default {
         this.highlightPasswordWithError = false;
         this.isFormSuccess = true;
         this.$store.commit('setUserName', this.name);
+        this.$store.commit('setUserEmail', this.email);
+        this.$store.commit('setUserPassword', this.password);
         this.$store.commit('isUserSignedUp', this.isFormSuccess);
         this.$store.commit('isUserLoggedIn', this.isFormSuccess);
       }

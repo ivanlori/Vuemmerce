@@ -286,7 +286,11 @@
     "isSignedUp": false,
     "hasSearched": false,
     "name": "",
-    "productTitleSearched": ""
+    "productTitleSearched": "",
+    "email": "",
+    "address": "",
+    "password": "",
+    "avatarBinary": ""
   },
   "systemInfo": {
     "openLoginModal": false,
