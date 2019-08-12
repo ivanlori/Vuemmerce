@@ -8,6 +8,8 @@ import WishlistContainer from '../src/components/user/WishlistContainer';
 import OrderPage from "./components/order_page/OrderPage";
 import CartDetail from "./components/cart_detail/CartDetail";
 import SearchResults from "./components/search_results/SearchResults";
+import AllNews from "./components/news/AllNews";
+import SingleNew from "./components/news/SingleNew";
 
 Vue.use(Router);
 
@@ -51,5 +53,16 @@ export default new Router({
       name: 'search-results',
       component: SearchResults,
     }, 
+    {
+      path: '/news',
+      name: 'news',
+      component: AllNews
+    },
+    {
+      path: '/news/:id',
+      name: 'singleNew',
+      component: SingleNew,
+      props: true
+    }
   ],
 });

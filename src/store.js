@@ -54,7 +54,10 @@ export default new Vuex.Store({
 
     quantity: state => {
       return state.products.quantity;
-    }
+    },
+    getNewsById: state => id => {
+      return state.news.find(newItem => newItem.id == id);
+    },
   },
   
   mutations: {
