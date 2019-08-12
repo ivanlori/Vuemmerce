@@ -53,7 +53,7 @@
               </button>
               <div class="select is-rounded is-small">
                 <select @change="onSelectQuantity(product.id)" v-model="selected">
-                  <option v-for="quantity in quantityArray" :value="quantity">{{ quantity }}</option>
+                  <option v-for="quantity in quantityArray" :value="quantity" :key="quantity">{{ quantity }}</option>
                 </select>
               </div>
             </div>

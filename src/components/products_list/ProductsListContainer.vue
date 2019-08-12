@@ -30,23 +30,9 @@ export default {
 
   computed: {
     products () {
-      if (this.$store.state.userInfo.hasSearched) {
-        return this.getProductByTitle();
-      } else {
         return this.$store.state.products;
-      }
-    }
-  },
-
-  methods: {
-    getProductByTitle () {
-      let listOfProducts = this.$store.state.products,
-          titleSearched = this.$store.state.userInfo.productTitleSearched;
-      
-      return this.productsFiltered = getByTitle(listOfProducts, titleSearched);
     }
   }
-
 };
 </script>
 

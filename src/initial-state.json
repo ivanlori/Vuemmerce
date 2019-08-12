@@ -284,14 +284,22 @@
   "userInfo": {
     "isLoggedIn": false,
     "isSignedUp": false,
-    "hasSearched": false,
     "name": "",
-    "productTitleSearched": "",
     "email": "",
     "address": "",
     "password": "",
     "avatarBinary": ""
   },
+
+  "searchParams": {
+    "query": "",
+    "searchInWishList": false
+  },
+  "searchConrolsSate": {
+    "queryStringInputText": "",
+    "searchInWishListCheckboxValue": false
+  },
+  
   "systemInfo": {
     "openLoginModal": false,
     "openSignupModal": false,
