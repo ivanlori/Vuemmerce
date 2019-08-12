@@ -42,6 +42,18 @@ export default new Vuex.Store({
     getSearchParams: state => state.searchParams,
     getSearchConrolsSate: state => state.searchConrolsSate,
 
+    getUserEmail: state => {
+      return state.userInfo.email;
+    },
+    getUserAddress: state => {
+      return state.userInfo.address;
+    },
+    getUserPassword: state => {
+      return state.userInfo.password;
+    },
+    getAvatar: state => {
+      return state.userInfo.avatarBinary;
+    },
     isLoginModalOpen: state => {
       return state.systemInfo.openLoginModal;
     },
@@ -100,6 +112,28 @@ export default new Vuex.Store({
 
     setSearchParams: (state, searchParams) => {
       state.searchParams = searchParams
+    },
+    
+    saveAvatar: (state, avatarBinary) => {
+      state.userInfo.avatarBinary = avatarBinary;
+    },
+    setHasUserSearched: (state, hasSearched) => {
+      state.userInfo.hasSearched = hasSearched;
+    },
+    setUserName: (state, name) => {
+      state.userInfo.name = name;
+    },
+    setUserEmail: (state, email) => {
+      state.userInfo.email = email;
+    },
+    setUserAddress: (state, address) => {
+      state.userInfo.address = address;
+    },
+    setUserPassword: (state, password) => {
+      state.userInfo.password = password;
+    },
+    setProductTitleSearched: (state, titleSearched) => {
+      state.userInfo.productTitleSearched = titleSearched;
     },
 
     setSearchConrolsSateQueryStringInputText: (state, queryStringInputText) => {

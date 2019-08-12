@@ -284,7 +284,11 @@
   "userInfo": {
     "isLoggedIn": false,
     "isSignedUp": false,
-    "name": ""
+    "name": "",
+    "email": "",
+    "address": "",
+    "password": "",
+    "avatarBinary": ""
   },
 
   "searchParams": {

@@ -21,10 +21,14 @@
 			</div>
 		</div>
 		<div v-if="isUserLoggedIn" class="navbar-item has-dropdown is-hoverable">
+            <img :src="getAvatar">
 			<a class="navbar-link">
 			Welcome {{ getUserName }}
 			</a>
 			<div class="navbar-dropdown is-boxed">
+				<router-link class="navbar-item" :to="{ path: '/profile' }">
+					{{ profileLabel }}
+				</router-link>
 				<router-link class="navbar-item" :to="{ path: '/wishlist', name: 'wishlist-container-component' }">
 					{{ wishlistLabel }}
 				</router-link>
@@ -38,10 +42,13 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
 	name: 'menu-component',
 	data () {
 		return {
+			profileLabel: 'Profile',
 			wishlistLabel: 'Wishlist',
 			logoutLabel: 'Log out',
 			loginLabel: 'Log in',
@@ -50,6 +57,7 @@ export default {
 	},
 
 	computed: {
+        ...mapGetters(['getAvatar']),
 		isUserLoggedIn () {
 			return this.$store.getters.isUserLoggedIn;
 		},
