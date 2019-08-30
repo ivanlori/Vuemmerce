@@ -3,9 +3,14 @@
     <breadcrumbs-component :items="path" />
     <div class="section">
       <div class="card is-clearfix columns">
-          <figure class="card-image is-480x480 column is-one-thirds">
+        <div class="columns column is-one-thirds is-multiline">
+          <figure class="card-image is-480x480 column is-full">
             <img src="https://bulma.io/images/placeholders/480x480.png">
           </figure>
+            <div class="card-image is-480x480 column is-full">
+              <product-detail-images-component product-id="product.id"></product-detail-images-component>
+            </div>
+          </div>
           <div class="card-content column is-two-thirds">
             <div class="card-content__title">
               <h2 class="title is-4">{{ product.title }}
@@ -77,10 +82,13 @@
 
 <script>
 import BreadcrumbsComponent from '../Breadcrumbs'
+import ProductDetailImagesComponent from './ProductDetailImages'
+
 export default {
   name: 'product-detail-component',
   components: {
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    ProductDetailImagesComponent
   },
   data () {
     return {
