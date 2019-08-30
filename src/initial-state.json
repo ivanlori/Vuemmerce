@@ -136,6 +136,123 @@
       "isFavourite": false,
       "quantity": 1,
       "category": 3
+    },
+    {
+      "id": 10,
+      "title": "Product 10",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": 50,
+      "ratings": 3,
+      "reviews": 5,
+      "isAddedToCart": false,
+      "isAddedBtn": false,
+      "isFavourite": false,
+      "quantity": 1,
+      "category": 1
+    },
+    {
+      "id": 11,
+      "title": "Product 11",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": 35,
+      "ratings": 5,
+      "reviews": 10,
+      "isAddedToCart": false,
+      "isAddedBtn": false,
+      "isFavourite": false,
+      "quantity": 1,
+      "category": 2
+    },
+    {
+      "id": 12,
+      "title": "Product 12",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": 110,
+      "ratings": 2,
+      "reviews": 3,
+      "isAddedToCart": false,
+      "isAddedBtn": false,
+      "isFavourite": false,
+      "quantity": 1,
+      "category": 1
+    },
+    {
+      "id": 13,
+      "title": "Product 13",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": 50,
+      "ratings": 1,
+      "reviews": 0,
+      "isAddedToCart": false,
+      "isAddedBtn": false,
+      "isFavourite": false,
+      "quantity": 1,
+      "category": 1
+    },
+    {
+      "id": 14,
+      "title": "Product 14",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": 35,
+      "ratings": 4,
+      "reviews": 2,
+      "isAddedToCart": false,
+      "isAddedBtn": false,
+      "isFavourite": false,
+      "quantity": 1,
+      "category": 2
+    },
+    {
+      "id": 15,
+      "title": "Product 15",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": 110,
+      "ratings": 5,
+      "reviews": 1,
+      "isAddedToCart": false,
+      "isAddedBtn": false,
+      "isFavourite": false,
+      "quantity": 1,
+      "category": 3
+    },
+    {
+      "id": 16,
+      "title": "Product 16",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": 50,
+      "ratings": 5,
+      "reviews": 7,
+      "isAddedToCart": false,
+      "isAddedBtn": false,
+      "isFavourite": false,
+      "quantity": 1,
+      "category": 1
+    },
+    {
+      "id": 17,
+      "title": "Product 17",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": 35,
+      "ratings": 3,
+      "reviews": 0,
+      "isAddedToCart": false,
+      "isAddedBtn": false,
+      "isFavourite": false,
+      "quantity": 1,
+      "category": 1
+    },
+    {
+      "id": 18,
+      "title": "Product 18",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "price": 110,
+      "ratings": 4,
+      "reviews": 2,
+      "isAddedToCart": false,
+      "isAddedBtn": false,
+      "isFavourite": false,
+      "quantity": 1,
+      "category": 1
     }
   ],
   "news": [
@@ -299,7 +416,7 @@
     "queryStringInputText": "",
     "searchInWishListCheckboxValue": false
   },
-  
+
   "systemInfo": {
     "openLoginModal": false,
     "openSignupModal": false,
