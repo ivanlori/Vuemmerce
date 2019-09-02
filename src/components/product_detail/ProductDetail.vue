@@ -8,7 +8,7 @@
             <img src="https://bulma.io/images/placeholders/480x480.png">
           </figure>
             <div class="card-image is-480x480 column is-full">
-              <product-detail-images-component product-id="product.id"></product-detail-images-component>
+              <product-detail-images-component v-bind:product-id="product.id"></product-detail-images-component>
             </div>
           </div>
           <div class="card-content column is-two-thirds">
@@ -102,7 +102,7 @@ export default {
     };
   },
 
-  mounted () {
+  created () {
     this.product = this.$store.getters.getProductById(this.$route.params.id);
     this.selected = this.product.quantity;
 

@@ -1,8 +1,5 @@
 <template>
-    <div class="carousel-placeholder" v-if="imagesLoading">
-        <p>Loading ...</p>
-    </div>
-    <div v-else>
+    <div>
         <hooper class="carousel" :itemsToShow="4" :infiniteScroll="true">
             <slide v-for="(slide, i) in slides" :key="i" v-html="slide.content"></slide>
             <hooper-navigation slot="hooper-addons"></hooper-navigation>
@@ -12,45 +9,37 @@
 
 <script>
     import { Hooper, Slide, Navigation as HooperNavigation } from 'hooper'
-    //import 'hooper/dist/hooper.css'
-    import productImages from './ProductDetailImages.json'
-    import { setTimeout } from 'timers';
 
     export default {
-    name: 'product-detail-images-component',
-    components: {
-        Hooper,
-        Slide,
-        HooperNavigation
-    },
-    props: {
-        productId: {
-            type: String,
-            required: true
-        }
-    },
-    data () {
-        return {
-                slides: [],
-                imagesLoading: false      
+        name: 'product-detail-images-component',
+        components: {
+            Hooper,
+            Slide,
+            HooperNavigation
+        },
+        props: {
+            productId: {
+                type: Number,
+                required: true
             }
         },
-         created: function() {
-            const getImages = function() { // Async behaviour emulation
-                for(let i = 0; i < productImages.length; i++) {
-                    this.slides[i] = {
-                        content: `<div
-                            style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
-                            background-image: url(${productImages[i].src}); background-repeat: no-repeat; background-position: center center;">
-                                ${productImages[i].title}
-                            </div>`,
-                        link: `${productImages[i].src}`
-                    }
-                }
-                this.imagesLoading = false;
+        data () {
+            return {
+                slides: []      
             }
-            this.imagesLoading = true;
-            setTimeout( getImages.bind(this), 1000);
+        },
+        created () {
+            const productImages = this.$store.getters.getProductImages(this.productId);
+            for(let i = 0; i < productImages.length; i++) {
+                this.slides[i] = {
+                    content: `<div
+                        style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                        background-image: url(${productImages[i].src}); background-repeat: no-repeat; background-position: center center;">
+                            ${productImages[i].title}
+                        </div>`,
+                    link: `${productImages[i].src}`
+                }
+            }
         } 
     }
 </script>

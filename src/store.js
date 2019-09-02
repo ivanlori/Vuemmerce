@@ -28,6 +28,9 @@ export default new Vuex.Store({
     getProductById: state => id => {
       return state.products.find(product => product.id == id);
     },
+    getProductImages: state => id => {
+      return state.products.find(product => product.id == id).images;
+    },
 
     isUserLoggedIn: state => {
       return state.userInfo.isLoggedIn;
