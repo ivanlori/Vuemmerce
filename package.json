@@ -24,8 +24,10 @@
     "bulma-helpers": "^0.3.8",
     "eslint-plugin-html": "^6.0.0",
     "express": "^4.16.4",
+    "hooper": "^0.3.4",
     "moment": "^2.24.0",
-    "vue": "^2.5.21",
+    "vue": "^2.6.10",
+    "vue-cli": "^2.9.6",
     "vue-i18n": "^8.12.0",
     "vue-router": "^3.0.2",
     "vue-social-sharing": "^2.4.5",
@@ -41,9 +43,11 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-plugin-transform-runtime": "^6.23.0",
+    "jest-serializer-vue": "^2.0.2",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.21"
+    "vue-server-renderer": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,

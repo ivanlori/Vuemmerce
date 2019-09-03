@@ -36,6 +36,8 @@ $navbar-background-color: $white;
 @import "../node_modules/bulma/sass/layout/hero.sass";
 @import "../node_modules/bulma/sass/layout/section.sass";
 
+@import "../node_modules/hooper/dist/hooper.css";
+
 /**
  * When Bulma doesn't provide variables
  * to replace the style I replace it

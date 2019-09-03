@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductDetailImages.vue snapshot renderer test 1`] = `
+<div slides="">
+  <section tabindex="0" class="carousel hooper">
+    <div class="hooper-list">
+      <ul class="hooper-track" style="transform:translate(0px, 0);">
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #1
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #2
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #3
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #4
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #5
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #6
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #7
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #8
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #9
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide is-prev" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #10
+          </div>
+        </li>
+        <li class="hooper-slide is-active" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #1
+          </div>
+        </li>
+        <li class="hooper-slide is-active" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #2
+          </div>
+        </li>
+        <li class="hooper-slide is-active" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #3
+          </div>
+        </li>
+        <li class="hooper-slide is-active" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #4
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide is-next" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #5
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #6
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #7
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #8
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #9
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #10
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide is-clone" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #1
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide is-clone" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #2
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide is-clone" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #3
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide is-clone" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #4
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide is-clone" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #5
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide is-clone" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #6
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide is-clone" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #7
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide is-clone" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #8
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide is-clone" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #9
+          </div>
+        </li>
+        <li aria-hidden="true" class="hooper-slide is-clone" style="width:0px;">
+          <div style="height: 128px; width: 100%; text-align: center; background-color: #FAFAFA;
+                    background-image: url(https://bulma.io/images/placeholders/128x128.png); background-repeat: no-repeat; background-position: center center;">
+            Slide #10
+          </div>
+        </li>
+      </ul>
+      <div class="hooper-navigation"><button type="button" class="hooper-prev"><svg class="icon icon-arrowLeft" viewBox="0 0 24 24" width="24px" height="24px">
+            <title>Arrow Left</title>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"></path>
+          </svg></button><button type="button" class="hooper-next"><svg class="icon icon-arrowRight" viewBox="0 0 24 24" width="24px" height="24px">
+            <title>Arrow Right</title>
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
+          </svg></button></div>
+      <div aria-live="polite" aria-atomic="true" class="hooper-liveregion hooper-sr-only">Item 1 of 10</div>
+    </div>
+  </section>
+</div>
+`;
