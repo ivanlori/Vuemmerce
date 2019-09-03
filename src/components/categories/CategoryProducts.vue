@@ -1,26 +1,36 @@
 <template>
   <div class="top-margin bottom-margin">
-    <breadcrumbs-component :items="path" />
-    <div class="columns is-centered is-multiline ">
-      <div class="card column is-one-quarter" v-for="product in products" :key="product.id">
-        <products-component :product="product"></products-component>
-      </div>
-      <div class="section" v-if="products.length === 0">
-        <p>{{ noProductLabel }}</p>
-      </div>
-    </div>
+    <breadcrumbs-component :items="path"/>
+    <pagination-component :items="products">
+      <template slot="itemsOnPage"
+                slot-scope="{ itemsOnPage: products }">
+        <div class="columns is-centered is-multiline">
+          <div class="card column is-one-quarter"
+               v-for="product in products"
+               :key="product.id">
+            <products-component :product="product"></products-component>
+          </div>
+          <div class="section" v-if="products.length === 0">
+            <p>{{ noProductLabel }}</p>
+          </div>
+        </div>
+      </template>
+    </pagination-component>
   </div>
 </template>
 
 <script>
 import ProductsComponent from '../Products';
 import BreadcrumbsComponent from '../Breadcrumbs'
+import PaginationComponent from '../pagination/Pagination'
+
 export default {
   name: 'products-list-component',
-  
+
   components: {
     ProductsComponent,
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    PaginationComponent
   },
 
   props: {
@@ -29,7 +39,7 @@ export default {
       required: true
     }
   },
-  
+
   data () {
     return {
       noProductLabel: 'No product found in this category',
