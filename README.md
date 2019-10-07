@@ -4,12 +4,11 @@
 
 Форк проекта [Responsive ecommerce template built with Vue.js](https://github.com/ivanlori/Vuemmerce)
 
-Используемые технологии:
+Используемые технологии: VueJS 2.x, Vuex, Bulma ![Bulma](http://svilpress.altervista.org/made-with-bulma.png)
 
- - VueJS
- - Vuex
- - Bulma ![Bulma](http://svilpress.altervista.org/made-with-bulma.png)
+[Как выполнять задачу:HOW_TO_OTUS.md](HOW_TO_OTUS.md)
 
+[Changelog проекта](CHANGELOG.md)
 ___
 
 ## Installing
