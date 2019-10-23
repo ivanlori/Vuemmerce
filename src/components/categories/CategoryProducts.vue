@@ -4,6 +4,7 @@
     <pagination-component :items="products">
       <template slot="itemsOnPage"
                 slot-scope="{ itemsOnPage: products }">
+        <categories_navigation  class='column is-2 is-pulled-left is-desktop is-narrow' :id='id' />
         <div class="columns is-centered is-multiline">
           <div class="card column is-one-quarter"
                v-for="product in products"
@@ -23,6 +24,7 @@
 import ProductsComponent from '../Products';
 import BreadcrumbsComponent from '../Breadcrumbs'
 import PaginationComponent from '../pagination/Pagination'
+import CategoriesNavigation from '../categories_nav/CategoriesNavigation';
 
 export default {
   name: 'products-list-component',
@@ -30,7 +32,8 @@ export default {
   components: {
     ProductsComponent,
     BreadcrumbsComponent,
-    PaginationComponent
+    PaginationComponent,
+    'categories_navigation': CategoriesNavigation,
   },
 
   props: {
