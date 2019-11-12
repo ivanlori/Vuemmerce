@@ -2,15 +2,7 @@
   <b-menu>
     <b-menu-list label="Categories">
       <div v-for="category in categories" :key="category.id">
-        <router-link
-          class="details"
-          :to="{
-                name: 'category-products-component',
-                params: {
-                    id: category.id,
-                }
-            }"
-        >
+        <router-link class="details" :to="getComponentLink(category.id)">
           <b-menu-item
             icon="information-outline"
             :label="category.title"
@@ -39,11 +31,16 @@ export default {
   computed: {
     categories() {
       return this.$store.state.categories;
-    },
-    products() {
-      return this.$store.state.products.filter(
-        product => String(product.category) === String(this.$route.params.id)
-      );
+    }
+  },
+  methods: {
+    getComponentLink(id) {
+      return {
+        name: "category-products-component",
+        params: {
+          id
+        }
+      };
     }
   }
 };
