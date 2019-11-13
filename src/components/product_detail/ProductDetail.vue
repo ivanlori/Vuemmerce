@@ -1,6 +1,7 @@
 <template>
   <section>
     <breadcrumbs-component :items="path" />
+    <categories_navigation class="class='column is-2 is-pulled-left is-desktop is-narrow'" :id='category.id'></categories_navigation>
     <div class="section">
       <div class="card is-clearfix columns">
         <div class="columns column is-one-thirds is-multiline">
@@ -83,12 +84,14 @@
 <script>
 import BreadcrumbsComponent from '../Breadcrumbs'
 import ProductDetailImagesComponent from './ProductDetailImages'
+import CategoriesNavigation from '../categories_nav/CategoriesNavigation';
 
 export default {
   name: 'product-detail-component',
   components: {
     BreadcrumbsComponent,
-    ProductDetailImagesComponent
+    ProductDetailImagesComponent,
+    'categories_navigation': CategoriesNavigation,
   },
   data () {
     return {

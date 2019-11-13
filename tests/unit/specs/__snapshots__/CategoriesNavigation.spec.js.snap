@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoriesNavigation.vue snapshot renderer test 1`] = `
+<div class="menu">
+  <p class="menu-label">Categories</p>
+  <ul class="menu-list">
+    <div><a href="/category-products/1" class="details">
+        <li><a class="is-active"><span class="icon is-small"><i class="mdi mdi-information-outline"></i></span> <span>Category 1</span></a>
+          <!---->
+        </li>
+      </a></div>
+    <div><a href="/category-products/2" class="details">
+        <li><a><span class="icon is-small"><i class="mdi mdi-information-outline"></i></span> <span>Category 2</span></a>
+          <!---->
+        </li>
+      </a></div>
+    <div><a href="/category-products/3" class="details">
+        <li><a><span class="icon is-small"><i class="mdi mdi-information-outline"></i></span> <span>Category 3</span></a>
+          <!---->
+        </li>
+      </a></div>
+  </ul>
+</div>
+`;
