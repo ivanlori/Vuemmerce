@@ -10,7 +10,7 @@
           </figure>
             <div class="card-image is-480x480 column is-full">
               <product-detail-images-component v-bind:product-id="product.id"></product-detail-images-component>
-            </div>
+           </div>
           </div>
           <div class="card-content column is-two-thirds">
             <div class="card-content__title">
@@ -76,14 +76,18 @@
               <button class="button is-text" v-if="isAddedBtn" @click="removeFromCart(product.id)">{{ removeFromCartLabel }}</button>
             </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </div> 
+      <div >
+        <p class="title is-4" style="padding-left: 120px" > Similar products:</p>
+         <other-component /> </div>
+     </div>
+   </section>
 </template>
 
 <script>
 import BreadcrumbsComponent from '../Breadcrumbs'
 import ProductDetailImagesComponent from './ProductDetailImages'
+import OtherProductComponent from '../other_product/OtherProduct'
 import CategoriesNavigation from '../categories_nav/CategoriesNavigation';
 
 export default {
@@ -91,6 +95,7 @@ export default {
   components: {
     BreadcrumbsComponent,
     ProductDetailImagesComponent,
+    'other-component':OtherProductComponent,
     'categories_navigation': CategoriesNavigation,
   },
   data () {
@@ -122,6 +127,7 @@ export default {
       return this.$store.getters.getCategoryById(this.product.category);
     },
     path () {
+      this.product = this.$store.getters.getProductById(this.$route.params.id);
       return [
         {
           text: 'Home',

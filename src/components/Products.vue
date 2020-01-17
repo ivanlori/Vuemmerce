@@ -72,6 +72,7 @@
           price: product.price,
           rating: product.ratings,
           reviews: product.reviews,
+          category: product.category,
           isAddedBtn: product.isAddedBtn
         }
       }"
