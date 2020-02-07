@@ -4,6 +4,7 @@ import 'bulma-helpers/css/bulma-helpers.min.css';
 import 'bulma';
 import 'babel-polyfill';
 import VueI18n from 'vue-i18n';
+import Nl2br from 'vue-nl2br'
 import messages from './messages';
 
 import App from './App';
@@ -16,6 +17,8 @@ Vue.config.productionTip = false;
 
 Vue.use(Buefy);
 Vue.use(VueI18n);
+
+Vue.component('nl2br', Nl2br);
 
 const i18n = new VueI18n({
   locale: 'en',

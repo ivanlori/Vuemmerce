@@ -78,6 +78,10 @@ $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
 
+// Reviews
+$rate-color-active: #ffce00;
+$toast-border-radius: 1rem;
+
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
