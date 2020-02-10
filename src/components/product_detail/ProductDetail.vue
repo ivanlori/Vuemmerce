@@ -33,34 +33,27 @@
               Ut enim ad minim veniam, quis nostrud
               </p>
             </div>
-            <div class="card-content__ratings" v-if="product.rating === 1">
-              <i class="fa fa-star"></i>
-            </div>
-            <div class="card-content__ratings" v-else-if="product.rating === 2">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </div>
-            <div class="card-content__ratings" v-else-if="product.rating === 3">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </div>
-            <div class="card-content__ratings" v-else-if="product.rating === 4">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </div>
-            <div class="card-content__ratings" v-else-if="product.rating === 5">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
+            <div class="card-content__ratings">
+              <b-rate v-model="productRating"
+                      :icon-pack="packs"
+                      :disabled="isDisabled"
+                      size="is-small">
+              </b-rate>
             </div>
             <div class="card-content__reviews">
               <div class="is-pulled-left">
-                <p><strong>{{ product.reviews > 0 ? `${product.reviews} Reviews` : 'No reviews' }}</strong></p>
+                <p>
+                  <strong>
+                    <router-link :to="{
+                      name: 'product-reviews-component',
+                      params: {
+                        id: product.id
+                      }
+                    }">
+                      {{ textCountReviews }}
+                    </router-link>
+                  </strong>
+                </p>
               </div>
               <div class="select is-rounded is-small is-pulled-right">
                 <select @change="onSelectQuantity(product.id)" v-model="selected">
@@ -101,7 +94,10 @@ export default {
       removeFromFavouriteLabel: 'Remove from favourite',
       product: {},
       selected: 1,
-      quantityArray: []
+      quantityArray: [],
+      packs: 'fas',
+      icons: 'star',
+      isDisabled: true
     };
   },
 
@@ -140,8 +136,14 @@ export default {
           text: this.product.title,
         }
       ]
-    }
-
+    },
+    productRating () {
+      return this.$store.getters.getOverallRatingProductById(this.$route.params.id);
+    },
+    textCountReviews () {
+      const count = this.$store.getters.getCountReviewsById(this.product.id);
+      return count > 0 ? `${count} Reviews` : 'No product reviews';
+    },
   },
 
   methods: {

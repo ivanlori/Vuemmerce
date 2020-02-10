@@ -73,6 +73,27 @@ export default new Vuex.Store({
     getNewsById: state => id => {
       return state.news.find(newItem => newItem.id == id);
     },
+
+    getReviewsById: state => id => {
+      return state.reviews.filter(review => review.product == id);
+    },
+    getCountReviewsById: state => id => {
+      return state.reviews.reduce((acc, review) => {
+        return review.product == id ? acc + 1 : acc;
+      }, 0);
+    },
+    getOverallRatingProductById: state => id => {
+      let count = 0;
+      const sum = state.reviews.reduce((acc, review) => {
+        if (review.product == id) {
+          count++;
+          return acc + review.rating;
+        } else {
+          return acc;
+        }
+      }, 0);
+      return count === 0 ? 0 : Math.floor(10 * sum / count) / 10;
+    }
   },
   
   mutations: {
@@ -123,9 +144,9 @@ export default new Vuex.Store({
     setHasUserSearched: (state, hasSearched) => {
       state.userInfo.hasSearched = hasSearched;
     },
-    setUserName: (state, name) => {
+    /*setUserName: (state, name) => {       //Duplicate
       state.userInfo.name = name;
-    },
+    },*/
     setUserEmail: (state, email) => {
       state.userInfo.email = email;
     },
@@ -175,6 +196,18 @@ export default new Vuex.Store({
           el.quantity = data.quantity;
         }
       });
+    },
+    addNewReview: (state, review) => {
+      if (state.products[review.product]) {
+        const newReview = {
+          id: state.reviews.length,
+          product: review.product,
+          author: review.author,
+          rating: review.rating,
+          text: review.text
+        };
+        state.reviews.push(newReview);
+      }
     }
   },
   
