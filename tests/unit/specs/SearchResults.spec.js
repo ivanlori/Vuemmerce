@@ -1,7 +1,6 @@
 import { shallowMount } from "@vue/test-utils";
 import component from "../../../src/components/search_results/SearchResults";
-import store from "../../../src/store";
-import initialState from "../../../src/initial-state.json";
+import store from "../../../src/store/";
 import router from "../../../src/router";
 
 const localVue = global.newVueInstance();
@@ -28,7 +27,7 @@ describe('SearchResults.vue', async () => {
       router,
       store
     });
-    
+
     wrapper.vm.$store.commit('setSearchParams', {query: '', searchInWishList: false})
     expect(wrapper.findAll('products-component-stub').length).toBe(9)
 
@@ -40,7 +39,6 @@ describe('SearchResults.vue', async () => {
     expect(wrapper.findAll('products-component-stub').length).toBe(1)
   });
 
-
   it('display all products for common search query', async () => {
     global.clearWishList(store)
     const wrapper = shallowMount(component, {
@@ -48,7 +46,7 @@ describe('SearchResults.vue', async () => {
       router,
       store
     });
-    
+
     wrapper.vm.$store.commit('setSearchParams', {query: 'Product', searchInWishList: false})
     expect(wrapper.findAll('products-component-stub').length).toBe(9)
 
@@ -78,5 +76,4 @@ describe('SearchResults.vue', async () => {
     wrapper.vm.$store.commit('setSearchParams', {query: 'Product 1', searchInWishList: true})
     expect(wrapper.findAll('products-component-stub').length).toBe(1)
   });
-
 });

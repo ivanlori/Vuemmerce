@@ -1,17 +1,19 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import initalState from './initial-state.json'
+import initalState from '../initial-state.json';
+import search from './modules/search';
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  strict: true,
+
   state: initalState,
-  
+
   getters: {
     getCategoryById: state => id => {
       return state.categories.find(category => category.id == id);
     },
-
-
     getProductsList: state => {
       return state.products;
     },
@@ -31,7 +33,6 @@ export default new Vuex.Store({
     getProductImages: state => id => {
       return state.products.find(product => product.id == id).images;
     },
-
     isUserLoggedIn: state => {
       return state.userInfo.isLoggedIn;
     },
@@ -41,10 +42,6 @@ export default new Vuex.Store({
     getUserName: state => {
       return state.userInfo.name;
     },
-
-    getSearchParams: state => state.searchParams,
-    getSearchConrolsSate: state => state.searchConrolsSate,
-
     getUserEmail: state => {
       return state.userInfo.email;
     },
@@ -66,15 +63,14 @@ export default new Vuex.Store({
     isCheckoutModalOpen: state => {
       return state.systemInfo.openCheckoutModal;
     },
-
     quantity: state => {
       return state.products.quantity;
     },
     getNewsById: state => id => {
       return state.news.find(newItem => newItem.id == id);
-    },
+    }
   },
-  
+
   mutations: {
     addToCart: (state, id) => {
       state.products.forEach(el => {
@@ -102,7 +98,6 @@ export default new Vuex.Store({
         el.isFavourite = false;
       });
     },
-
     isUserLoggedIn: (state, isUserLoggedIn) => {
       state.userInfo.isLoggedIn = isUserLoggedIn;
     },
@@ -112,11 +107,6 @@ export default new Vuex.Store({
     setUserName: (state, name) => {
       state.userInfo.name = name;
     },
-
-    setSearchParams: (state, searchParams) => {
-      state.searchParams = searchParams
-    },
-    
     saveAvatar: (state, avatarBinary) => {
       state.userInfo.avatarBinary = avatarBinary;
     },
@@ -138,14 +128,6 @@ export default new Vuex.Store({
     setProductTitleSearched: (state, titleSearched) => {
       state.userInfo.productTitleSearched = titleSearched;
     },
-
-    setSearchConrolsSateQueryStringInputText: (state, queryStringInputText) => {
-      state.searchConrolsSate.queryStringInputText = queryStringInputText
-    },
-    setSearchConrolsSateSearchInWishListCheckboxValue: (state, searchInWishListCheckboxValue) => {
-      state.searchConrolsSate.searchInWishListCheckboxValue = searchInWishListCheckboxValue
-    },
-
     showLoginModal: (state, show) => {
       state.systemInfo.openLoginModal = show;
     },
@@ -177,7 +159,8 @@ export default new Vuex.Store({
       });
     }
   },
-  
-  actions: {
+
+  modules: {
+    search
   }
-});
+})
