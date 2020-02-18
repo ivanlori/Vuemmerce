@@ -72,7 +72,7 @@
               <span class="title is-3"><strong>{{ product.price }}&euro;</strong></span>
             </div>
             <div class="card-content__btn is-pulled-right">
-              <button class="button is-primary" v-if="!isAddedBtn" @click="addToCart(product.id)">{{ addToCartLabel }}</button>
+              <button class="button is-primary" v-if="!isAddedBtn" @click="addToCart(product.id, product.title)">{{ addToCartLabel }}</button>
               <button class="button is-text" v-if="isAddedBtn" @click="removeFromCart(product.id)">{{ removeFromCartLabel }}</button>
             </div>
         </div>
@@ -99,6 +99,7 @@ export default {
       removeFromCartLabel: 'Remove from cart',
       addToFavouriteLabel: 'Add to favourite',
       removeFromFavouriteLabel: 'Remove from favourite',
+      addedToCart: 'added to cart',
       product: {},
       selected: 1,
       quantityArray: []
@@ -145,13 +146,14 @@ export default {
   },
 
   methods: {
-    addToCart (id) {
+    addToCart (id, title) {
       let data = {
         id: id,
         status: true
       }
-      this.$store.commit('addToCart', id);
-      this.$store.commit('setAddedBtn', data);
+      this.$store.dispatch('addToCartAction', id).then(() => {
+        this.$buefy.snackbar.open(`${title} ${this.addedToCart}`)
+      })
     },
     removeFromCart (id) {
       let data = {

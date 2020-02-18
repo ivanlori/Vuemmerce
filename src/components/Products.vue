@@ -38,7 +38,7 @@
       <div class="card-footer btn-actions">
         <div class="card-footer-item field is-grouped">
           <div class="buttons">
-            <button class="button is-primary" v-if="!product.isAddedToCart" @click="addToCart(product.id)">{{ addToCartLabel }}</button>
+            <button class="button is-primary" v-if="!product.isAddedToCart" @click="addToCart(product.id, product.title)">{{ addToCartLabel }}</button>
             <button class="button is-text" v-if="product.isAddedToCart" @click="removeFromCart(product.id, false)">{{ removeFromCartLabel }}</button>
             <div>
               <button class="button is-small" :title="removeFromFavouriteLabel" v-show="product.isFavourite" @click="removeFromFavourite(product.id)">
@@ -97,6 +97,7 @@ export default {
       removeFromCartLabel: 'Remove from cart',
       addToFavouriteLabel: 'Add to favourite',
       removeFromFavouriteLabel: 'Remove from favourite',
+      addedToCart: 'added to cart',
       selected: 1,
       quantityArray: []
     }
@@ -119,13 +120,14 @@ export default {
   },
 
   methods: {
-    addToCart (id) {
+    addToCart (id, title) {
       let data = {
         id: id,
         status: true
       }
-      this.$store.commit('addToCart', id);
-      this.$store.commit('setAddedBtn', data);
+      this.$store.dispatch('addToCartAction', id).then(() => {
+        this.$buefy.snackbar.open(`${title} ${this.addedToCart}`)
+      })
     },
     removeFromCart (id) {
       let data = {

@@ -71,6 +71,16 @@ export default new Vuex.Store({
     }
   },
 
+  actions: {
+    addToCartAction ({ commit }, id) {
+      return new Promise((resolve, reject) => {
+          commit('addToCart', id);
+          commit('setAddedBtn', id);
+          resolve();
+      })
+    }
+  },
+
   mutations: {
     addToCart: (state, id) => {
       state.products.forEach(el => {
