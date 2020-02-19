@@ -45,6 +45,4 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>
+z

@@ -9,7 +9,7 @@ const defaultSearchState = () => {
       searchInWishListCheckboxValue: false
     }
   }
-}
+};
 
 const state = defaultSearchState();
 
