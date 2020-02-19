@@ -25,7 +25,6 @@ import ProductsComponent from '../Products';
 
 import PaginationOtherComponent from './PaginationOtherProduct'
 
-
 export default {
   name: 'other-component',
 
@@ -54,7 +53,6 @@ export default {
       return this.$store.getters.getCategoryById(this.$route.params.id);
     },
     products () {
-      console.log(this.$route.params.id)
       return this.$store.state.products.filter(product => String(product.category) === String(this.$route.params.category) && String(product.id) != String(this.$route.params.id));
     },
     path () {

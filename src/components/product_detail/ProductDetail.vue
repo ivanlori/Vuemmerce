@@ -1,7 +1,7 @@
 <template>
   <section>
     <breadcrumbs-component :items="path" />
-    <categories_navigation class="class='column is-2 is-pulled-left is-desktop is-narrow'" :id='category.id'></categories_navigation>
+    <CategoriesNavigation class="class='column is-2 is-pulled-left is-desktop is-narrow'" :id='category.id'></CategoriesNavigation>
     <div class="section">
       <div class="card is-clearfix columns">
         <div class="columns column is-one-thirds is-multiline">
@@ -79,7 +79,7 @@
       </div> 
       <div >
         <p class="title is-4" style="padding-left: 120px" > Similar products:</p>
-         <other-component /> </div>
+         <OtherProductComponent /> </div>
      </div>
    </section>
 </template>
@@ -95,8 +95,8 @@ export default {
   components: {
     BreadcrumbsComponent,
     ProductDetailImagesComponent,
-    'other-component':OtherProductComponent,
-    'categories_navigation': CategoriesNavigation,
+    OtherProductComponent,
+    CategoriesNavigation,
   },
   data () {
     return {
