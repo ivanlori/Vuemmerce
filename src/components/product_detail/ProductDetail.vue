@@ -129,9 +129,6 @@ export default {
     isAddedBtn () {
       return this.product.isAddedBtn;
     },
-    // category () {
-    //   return this.$store.getters.getCategoryById(this.product.category);
-    // },
     path () {
       return [
         {
