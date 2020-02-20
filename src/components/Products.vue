@@ -13,23 +13,21 @@
       </div>
       <div class="content is-clearfix">
         <p>{{ product.description }}</p>
-        <div class="is-pulled-left">
-          <i v-if="product.ratings === 1" class="fa fa-star"></i>
-          <i v-if="product.ratings === 2" class="fa fa-star"></i>
-          <i v-if="product.ratings === 2" class="fa fa-star"></i>
-          <i v-if="product.ratings === 3" class="fa fa-star"></i>
-          <i v-if="product.ratings === 3" class="fa fa-star"></i>
-          <i v-if="product.ratings === 3" class="fa fa-star"></i>
-          <i v-if="product.ratings === 4" class="fa fa-star"></i>
-          <i v-if="product.ratings === 4" class="fa fa-star"></i>
-          <i v-if="product.ratings === 4" class="fa fa-star"></i>
-          <i v-if="product.ratings === 4" class="fa fa-star"></i>
-          <i v-if="product.ratings === 5" class="fa fa-star"></i>
-          <i v-if="product.ratings === 5" class="fa fa-star"></i>
-          <i v-if="product.ratings === 5" class="fa fa-star"></i>
-          <i v-if="product.ratings === 5" class="fa fa-star"></i>
-          <i v-if="product.ratings === 5" class="fa fa-star"></i>
-          <p>{{ product.reviews > 0 ? `${product.reviews} Reviews` : 'No reviews' }}</p>
+        <div class="is-pulled-left box1">
+          <b-rate v-model="overallRating"
+                  :icon-pack="packs"
+                  :disabled="isDisabled"
+                  size="is-small">
+          </b-rate>
+          <router-link class="rlink"
+                       :to="{
+                          name: 'product-reviews-component',
+                          params: {
+                            id: product.id
+                          }
+                       }">
+            {{ textCountReviews }}
+          </router-link>
         </div>
         <p class="is-pulled-right">
           <span class="title is-4"><strong>&euro; {{ product.price }}</strong></span>
@@ -99,7 +97,10 @@ export default {
       addToFavouriteLabel: 'Add to favourite',
       removeFromFavouriteLabel: 'Remove from favourite',
       selected: 1,
-      quantityArray: []
+      quantityArray: [],
+      packs: 'fas',
+      icons: 'star',
+      isDisabled: true
     }
   },
 
@@ -116,6 +117,13 @@ export default {
   computed: {
     isUserLogged () {
       return this.$store.getters.isUserLoggedIn;
+    },
+    textCountReviews () {
+      const count = this.$store.getters.getCountReviewsById(this.product.id);
+      return count > 0 ? `${count} Reviews` : 'No product reviews';
+    },
+    overallRating () {
+      return this.$store.getters.getOverallRatingProductById(this.product.id);
     }
   },
 
@@ -160,27 +168,43 @@ export default {
 </script>
 
 <style lang="scss" scoped>
- .details {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+   .details {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
 
-    &:hover {
-      border: 1px solid #51bafc;
-    }
- }
- .button,
- .select {
-   z-index: 2;
- }
- .select {
-   position: absolute;
-   right: 15px;
- }
+      &:hover {
+        border: 1px solid #51bafc;
+      }
+   }
+   .button,
+   .select {
+     z-index: 2;
+   }
+   .select {
+     position: absolute;
+     right: 15px;
+   }
+   .box1 {
+     position: relative;
+     min-height: 50px;
+   }
+  .rlink,
+  .rlinkk:hover,
+  .rlink:focus,
+  .rlink:active {
+    padding: 0;
+    background-color: transparent !important;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    z-index: 1000;
+    white-space: nowrap;
+  }
 </style>
 
 
