@@ -68,6 +68,9 @@
           id: product.id,
           title: product.title,
           price: product.price,
+          rating: product.ratings,
+          reviews: product.reviews,
+          category: product.category,
           isAddedBtn: product.isAddedBtn
         }
       }"

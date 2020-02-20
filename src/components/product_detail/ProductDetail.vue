@@ -1,7 +1,7 @@
 <template>
   <section>
     <breadcrumbs-component :items="path" />
-    <categories_navigation class="class='column is-2 is-pulled-left is-desktop is-narrow'" :id='category.id'></categories_navigation>
+    <CategoriesNavigation class="class='column is-2 is-pulled-left is-desktop is-narrow'" :id='category.id'></CategoriesNavigation>
     <div class="section">
       <div class="card is-clearfix columns">
         <div class="columns column is-one-thirds is-multiline">
@@ -10,7 +10,7 @@
           </figure>
             <div class="card-image is-480x480 column is-full">
               <product-detail-images-component v-bind:product-id="product.id"></product-detail-images-component>
-            </div>
+           </div>
           </div>
           <div class="card-content column is-two-thirds">
             <div class="card-content__title">
@@ -69,14 +69,18 @@
               <button class="button is-text" v-if="isAddedBtn" @click="removeFromCart(product.id)">{{ removeFromCartLabel }}</button>
             </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </div> 
+      <div >
+        <p class="title is-4" style="padding-left: 120px" > Similar products:</p>
+         <OtherProductComponent /> </div>
+     </div>
+   </section>
 </template>
 
 <script>
 import BreadcrumbsComponent from '../Breadcrumbs'
 import ProductDetailImagesComponent from './ProductDetailImages'
+import OtherProductComponent from '../other_product/OtherProduct'
 import CategoriesNavigation from '../categories_nav/CategoriesNavigation';
 
 export default {
@@ -84,7 +88,8 @@ export default {
   components: {
     BreadcrumbsComponent,
     ProductDetailImagesComponent,
-    'categories_navigation': CategoriesNavigation,
+    OtherProductComponent,
+    CategoriesNavigation,
   },
   data () {
     return {
@@ -118,6 +123,7 @@ export default {
       return this.$store.getters.getCategoryById(this.product.category);
     },
     path () {
+      this.product = this.$store.getters.getProductById(this.$route.params.id);
       return [
         {
           text: 'Home',
