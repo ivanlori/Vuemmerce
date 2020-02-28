@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Homepage from '../src/components/homepage/Homepage';
 import CategoryProducts from '../src/components/categories/CategoryProducts';
 import ProductDetail from '../src/components/product_detail/ProductDetail';
+import ProductReviews from '../src/components/product_reviews/ProductReviews';
 import WishlistContainer from '../src/components/user/WishlistContainer';
 import OrderPage from "./components/order_page/OrderPage";
 import CartDetail from "./components/cart_detail/CartDetail";
@@ -33,6 +34,12 @@ export default new Router({
       name: 'product-detail-component',
       props: true,
       component: ProductDetail,
+    },
+    {
+      path: '/product-detail/:id/reviews',
+      name: 'product-reviews-component',
+      props: true,
+      component: ProductReviews,
     },
     {
       path: '/order',

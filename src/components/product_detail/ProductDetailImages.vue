@@ -25,7 +25,7 @@
         },
         data () {
             return {
-                slides: []      
+                slides: []
             }
         },
         created () {

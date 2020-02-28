@@ -19,6 +19,92 @@
       "image": "http://lorempixel.com/640/480/technics/3/"
     }
   ],
+  "reviews": [
+    {
+      "id": 1,
+      "product": 1,
+      "author": "Ivan",
+      "rating": 4,
+      "text": "This is a really nice little monitor. I was not expecting much for a low-end monitor at a rock bottom price, but have to admit I am pleasantly surprised. Really, no cons at this price point. Pluses:\n\n1. Very clear, sharp screen for a 1600 x 900 display. Has a better picture than a new 1920 x 1080 HP monitor I have.\n2. Very good standard color saturation - not washed out at all. I did not feel the need to adjust color or brightness settings.\n3. Good font clarity and sharpness.\n4. Has integrated speakers, a nice surprise for such an inexpensive monitor, where many higher-end models don't include speakers. Speakers are not incredibly loud but are very clear and not tinny. The speakers work through the DVI to HDMI cable and there is no need for an extra audio cable.\n5. Comes with a DVI-D to HDMI cable as well as a standard VGA to VGA cable. Monitor has a VGA output and two HDMI outputs, as well as audio outputs if you would rather not use the integrated speakers.\n6. The monitor stand snaps to the base, and the stand screws into the monitor with just two screws. There is a strong hinge built in which allows easy tilting for your viewing preferences. Took a couple minutes to assemble.\n7. Box comes with a screwdriver, so you don't need to have tools of your own.\n8. Nice color-coded ports on the back.\n\nThis is my first Sceptre monitor and based on this, I will be likely to consider this brand again. Very pleased."
+    },
+    {
+      "id": 2,
+      "product": 1,
+      "author": "Peter",
+      "rating": 5,
+      "text": "Needed two new monitors for a new PC in the office. Went with this because it was the best value in terms of size vs price. I'd also purchased these for clients in the past and heard they were happy with them. After seeing the complaints about the colors being washed out, I gave my monitors away and decided if there were any problems with these I'd either live with it or fix it.\n\nOut of the box the monitors were fine. The only complaint I can come up with is that the VESA mounts are lower on the back due to the slim design. After looking at settings, I determined that for me as an IT manager I didn't need to recalibrate the screens at all. Granted, I spend most of my time looking at text documents, configuration pages for network equipment, and the accounting software my company uses. I couldn't speak to color calibration for individuals doing video or photo production.\n\nOne thought on the others experiencing washed out colors - HDMI out on a computer kind of expects a TV. Televisions and Monitors will sometimes have different ranges for black levels, which can cause the screen to look washed out. If you're experiencing this, check the control panel for your graphics driver. You should be able to adjust black levels and fix the issue. This has been a driving factor in my preference for just about anything over HDMI. (Display Port is king, for what it's worth.)"
+    },
+    {
+      "id": 3,
+      "product": 1,
+      "author": "Natalya",
+      "rating": 3,
+      "text": "The monitor is great for pc and console gaming. My PC pc is able to take advantage of the 75hz refresh rate, the auto power on and auto source switching is convenient. The audio out port also saves me a lot of effort with my setup. Where this device looses stars is the defects. There is an over brighten set of pixels, fortunately they are only visible on all white screens. There is also this mark that looks as though there is a piece of plastic on the screen. I am not some professional gamer or content creater so I don't want to go through the hassell or requesting a new one. Im still going to use it and appreciate the good things about it. 5 stars if it did not have these scars."
+    },
+    {
+      "id": 4,
+      "product": 1,
+      "author": "Andrew",
+      "rating": 5,
+      "text": "This is a really nice little monitor. I was not expecting much for a low-end monitor at a rock bottom price, but have to admit I am pleasantly surprised."
+    },
+    {
+      "id": 5,
+      "product": 1,
+      "author": "Masha",
+      "rating": 4,
+      "text": "This is a really nice little monitor. I was not expecting much for a low-end monitor at a rock bottom price, but have to admit I am pleasantly surprised."
+    },
+    {
+      "id": 6,
+      "product": 7,
+      "author": "Timur",
+      "rating": 3,
+      "text": "This is a really nice little monitor. I was not expecting much for a low-end monitor at a rock bottom price, but have to admit I am pleasantly surprised."
+    },
+    {
+      "id": 7,
+      "product": 7,
+      "author": "Evgeny",
+      "rating": 4,
+      "text": "This is a really nice little monitor. I was not expecting much for a low-end monitor at a rock bottom price, but have to admit I am pleasantly surprised."
+    },
+    {
+      "id": 8,
+      "product": 7,
+      "author": "Polina",
+      "rating": 3,
+      "text": "This is a really nice little monitor. I was not expecting much for a low-end monitor at a rock bottom price, but have to admit I am pleasantly surprised."
+    },
+    {
+      "id": 9,
+      "product": 7,
+      "author": "July",
+      "rating": 5,
+      "text": "This is a really nice little monitor. I was not expecting much for a low-end monitor at a rock bottom price, but have to admit I am pleasantly surprised."
+    },
+    {
+      "id": 10,
+      "product": 7,
+      "author": "Ivan",
+      "rating": 3,
+      "text": "This is a really nice little monitor. I was not expecting much for a low-end monitor at a rock bottom price, but have to admit I am pleasantly surprised."
+    },
+    {
+      "id": 11,
+      "product": 7,
+      "author": "Masha",
+      "rating": 2,
+      "text": "This is a really nice little monitor. I was not expecting much for a low-end monitor at a rock bottom price, but have to admit I am pleasantly surprised."
+    },
+    {
+      "id": 12,
+      "product": 7,
+      "author": "Peter",
+      "rating": 4,
+      "text": "This is a really nice little monitor. I was not expecting much for a low-end monitor at a rock bottom price, but have to admit I am pleasantly surprised."
+    }
+  ],
   "news": [
     {
       "id": 0,
@@ -171,7 +257,6 @@
     "password": "",
     "avatarBinary": ""
   },
-
   "systemInfo": {
     "openLoginModal": false,
     "openSignupModal": false,

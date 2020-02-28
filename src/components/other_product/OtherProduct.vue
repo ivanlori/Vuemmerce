@@ -1,10 +1,9 @@
 <template>
-  <div ref="loader" class="top-margin bottom-margin">
-    <breadcrumbs-component :items="path"/>
-    <pagination-component :items="products">
-      <template slot="itemsOnPage"
+  <div ref="otherProductsloader" class="top-margin bottom-margin">
+    <pagination-other-component :items="products">
+      <template  slot="itemsOnPage"
                 slot-scope="{ itemsOnPage: products }">
-        <categories-navigation  class='column is-2 is-pulled-left is-desktop is-narrow' :id="id" />
+
         <div class="columns is-centered is-multiline">
           <div class="card column is-one-quarter"
                v-for="product in products"
@@ -16,28 +15,25 @@
           </div>
         </div>
       </template>
-    </pagination-component>
+    </pagination-other-component>
   </div>
 </template>
 
 <script>
 import ProductsComponent from '../Products';
-import BreadcrumbsComponent from '../Breadcrumbs'
-import PaginationComponent from '../pagination/Pagination'
-import CategoriesNavigation from '../categories_nav/CategoriesNavigation';
+import PaginationOtherComponent from './PaginationOtherProduct'
 
 export default {
-  name: 'products-list-component',
+  name: 'other-component',
 
   components: {
-    ProductsComponent,
-    BreadcrumbsComponent,
-    PaginationComponent,
-    CategoriesNavigation,
+     ProductsComponent,
+
+    'pagination-other-component': PaginationOtherComponent
   },
 
   props: {
-    id: {
+    category: {
       type: [Number, String],
       required: true
     }
@@ -54,36 +50,13 @@ export default {
     this.pseudoLoadingPage()
   },
 
-  computed: {
-    category () {
-      return this.$store.getters.getCategoryById(this.$route.params.id);
-    },
-    path () {
-      return [
-        {
-          text: 'Home',
-          to: { path: '/' }
-        },
-        {
-          text: this.category.title,
-        }
-      ]
-    }
-  },
-
-  watch: {
-    $route(to, from) {
-      this.pseudoLoadingPage()
-    }
-  },
-
   methods: {
     pseudoLoadingPage() {
       const loadingComponent = this.$buefy.loading.open({
-        container: this.$refs.loader
+        container: this.$refs.otherProductsloader
       })
 
-      this.$store.dispatch('pseudoFetchProducts', this.$route.params.id).then(products => {
+      this.$store.dispatch('pseudoFetchProducts', this.category).then(products => {
         this.products = products;
         loadingComponent.close();
       });
