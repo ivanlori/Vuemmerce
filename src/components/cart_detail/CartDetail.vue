@@ -18,7 +18,9 @@
                         {{index + 1}}
                     </td>
                     <td>
-                        {{product.title}}
+                        <router-link :to="{ name: 'product-detail-component', params: { id: product.id }}">
+                            {{product.title}}
+                        </router-link>
                     </td>
                     <td>
                         {{product.price}}
