@@ -29,7 +29,10 @@ export default {
     newsUrl(id) {
       return `/news/${id}`;
     }
-  }
+  },
+  metaInfo: {
+    title: 'Vuemmerce | News',
+  },
 }
 </script>
 

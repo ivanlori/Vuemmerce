@@ -83,7 +83,10 @@
       confirmOrder(){
         this.$router.push('/order');
       }
-    }
+    },
+    metaInfo: {
+      title: 'Vuemmerce | Cart',
+    },
   }
 </script>
 

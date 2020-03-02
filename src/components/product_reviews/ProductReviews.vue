@@ -127,7 +127,16 @@
                     }
                 ]
             }
-        }
+        },
+        metaInfo() {
+            let title = 'Product';
+            if (this.product && this.product.title) {
+                title = this.product.title;
+            }
+            return {
+                title: `Vuemmerce | ${title} | Reviews`,
+            };
+        },
     }
 </script>
 

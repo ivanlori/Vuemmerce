@@ -29,10 +29,11 @@
     "vue": "^2.6.10",
     "vue-cli": "^2.9.6",
     "vue-i18n": "^8.12.0",
+    "vue-meta": "^2.3.3",
+    "vue-nl2br": "^0.1.2",
     "vue-router": "^3.0.2",
     "vue-social-sharing": "^2.4.5",
-    "vuex": "^3.0.1",
-    "vue-nl2br": "^0.1.2"
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.2.3",

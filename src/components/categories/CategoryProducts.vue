@@ -67,8 +67,16 @@ export default {
         }
       ]
     }
-  }
-
+  },
+  metaInfo() {
+    let title = 'Category';
+    if (this.category && this.category.title) {
+      title = this.category.title;
+    }
+    return {
+      title: `Vuemmerce | ${title}`,
+    };
+  },
 };
 </script>
 
