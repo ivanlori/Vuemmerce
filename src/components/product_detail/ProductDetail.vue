@@ -1,104 +1,110 @@
 <template>
   <section>
-    <breadcrumbs-component :items="path" />
-    <CategoriesNavigation class="class='column is-2 is-pulled-left is-desktop is-narrow'" :id='category.id'></CategoriesNavigation>
-    <div class="section">
-      <div class="card is-clearfix columns">
-        <div class="columns column is-one-thirds is-multiline">
-          <figure class="card-image is-480x480 column is-full">
-            <img src="https://bulma.io/images/placeholders/480x480.png">
-          </figure>
+    <breadcrumbs-component :items="path"/>
+    <div class="skeleton" v-if="!isLoaded" ref="skeleton">Место для вашего красивого скелетона</div>
+    <template v-else>
+      <CategoriesNavigation class="class=column is-2 is-pulled-left is-desktop is-narrow" :id='category.id'></CategoriesNavigation>
+      <div class="section">
+        <div class="card is-clearfix columns">
+          <div class="columns column is-one-thirds is-multiline">
+            <figure class="card-image is-480x480 column is-full">
+              <img src="https://bulma.io/images/placeholders/480x480.png">
+            </figure>
             <div class="card-image is-480x480 column is-full">
               <product-detail-images-component v-bind:product-id="product.id"></product-detail-images-component>
-           </div>
+            </div>
           </div>
           <div class="card-content column is-two-thirds">
-            <div class="card-content__title">
-              <h2 class="title is-4">{{ product.title }}
-                <button class="button is-small" :title="removeFromFavouriteLabel" v-show="product.isFavourite" @click="removeFromFavourite(product.id)">
-                  <span class="icon is-small">
-                    <i class="fas fa-heart"></i>
-                  </span>
-                </button>
-                <button class="button is-small" :title="addToFavouriteLabel" v-show="!product.isFavourite" @click="saveToFavorite(product.id)">
-                  <span class="icon is-small">
-                    <i class="far fa-heart"></i>
-                  </span>
-                </button>
-              </h2>
+            <div class="content">
+              <div class="card-content__title">
+              <h2 class="title is-4">{{ product.title }}</h2>
             </div>
             <div class="card-content__text">
-              <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud
-              </p>
+              <p>{{ product.description}}</p>
             </div>
-            <div class="card-content__ratings">
-              <b-rate v-model="productRating"
-                      :icon-pack="packs"
-                      :disabled="isDisabled"
-                      size="is-small">
-              </b-rate>
-            </div>
+            <b-rate v-model="overallRating"
+                :icon-pack="packs"
+                :disabled="isDisabled"
+                size="is-small">
+            </b-rate>
             <div class="card-content__reviews">
-              <div class="is-pulled-left">
-                <p>
-                  <strong>
-                    <router-link :to="{
-                      name: 'product-reviews-component',
-                      params: {
-                        id: product.id
-                      }
-                    }">
-                      {{ textCountReviews }}
-                    </router-link>
-                  </strong>
-                </p>
-              </div>
-              <div class="select is-rounded is-small is-pulled-right">
-                <select @change="onSelectQuantity(product.id)" v-model="selected">
-                  <option v-for="quantity in quantityArray" :value="quantity">{{ quantity }}</option>
-                </select>
-              </div>
+              <router-link class="rlink"
+                          :to="{
+                              name: 'product-reviews-component',
+                              params: {
+                                id: product.id
+                              }
+                          }">
+                {{ textCountReviews }}
+              </router-link>
             </div>
-            <div class="card-content__price is-pulled-left">
+            <div class="card-content__price">
               <span class="title is-3"><strong>{{ product.price }}&euro;</strong></span>
             </div>
-            <div class="card-content__btn is-pulled-right">
-              <button class="button is-primary" v-if="!isAddedBtn" @click="addToCart(product.id)">{{ addToCartLabel }}</button>
-              <button class="button is-text" v-if="isAddedBtn" @click="removeFromCart(product.id)">{{ removeFromCartLabel }}</button>
             </div>
+            <div class="card-footer btn-actions">
+              <div class="card-footer-item field is-grouped">
+                <div class="buttons">
+                  <button class="button is-primary" v-if="!product.isAddedToCart" @click="addToCart(product.id, product.title)">{{ addToCartLabel }}</button>
+                  <button class="button is-text" v-if="product.isAddedToCart" @click="removeFromCart(product.id, false)">{{ removeFromCartLabel }}</button>
+                  <div>
+                    <button class="button is-small" :title="removeFromFavouriteLabel" v-show="product.isFavourite" @click="removeFromFavourite(product.id)">
+                      <span class="icon is-small">
+                        <i class="fas fa-heart"></i>
+                      </span>
+                    </button>
+                    <button class="button is-small" :title="addToFavouriteLabel" v-show="!product.isFavourite" @click="saveToFavorite(product.id)">
+                      <span class="icon is-small">
+                        <i class="far fa-heart"></i>
+                      </span>
+                    </button>
+                    <div class="select is-rounded is-small">
+                      <select @change="onSelectQuantity(product.id)" v-model="selected">
+                        <option v-for="quantity in quantityArray" :value="quantity" :key="quantity">{{ quantity }}</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div> 
-      <div >
+      </div>
+      <div>
         <p class="title is-4" style="padding-left: 120px" > Similar products:</p>
-         <OtherProductComponent /> </div>
-     </div>
-   </section>
+        <OtherProductComponent :category="product.category"/>
+      </div>
+    </template>
+  </section>
 </template>
 
 <script>
 import BreadcrumbsComponent from '../Breadcrumbs'
 import ProductDetailImagesComponent from './ProductDetailImages'
 import OtherProductComponent from '../other_product/OtherProduct'
-import CategoriesNavigation from '../categories_nav/CategoriesNavigation';
+import CategoriesNavigation from '../categories_nav/CategoriesNavigation'
 
 export default {
   name: 'product-detail-component',
+
   components: {
     BreadcrumbsComponent,
     ProductDetailImagesComponent,
     OtherProductComponent,
     CategoriesNavigation,
   },
+
   data () {
     return {
       addToCartLabel: 'Add to cart',
       removeFromCartLabel: 'Remove from cart',
       addToFavouriteLabel: 'Add to favourite',
       removeFromFavouriteLabel: 'Remove from favourite',
+      addedToCart: 'added to cart',
       product: {},
       selected: 1,
+      category: null,
+      isLoaded: false,
       quantityArray: [],
       packs: 'fas',
       icons: 'star',
@@ -106,21 +112,28 @@ export default {
     };
   },
 
-  created () {
-    this.product = this.$store.getters.getProductById(this.$route.params.id);
-    this.selected = this.product.quantity;
-
+  mounted() {
     for (let i = 1; i <= 20; i++) {
       this.quantityArray.push(i);
-    }
+    };
+
+    const loadingComponent = this.$buefy.loading.open({
+      container: this.$refs.skeleton
+    });
+
+    this.$store.dispatch('pseudoFetchProduct', this.$route.params.id).then(currentProduct => {
+      this.product = currentProduct;
+      this.selected = currentProduct.quantity;
+      this.category = this.$store.getters.getCategoryById(currentProduct.category);
+      this.isLoaded = true;
+
+      loadingComponent.close();
+    });
   },
 
   computed: {
     isAddedBtn () {
       return this.product.isAddedBtn;
-    },
-    category () {
-      return this.$store.getters.getCategoryById(this.product.category);
     },
     path () {
       this.product = this.$store.getters.getProductById(this.$route.params.id);
@@ -143,23 +156,24 @@ export default {
         }
       ]
     },
-    productRating () {
+    overallRating () {
       return this.$store.getters.getOverallRatingProductById(this.$route.params.id);
     },
     textCountReviews () {
       const count = this.$store.getters.getCountReviewsById(this.product.id);
       return count > 0 ? `${count} Reviews` : 'No product reviews';
-    },
+    }
   },
 
   methods: {
-    addToCart (id) {
+    addToCart (id, title) {
       let data = {
         id: id,
         status: true
       }
-      this.$store.commit('addToCart', id);
-      this.$store.commit('setAddedBtn', data);
+      this.$store.dispatch('addToCartAction', id).then(() => {
+        this.$buefy.snackbar.open(`${title} ${this.addedToCart}`)
+      })
     },
     removeFromCart (id) {
       let data = {
@@ -204,6 +218,10 @@ export default {
       width: 100%;
       margin-bottom: 10px;
     }
+  }
+  .skeleton {
+    width: 100vw;
+    height: 40vw;
   }
 </style>
 

@@ -36,7 +36,7 @@
       <div class="card-footer btn-actions">
         <div class="card-footer-item field is-grouped">
           <div class="buttons">
-            <button class="button is-primary" v-if="!product.isAddedToCart" @click="addToCart(product.id)">{{ addToCartLabel }}</button>
+            <button class="button is-primary" v-if="!product.isAddedToCart" @click="addToCart(product.id, product.title)">{{ addToCartLabel }}</button>
             <button class="button is-text" v-if="product.isAddedToCart" @click="removeFromCart(product.id, false)">{{ removeFromCartLabel }}</button>
             <div>
               <button class="button is-small" :title="removeFromFavouriteLabel" v-show="product.isFavourite" @click="removeFromFavourite(product.id)">
@@ -82,6 +82,7 @@
 <script>
 export default {
   name: 'products-component',
+
   props: {
     product: {
       type: Object,
@@ -96,6 +97,7 @@ export default {
       removeFromCartLabel: 'Remove from cart',
       addToFavouriteLabel: 'Add to favourite',
       removeFromFavouriteLabel: 'Remove from favourite',
+      addedToCart: 'added to cart',
       selected: 1,
       quantityArray: [],
       packs: 'fas',
@@ -128,13 +130,14 @@ export default {
   },
 
   methods: {
-    addToCart (id) {
+    addToCart (id, title) {
       let data = {
         id: id,
         status: true
       }
-      this.$store.commit('addToCart', id);
-      this.$store.commit('setAddedBtn', data);
+      this.$store.dispatch('addToCartAction', id).then(() => {
+        this.$buefy.snackbar.open(`${title} ${this.addedToCart}`)
+      })
     },
     removeFromCart (id) {
       let data = {
@@ -168,31 +171,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-   .details {
-      cursor: pointer;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
+  .details {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 
-      &:hover {
-        border: 1px solid #51bafc;
-      }
-   }
-   .button,
-   .select {
-     z-index: 2;
-   }
-   .select {
-     position: absolute;
-     right: 15px;
-   }
-   .box1 {
-     position: relative;
-     min-height: 50px;
-   }
+    &:hover {
+      border: 1px solid #51bafc;
+    }
+  }
+  .button,
+  .select {
+    z-index: 2;
+  }
+  .select {
+    position: absolute;
+    right: 15px;
+  }
+  .box1 {
+    position: relative;
+    min-height: 50px;
+  }
   .rlink,
   .rlinkk:hover,
   .rlink:focus,

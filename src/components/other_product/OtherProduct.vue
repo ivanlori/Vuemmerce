@@ -1,10 +1,9 @@
 <template>
-  <div class="top-margin bottom-margin">
-  
+  <div ref="otherProductsloader" class="top-margin bottom-margin">
     <pagination-other-component :items="products">
       <template  slot="itemsOnPage"
                 slot-scope="{ itemsOnPage: products }">
-  
+
         <div class="columns is-centered is-multiline">
           <div class="card column is-one-quarter"
                v-for="product in products"
@@ -22,7 +21,6 @@
 
 <script>
 import ProductsComponent from '../Products';
-
 import PaginationOtherComponent from './PaginationOtherProduct'
 
 export default {
@@ -30,13 +28,12 @@ export default {
 
   components: {
      ProductsComponent,
-  
-    'pagination-other-component': PaginationOtherComponent,
-  
+
+    'pagination-other-component': PaginationOtherComponent
   },
 
   props: {
-    id: {
+    category: {
       type: [Number, String],
       required: true
     }
@@ -45,29 +42,26 @@ export default {
   data () {
     return {
       noProductLabel: 'No product found in this category',
+      products: []
     };
   },
 
-  computed: {
-    category () {
-      return this.$store.getters.getCategoryById(this.$route.params.id);
-    },
-    products () {
-      return this.$store.state.products.filter(product => String(product.category) === String(this.$route.params.category) && String(product.id) != String(this.$route.params.id));
-    },
-    path () {
-      return [
-        {
-          text: 'Home',
-          to: { path: '/' }
-        },
-        {
-           text: this.category.title,
-        }
-      ]
+  mounted() {
+    this.pseudoLoadingPage()
+  },
+
+  methods: {
+    pseudoLoadingPage() {
+      const loadingComponent = this.$buefy.loading.open({
+        container: this.$refs.otherProductsloader
+      })
+
+      this.$store.dispatch('pseudoFetchProducts', this.category).then(products => {
+        this.products = products;
+        loadingComponent.close();
+      });
     }
   }
-
 };
 </script>
 

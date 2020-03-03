@@ -9,7 +9,7 @@ import messages from './messages';
 
 import App from './App';
 import router from './router';
-import store from './store';
+import store from './store/';
 
 import Buefy from 'buefy';
 

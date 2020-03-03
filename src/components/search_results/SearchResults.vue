@@ -20,11 +20,10 @@
 </template>
 
 <script>
-
 import ProductsComponent from '../Products';
 import BreadcrumbsComponent from '../Breadcrumbs';
 import PaginationComponent from '../pagination/Pagination'
-import {mapMutations, mapGetters} from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 
 export default {
   name: 'search-results-component',
@@ -37,41 +36,53 @@ export default {
 
   data () {
     return {
-      noProductLabel: 'No products found for this query',
+      noProductLabel: 'No products found for this query'
     };
   },
 
   methods: {
-    ...mapGetters (['getSearchParams', 'getProductsList']),
+    ...mapGetters ([
+      'getSearchParams',
+      'getProductsList'
+    ]),
+    ...mapMutations ([
+      'setSearchConrolsStateQueryStringInputText',
+      'setSearchParams',
+      'resetSearchState'
+    ]),
   },
 
   computed: {
     seachString () {
-        return this.getSearchParams().query
+      return this.getSearchParams().query
     },
     searchInWishList () {
-        return this.getSearchParams().searchInWishList
+      return this.getSearchParams().searchInWishList
     },
     products () {
       return this.getProductsList().filter(p => {
-          const reg = new RegExp(this.seachString, 'gi');
-          return (reg.test(p.title) || reg.test(p.description)) && (!this.searchInWishList || p.isFavourite)
-        });
+        const reg = new RegExp(this.seachString, 'gi');
+        return (reg.test(p.title) || reg.test(p.description)) && (!this.searchInWishList || p.isFavourite)
+      });
     },
     path () {
-      let path = [
-        {
-          text: 'Home',
-          to: { path: '/' }
-        }]
+      let path = [{
+        text: 'Home',
+        to: { path: '/' }
+      }];
 
-        path.push({
-          text: 'Search results ' + (this.searchInWishList? '(wishlist)': '') + ' [' + this.seachString + ']',
-        })
+      path.push({
+        text: 'Search results ' + (this.searchInWishList ? '(wishlist)' : '') + ' [' + this.seachString + ']'
+      });
+
       return path
     }
-  }
+  },
 
+  beforeRouteLeave (to, from, next) {
+    this.resetSearchState();
+    next();
+  }
 };
 </script>
 

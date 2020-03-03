@@ -1,10 +1,10 @@
 <template>
-  <div class="top-margin bottom-margin">
+  <div ref="loader" class="top-margin bottom-margin">
     <breadcrumbs-component :items="path"/>
     <pagination-component :items="products">
       <template slot="itemsOnPage"
                 slot-scope="{ itemsOnPage: products }">
-        <categories-navigation  class='column is-2 is-pulled-left is-desktop is-narrow' :id='id' />
+        <categories-navigation  class='column is-2 is-pulled-left is-desktop is-narrow' :id="id" />
         <div class="columns is-centered is-multiline">
           <div class="card column is-one-quarter"
                v-for="product in products"
@@ -46,15 +46,17 @@ export default {
   data () {
     return {
       noProductLabel: 'No product found in this category',
+      products: []
     };
+  },
+
+  mounted() {
+    this.pseudoLoadingPage()
   },
 
   computed: {
     category () {
       return this.$store.getters.getCategoryById(this.$route.params.id);
-    },
-    products () {
-      return this.$store.state.products.filter(product => String(product.category) === String(this.$route.params.id));
     },
     path () {
       return [
@@ -67,8 +69,26 @@ export default {
         }
       ]
     }
-  }
+  },
 
+  watch: {
+    $route(to, from) {
+      this.pseudoLoadingPage()
+    }
+  },
+
+  methods: {
+    pseudoLoadingPage() {
+      const loadingComponent = this.$buefy.loading.open({
+        container: this.$refs.loader
+      })
+
+      this.$store.dispatch('pseudoFetchProducts', this.$route.params.id).then(products => {
+        this.products = products;
+        loadingComponent.close();
+      });
+    }
+  }
 };
 </script>
 

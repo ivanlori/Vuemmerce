@@ -1,37 +1,20 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import initalState from './initial-state.json'
+import initalState from '../initial-state.json';
+import search from './modules/search';
+import products from './modules/products';
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  strict: true,
+
   state: initalState,
-  
+
   getters: {
     getCategoryById: state => id => {
       return state.categories.find(category => category.id == id);
     },
-
-
-    getProductsList: state => {
-      return state.products;
-    },
-    productsAdded: state => {
-      return state.products.filter(el => {
-        return el.isAddedToCart;
-      });
-    },
-    productsAddedToFavourite: state => {
-      return state.products.filter(el => {
-        return el.isFavourite;
-      });
-    },
-    getProductById: state => id => {
-      return state.products.find(product => product.id == id);
-    },
-    getProductImages: state => id => {
-      return state.products.find(product => product.id == id).images;
-    },
-
     isUserLoggedIn: state => {
       return state.userInfo.isLoggedIn;
     },
@@ -41,10 +24,6 @@ export default new Vuex.Store({
     getUserName: state => {
       return state.userInfo.name;
     },
-
-    getSearchParams: state => state.searchParams,
-    getSearchConrolsSate: state => state.searchConrolsSate,
-
     getUserEmail: state => {
       return state.userInfo.email;
     },
@@ -65,10 +44,6 @@ export default new Vuex.Store({
     },
     isCheckoutModalOpen: state => {
       return state.systemInfo.openCheckoutModal;
-    },
-
-    quantity: state => {
-      return state.products.quantity;
     },
     getNewsById: state => id => {
       return state.news.find(newItem => newItem.id == id);
@@ -95,35 +70,8 @@ export default new Vuex.Store({
       return count === 0 ? 0 : Math.floor(10 * sum / count) / 10;
     }
   },
-  
-  mutations: {
-    addToCart: (state, id) => {
-      state.products.forEach(el => {
-        if (id === el.id) {
-          el.isAddedToCart = true;
-        }
-      });
-    },
-    setAddedBtn: (state, data) => {
-      state.products.forEach(el => {
-        if (data.id === el.id) {
-          el.isAddedBtn = data.status;
-        }
-      });
-    },
-    removeFromCart: (state, id) => {
-      state.products.forEach(el => {
-        if (id === el.id) {
-          el.isAddedToCart = false;
-        }
-      });
-    },
-    removeProductsFromFavourite: state => {
-      state.products.filter(el => {
-        el.isFavourite = false;
-      });
-    },
 
+  mutations: {
     isUserLoggedIn: (state, isUserLoggedIn) => {
       state.userInfo.isLoggedIn = isUserLoggedIn;
     },
@@ -133,20 +81,15 @@ export default new Vuex.Store({
     setUserName: (state, name) => {
       state.userInfo.name = name;
     },
-
-    setSearchParams: (state, searchParams) => {
-      state.searchParams = searchParams
-    },
-    
     saveAvatar: (state, avatarBinary) => {
       state.userInfo.avatarBinary = avatarBinary;
     },
     setHasUserSearched: (state, hasSearched) => {
       state.userInfo.hasSearched = hasSearched;
     },
-    /*setUserName: (state, name) => {       //Duplicate
+    setUserName: (state, name) => {
       state.userInfo.name = name;
-    },*/
+    },
     setUserEmail: (state, email) => {
       state.userInfo.email = email;
     },
@@ -159,14 +102,6 @@ export default new Vuex.Store({
     setProductTitleSearched: (state, titleSearched) => {
       state.userInfo.productTitleSearched = titleSearched;
     },
-
-    setSearchConrolsSateQueryStringInputText: (state, queryStringInputText) => {
-      state.searchConrolsSate.queryStringInputText = queryStringInputText
-    },
-    setSearchConrolsSateSearchInWishListCheckboxValue: (state, searchInWishListCheckboxValue) => {
-      state.searchConrolsSate.searchInWishListCheckboxValue = searchInWishListCheckboxValue
-    },
-
     showLoginModal: (state, show) => {
       state.systemInfo.openLoginModal = show;
     },
@@ -175,42 +110,11 @@ export default new Vuex.Store({
     },
     showCheckoutModal: (state, show) => {
       state.systemInfo.openCheckoutModal = show;
-    },
-    addToFavourite: (state, id) => {
-      state.products.forEach(el => {
-        if (id === el.id) {
-          el.isFavourite = true;
-        }
-      });
-    },
-    removeFromFavourite: (state, id) => {
-      state.products.forEach(el => {
-        if (id === el.id) {
-          el.isFavourite = false;
-        }
-      });
-    },
-    quantity: (state, data) => {
-      state.products.forEach(el => {
-        if (data.id === el.id) {
-          el.quantity = data.quantity;
-        }
-      });
-    },
-    addNewReview: (state, review) => {
-      if (state.products[review.product]) {
-        const newReview = {
-          id: state.reviews.length,
-          product: review.product,
-          author: review.author,
-          rating: review.rating,
-          text: review.text
-        };
-        state.reviews.push(newReview);
-      }
     }
   },
-  
-  actions: {
+
+  modules: {
+    search,
+    products
   }
-});
+})

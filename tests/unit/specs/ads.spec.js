@@ -15,12 +15,11 @@ describe('ads.vue', async () => {
 
     let slides = wrapper.findAll('.hooper-slide.is-active');
     expect(slides.length).toBe(3);
-    
+
     let navigation = wrapper.findAll('.hooper-navigation');
     expect(navigation).toBeTruthy();
 
     expect(wrapper.vm.slides.length).toBe(4);
-
   });
 
   it('snapshot renderer test', () => {
