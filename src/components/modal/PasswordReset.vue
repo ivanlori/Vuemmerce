@@ -2,7 +2,6 @@
   <div :class="[openModal ? 'is-active' : '', 'modal']">
     <div class="modal-background"></div>
     <div class="modal-card">
-
       <header class="modal-card-head">
         <p class="modal-card-title">{{ modalTitle }}</p>
         <button class="delete" aria-label="close" @click="closeModal"></button>
@@ -86,8 +85,10 @@ export default {
   data() {
     return {
       modalTitle: 'Password reset',
-      infoReset: 'Enter your user account\'s verified email address and we will send you a password reset link.',
-      infoSubmitted: 'A password reset link has been sent to your email address.',
+      infoReset:
+        "Enter your user account's verified email address and we will send you a password reset link.",
+      infoSubmitted:
+        'A password reset link has been sent to your email address.',
       btnSubmit: 'Reset',
       btnClose: 'Close',
       emailPlaceholder: 'Your email',
