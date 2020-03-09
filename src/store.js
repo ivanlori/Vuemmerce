@@ -66,6 +66,9 @@ export default new Vuex.Store({
     isCheckoutModalOpen: state => {
       return state.systemInfo.openCheckoutModal;
     },
+    isPasswordResetModalOpen: state => {
+      return state.systemInfo.openPasswordResetModal;
+    },
 
     quantity: state => {
       return state.products.quantity;
@@ -176,6 +179,10 @@ export default new Vuex.Store({
     showCheckoutModal: (state, show) => {
       state.systemInfo.openCheckoutModal = show;
     },
+    showPasswordResetModal: (state, show) => {
+      state.systemInfo.openPasswordResetModal = show;
+    },
+
     addToFavourite: (state, id) => {
       state.products.forEach(el => {
         if (id === el.id) {
@@ -212,5 +219,13 @@ export default new Vuex.Store({
   },
   
   actions: {
+    // eslint-disable-line no-unused-vars
+    doPasswordReset: ({}, { email }) => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 500);
+      })
+    },
   }
 });
