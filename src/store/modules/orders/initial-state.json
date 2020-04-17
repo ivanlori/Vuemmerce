@@ -1,0 +1,51 @@
+{
+    "orders": [
+        {
+            "id": 1,
+            "products": [
+                {
+                    "id": 1,
+                    "price": 50
+                },
+                {
+                    "id": 2,
+                    "price": 35
+                },
+                {
+                    "id": 3,
+                    "price": 100
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "products": [
+                {
+                    "id": 5,
+                    "price": 50
+                },
+                {
+                    "id": 6,
+                    "price": 80
+                },
+                {
+                    "id": 7,
+                    "price": 50
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "products": [
+                {
+                    "id": 8,
+                    "price": 35
+                },
+                {
+                    "id": 9,
+                    "price": 110
+                }
+            ]
+        }
+    ]
+}
