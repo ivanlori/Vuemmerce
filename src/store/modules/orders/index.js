@@ -36,7 +36,10 @@ export const actions = {
  * @type {import('vuex').GetterTree<state>}
  */
 export const getters = {
-    allOrders: ({ orders }) => orders,
+    allOrders: ({ orders }) => orders.map(order => {
+        const sum = order.products && order.products.reduce((acc, product) => acc + product.price, 0);
+        return { ...order, sum };
+    }),
 };
 
 export default { state, mutations, actions, getters };
