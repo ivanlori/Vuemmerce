@@ -76,6 +76,11 @@ export default new Router({
       name: 'singleNew',
       component: SingleNew,
       props: true
+    },
+    {
+      path: '/my-orders',
+      name: 'myOrders',
+      component: () => import('./components/profile/MyOrders'),
     }
   ],
 });
