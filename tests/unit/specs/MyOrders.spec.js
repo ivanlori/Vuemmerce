@@ -17,17 +17,17 @@ describe('"Orders" store module', () => {
 
     describe('actions', () => {
         it('"fetch all orders" should get all orders or []', async () => {
-            expect(store.getters.orders.length).toBe(0);
+            expect(store.getters.allOrders.length).toBe(0);
             await store.dispatch(ACTIONS.FETCH_ALL);
-            expect(store.getters.orders.length).toBeGreaterThanOrEqual(0);
+            expect(store.getters.allOrders.length).toBeGreaterThanOrEqual(0);
         });
 
         it('"create order" should create new order and return it with id', async () => {
-            const prevLen = store.getters.orders.length;
-            const lastOrder = store.getters.orders[prevLen - 1];
+            const prevLen = store.getters.allOrders.length;
+            const lastOrder = store.getters.allOrders[prevLen - 1];
             await store.dispatch(ACTIONS.CREATE, {});
-            expect(store.getters.orders.length).toBe(prevLen + 1);
-            expect(store.getters.orders[prevLen].id).toBe(lastOrder.id + 1);
+            expect(store.getters.allOrders.length).toBe(prevLen + 1);
+            expect(store.getters.allOrders[prevLen].id).toBe(lastOrder.id + 1);
         });
     });
 });

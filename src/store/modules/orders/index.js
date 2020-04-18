@@ -36,7 +36,7 @@ export const actions = {
  * @type {import('vuex').GetterTree<state>}
  */
 export const getters = {
-    orders: ({ orders }) => orders,
+    allOrders: ({ orders }) => orders,
 };
 
 export default { state, mutations, actions, getters };
