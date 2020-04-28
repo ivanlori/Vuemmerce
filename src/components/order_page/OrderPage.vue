@@ -147,7 +147,10 @@
                     position: 'is-bottom-right'
                 })
             }
-        }
+        },
+        metaInfo: {
+            title: 'Vuemmerce | Order',
+        },
     };
 </script>
 

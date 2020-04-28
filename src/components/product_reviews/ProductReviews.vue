@@ -85,50 +85,59 @@ created () {
   this.product = this.$store.getters.getProductById(this.$route.params.id);
 },
 
-computed: {
-  reviews () {
-      return this.$store.getters.getReviewsById(this.$route.params.id);
-  },
-  productRating () {
-      return this.$store.getters.getOverallRatingProductById(this.$route.params.id);
-  },
-  countReviews () {
-      return this.$store.getters.getCountReviewsById(this.$route.params.id);
-  },
-  category () {
-      return this.$store.getters.getCategoryById(this.product.category);
-  },
-  path () {
-      return [
-          {
-              text: 'Home',
-              to: { path: '/' }
-          },
-          {
-              text: this.category ? this.category.title : '',
-              to: {
-                  name: 'category-products-component',
-                  params: {
-                      id: this.category ? this.category.id : 0
-                  }
-              }
-          },
-          {
-              text: this.product.title,
-              to: {
-                name: 'product-detail-component',
-                params: {
-                    id: this.product ? this.product.id : 0
-                }
-              }
-          },
-          {
-            text: 'Reviews',
-          }
-      ]
-  }
-}
-}
+        computed: {
+            reviews () {
+                return this.$store.getters.getReviewsById(this.$route.params.id);
+            },
+            productRating () {
+                return this.$store.getters.getOverallRatingProductById(this.$route.params.id);
+            },
+            countReviews () {
+                return this.$store.getters.getCountReviewsById(this.$route.params.id);
+            },
+            category () {
+                return this.$store.getters.getCategoryById(this.product.category);
+            },
+            path () {
+                return [
+                    {
+                        text: 'Home',
+                        to: { path: '/' }
+                    },
+                    {
+                        text: this.category ? this.category.title : '',
+                        to: {
+                            name: 'category-products-component',
+                            params: {
+                                id: this.category ? this.category.id : 0
+                            }
+                        }
+                    },
+                    {
+                        text: this.product.title,
+                        to: {
+                            name: 'product-detail-component',
+                            params: {
+                                id: this.product ? this.product.id : 0
+                            }
+                        }
+                    },
+                    {
+                        text: 'Reviews',
+                    }
+                ]
+            }
+        },
+        metaInfo() {
+            let title = 'Product';
+            if (this.product && this.product.title) {
+                title = this.product.title;
+            }
+            return {
+                title: `Vuemmerce | ${title} | Reviews`,
+            };
+        },
+    }
 </script>
 
 <style scoped>

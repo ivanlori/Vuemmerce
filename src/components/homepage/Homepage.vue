@@ -20,6 +20,9 @@ export default {
     'hero': HeroSection,
     'news': VmNewsList,
     ads
-  }
+  },
+  metaInfo: {
+    title: 'Vuemmerce | Free ecommerce template for Vue.js projects',
+  },
 };
 </script>

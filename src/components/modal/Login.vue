@@ -48,6 +48,9 @@
               </p>
               <p v-if="highlightPasswordWithError" class="help is-danger">{{ passwordRequiredLabel }}</p>
             </div>
+            <div class="password-reset">
+              <a v-on:click.prevent="openPasswordResetModal" >Forgot password?</a>
+            </div>
           </div>
           <div v-if="isUserLoggedIn" class="level">
             <div class="level-item has-text-centered">
@@ -108,6 +111,10 @@ export default {
     closeModal () {
       this.$store.commit('showLoginModal', false);
     },
+    openPasswordResetModal() {
+      this.closeModal();
+      this.$store.commit('showPasswordResetModal', true);
+    },
     checkForm (e) {
       e.preventDefault();
 
@@ -162,6 +169,11 @@ export default {
 }
 .fa-check {
   color: green;
+}
+.password-reset {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 </style>
 

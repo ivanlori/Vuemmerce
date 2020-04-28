@@ -46,7 +46,10 @@ export default {
       
       return this.productsFiltered = getByTitle(listOfProducts, titleSearched);
     }
-  }
+  },
+  metaInfo: {
+    title: 'Vuemmerce | Wishlist',
+  },
 }
 </script>
 
