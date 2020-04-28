@@ -46,6 +46,13 @@ export default new Vuex.Store({
     isCheckoutModalOpen: state => {
       return state.systemInfo.openCheckoutModal;
     },
+    isPasswordResetModalOpen: state => {
+      return state.systemInfo.openPasswordResetModal;
+    },
+
+    quantity: state => {
+      return state.products.quantity;
+    },
     getNewsById: state => id => {
       return state.news.find(newItem => newItem.id == id);
     },
@@ -111,12 +118,60 @@ export default new Vuex.Store({
     },
     showCheckoutModal: (state, show) => {
       state.systemInfo.openCheckoutModal = show;
+    },
+    showPasswordResetModal: (state, show) => {
+      state.systemInfo.openPasswordResetModal = show;
+    },
+
+    addToFavourite: (state, id) => {
+      state.products.forEach(el => {
+        if (id === el.id) {
+          el.isFavourite = true;
+        }
+      });
+    },
+    removeFromFavourite: (state, id) => {
+      state.products.forEach(el => {
+        if (id === el.id) {
+          el.isFavourite = false;
+        }
+      });
+    },
+    quantity: (state, data) => {
+      state.products.forEach(el => {
+        if (data.id === el.id) {
+          el.quantity = data.quantity;
+        }
+      });
+    },
+    addNewReview: (state, review) => {
+      if (state.products[review.product]) {
+        const newReview = {
+          id: state.reviews.length,
+          product: review.product,
+          author: review.author,
+          rating: review.rating,
+          text: review.text
+        };
+        state.reviews.push(newReview);
+      }
     }
   },
 
   modules: {
     search,
     products,
-    orders,
+    orders
+  },
+  
+  actions: {
+    // eslint-disable-line no-unused-vars
+    doPasswordReset: ({}, { email }) => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        }, 500);
+      })
+    },
   }
 })

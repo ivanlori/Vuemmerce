@@ -101,7 +101,10 @@ export default {
             changes.map(f => f());
         }
     },
-  }
+  },
+  metaInfo: {
+    title: 'Vuemmerce | Profile',
+  },
 };
 </script>
 
