@@ -31,7 +31,14 @@ export default new Router({
     },
     {
       path: '/product-detail/:id',
+      redirect: '/product-detail/:id/tab/1',
       name: 'product-detail-component',
+      props: true,
+      component: ProductDetail,
+    },
+    {
+      path: '/product-detail/:id/tab/:tabid',
+      name: 'product-detail-component-tab',
       props: true,
       component: ProductDetail,
     },
