@@ -58,6 +58,9 @@ export default {
       return this.$store.getters.getNewsById(this.$route.params.id);
     }
   },
+  metaInfo: {
+    title: 'Vuemmerce | News',
+  },
 };
 </script>
 

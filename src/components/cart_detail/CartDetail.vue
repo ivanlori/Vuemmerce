@@ -18,7 +18,9 @@
                         {{index + 1}}
                     </td>
                     <td>
-                        {{product.title}}
+                        <router-link :to="{ name: 'product-detail-component', params: { id: product.id }}">
+                            {{product.title}}
+                        </router-link>
                     </td>
                     <td>
                         {{product.price}}
@@ -81,7 +83,10 @@
       confirmOrder(){
         this.$router.push('/order');
       }
-    }
+    },
+    metaInfo: {
+      title: 'Vuemmerce | Cart',
+    },
   }
 </script>
 

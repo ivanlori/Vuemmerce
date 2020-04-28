@@ -260,6 +260,7 @@
   "systemInfo": {
     "openLoginModal": false,
     "openSignupModal": false,
-    "openCheckoutModal": false
+    "openCheckoutModal": false,
+    "openPasswordResetModal": false
   }
 }
