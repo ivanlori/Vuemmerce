@@ -4,6 +4,7 @@ import initalState from '../initial-state.json';
 import search from './modules/search';
 import products from './modules/products';
 import orders from './modules/orders';
+import brands from "./modules/brands";
 
 Vue.use(Vuex);
 
@@ -161,7 +162,8 @@ export default new Vuex.Store({
   modules: {
     search,
     products,
-    orders
+    orders,
+    brands
   },
   
   actions: {
