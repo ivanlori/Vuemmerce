@@ -81,6 +81,16 @@
                           <i class="far fa-heart"></i>
                         </span>
                       </button>
+                      <button class="button is-small" :title="addToCompareLabel" v-show="!product.isAddedToCompare" @click="addToCompare(product.id)">
+                        <span class="icon is-small">
+                          <i class="far fa-chart-bar"></i>
+                        </span>
+                       </button>
+                       <button class="button is-small is-black" :title="removeFormCompareLabel"  v-show="product.isAddedToCompare" @click="removeFromCompare(product.id)">
+                        <span class="icon is-small">
+                          <i class="fas fa-chart-bar"></i>
+                        </span>
+                      </button>
                       <div class="select is-rounded is-small">
                         <select @change="onSelectQuantity(product.id)" v-model="selected">
                           <option
@@ -138,6 +148,9 @@ export default {
       addToFavouriteLabel: "Add to favourite",
       removeFromFavouriteLabel: "Remove from favourite",
       addedToCart: "added to cart",
+      addToCompareLabel: 'Add to compare',
+      removeFormCompareLabel: 'Remove from compare',
+      errorAddToCompare: 'only 4 or less products can add to compare',
       product: {},
       selected: 1,
       category: null,
@@ -229,6 +242,9 @@ export default {
     textCountReviews() {
       const count = this.$store.getters.getCountReviewsById(this.product.id);
       return count > 0 ? `${count} Reviews` : "No product reviews";
+    },
+    quantifyCompareItems () {
+      return this.$store.getters.numbersOfCompareProducts
     }
   },
 
@@ -268,6 +284,17 @@ export default {
     },
     removeFromFavourite(id) {
       this.$store.commit("removeFromFavourite", id);
+    },
+    addToCompare (id) {
+      if(this.quantifyCompareItems >= 4) {
+        this.$buefy.snackbar.open(this.errorAddToCompare)
+      }
+      else {
+        this.$store.commit('addProductToCompare', id);
+      }
+    },
+    removeFromCompare (id) {
+      this.$store.commit('removeProductFromCompare', id);
     },
     tabChanged(id) {
       this.selectedTabIndex = id;

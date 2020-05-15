@@ -12,6 +12,7 @@ import SearchResults from "./components/search_results/SearchResults";
 import Profile from "./components/profile/Profile";
 import AllNews from "./components/news/AllNews";
 import SingleNew from "./components/news/SingleNew";
+import Compare from "./components/compare/Compare";
 
 Vue.use(Router);
 
@@ -88,6 +89,11 @@ export default new Router({
       path: '/my-orders',
       name: 'myOrders',
       component: () => import('./components/profile/MyOrders'),
+    },
+    {
+      path: '/compare',
+      name: 'compare',
+      component: Compare,
     }
   ],
 });
