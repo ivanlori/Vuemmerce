@@ -1,6 +1,6 @@
 {
   "name": "vuemmerce",
-  "version": "0.8.6",
+  "version": "0.8.7",
   "private": true,
   "description": "Responsive ecommerce template built with Vue.js",
   "author": "ivan lori <ivan.lori@protonmail.com>",
@@ -19,7 +19,7 @@
     "@vue/cli": "^3.10.0",
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
-    "buefy": "^0.8.10",
+    "buefy": "^0.8.19",
     "bulma": "^0.7.5",
     "bulma-helpers": "^0.3.8",
     "eslint-plugin-html": "^6.0.0",
