@@ -189,16 +189,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/*.profile {*/
-/*margin: 40px;*/
-/*}*/
-/*.red-border {*/
-/*    border-color: red;*/
-/*}*/
-/*td {*/
-/*    padding-right: 5px;*/
-/*}*/
-/*input {*/
-/*    margin: 2px;*/
-/*}*/
 </style>
