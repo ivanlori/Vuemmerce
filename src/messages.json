@@ -17,6 +17,7 @@
       "all": "All news"
     },
     "profile": {
+      "name": "Name",
       "email": "Email",
       "address": "Address",
       "password": "New Password",

@@ -50,7 +50,7 @@ export default new Vuex.Store({
       return state.systemInfo.openPasswordResetModal;
     },
 
-    quantity: state => {
+    getQuantity: state => {
       return state.products.quantity;
     },
     getNewsById: state => id => {
@@ -94,9 +94,6 @@ export default new Vuex.Store({
     },
     setHasUserSearched: (state, hasSearched) => {
       state.userInfo.hasSearched = hasSearched;
-    },
-    setUserName: (state, name) => {
-      state.userInfo.name = name;
     },
     setUserEmail: (state, email) => {
       state.userInfo.email = email;
