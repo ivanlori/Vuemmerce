@@ -82,6 +82,9 @@ $link-focus-border: $primary;
 $rate-color-active: #ffce00;
 $toast-border-radius: 1rem;
 
+// Feedback sidebar
+$sidebar-width: 340px;
+
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
