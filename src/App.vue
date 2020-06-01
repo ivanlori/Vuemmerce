@@ -7,6 +7,7 @@
     <registration-modal-component></registration-modal-component>
     <checkout-modal-component></checkout-modal-component>
     <password-reset-component></password-reset-component>
+    <feedback-form></feedback-form>
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import LoginModal from './components/modal/Login';
 import RegistrationModal from './components/modal/Registration';
 import CheckoutModal from './components/modal/Checkout';
 import PasswordReset from './components/modal/PasswordReset';
+import FeedbackForm from './components/feedback/FeedbackForm';
 
 export default {
   name: 'app',
@@ -28,6 +30,7 @@ export default {
     'registration-modal-component': RegistrationModal,
     'checkout-modal-component': CheckoutModal,
     'password-reset-component': PasswordReset,
+    'feedback-form': FeedbackForm,
   }
 };
 </script>
