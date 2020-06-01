@@ -7,6 +7,8 @@ import VueI18n from 'vue-i18n';
 import VueMeta from 'vue-meta';
 import Nl2br from 'vue-nl2br';
 import messages from './messages';
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 import App from './App';
 import router from './router';
@@ -19,6 +21,7 @@ Vue.config.productionTip = false;
 Vue.use(Buefy);
 Vue.use(VueI18n);
 Vue.use(VueMeta);
+Vue.use(VueAxios, axios)
 
 Vue.component('nl2br', Nl2br);
 
