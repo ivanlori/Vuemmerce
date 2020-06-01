@@ -11,6 +11,7 @@ const state = [
     "isFavourite": false,
     "quantity": 1,
     "category": 1,
+    "brand": 1,
     "images":
       [
         {
@@ -67,6 +68,7 @@ const state = [
     "isFavourite": false,
     "quantity": 1,
     "category": 2,
+    "brand": 1,
     "images":
       [
         {
@@ -123,6 +125,7 @@ const state = [
     "isFavourite": false,
     "quantity": 1,
     "category": 3,
+    "brand": 1,
     "images":
       [
         {
@@ -179,6 +182,7 @@ const state = [
     "isFavourite": false,
     "quantity": 1,
     "category": 1,
+    "brand": 2,
     "images":
       [
         {
@@ -235,6 +239,7 @@ const state = [
     "isFavourite": false,
     "quantity": 1,
     "category": 2,
+    "brand": 2,
     "images":
       [
         {
@@ -291,6 +296,7 @@ const state = [
     "isFavourite": false,
     "quantity": 1,
     "category": 3,
+    "brand": 2,
     "images":
       [
         {
@@ -347,6 +353,7 @@ const state = [
     "isFavourite": false,
     "quantity": 1,
     "category": 1,
+    "brand": 3,
     "images":
       [
         {
@@ -403,6 +410,7 @@ const state = [
     "isFavourite": false,
     "quantity": 1,
     "category": 2,
+    "brand": 3,
     "images":
       [
         {
@@ -459,6 +467,7 @@ const state = [
     "isFavourite": false,
     "quantity": 1,
     "category": 3,
+    "brand": 3,
     "images":
       [
         {
@@ -514,7 +523,8 @@ const state = [
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
-    "category": 1
+    "category": 1,
+    "brand": 4
   },
   {
     "id": 11,
@@ -527,7 +537,8 @@ const state = [
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
-    "category": 2
+    "category": 2,
+    "brand": 4
   },
   {
     "id": 12,
@@ -540,7 +551,8 @@ const state = [
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
-    "category": 1
+    "category": 1,
+    "brand": 5,
   },
   {
     "id": 13,
@@ -553,7 +565,8 @@ const state = [
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
-    "category": 1
+    "category": 1,
+    "brand": 1,
   },
   {
     "id": 14,
@@ -566,7 +579,8 @@ const state = [
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
-    "category": 2
+    "category": 2,
+    "brand": 5,
   },
   {
     "id": 15,
@@ -579,7 +593,8 @@ const state = [
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
-    "category": 3
+    "category": 3,
+    "brand": 4
   },
   {
     "id": 16,
@@ -592,7 +607,8 @@ const state = [
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
-    "category": 1
+    "category": 1,
+    "brand": 2,
   },
   {
     "id": 17,
@@ -605,7 +621,8 @@ const state = [
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
-    "category": 1
+    "category": 1,
+    "brand": 3,
   },
   {
     "id": 18,
@@ -618,7 +635,8 @@ const state = [
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
-    "category": 1
+    "category": 1,
+    "brand": 4,
   }
 ];
 
@@ -661,6 +679,28 @@ const actions = {
         resolve(getters.getProductsList.filter(product => String(product.category) === String(id)));
       }, 2000);
     })
+  },
+  pseudoFetchProductsWithFilter ({ commit, getters }, params) {
+      return new Promise((resolve, reject) => {
+          setTimeout(() => {
+              resolve(getters.getProductsList.filter(product => String(product.category) === String(params.id)
+                  && (params.priceFrom === undefined || Number(product.price) >= params.priceFrom)
+                  && (params.priceTo === undefined || Number(product.price) <= params.priceTo)
+                  && (params.brands === undefined || params.brands.length === 0 || params.brands.includes(Number(product.brand)))));
+          }, 2000);
+      })
+  },
+  pseudoGetCategoryMaxPrice({ getters }, id) {
+      return new Promise((resolve, reject) => {
+          setTimeout(() => {
+
+              let products = getters.getProductsList.filter(product => String(product.category) === String(id));
+              resolve(
+                  products.reduce(
+                  (max, product) => (product.price > max ? product.price : max),
+                      0));
+          }, 2000);
+      })
   },
 
   addToCartAction ({ commit }, id) {
