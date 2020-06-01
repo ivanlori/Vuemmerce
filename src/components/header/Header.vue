@@ -43,6 +43,14 @@
               <span :class="{ 'tag is-info' : numProductsAdded > 0 }" >{{ numProductsAdded }}</span>
             </router-link>
           </div>
+          <div class="navbar-item compare-cart">
+            <router-link to="/compare" class="navbar-item">
+              <span class="icon">
+                <i class="fa fa-chart-bar"></i>
+              </span>
+              <span class="tag is-info" >{{ quantifyCompareItems }}</span>
+            </router-link>
+          </div>
         </div>
       </div>
 
@@ -72,6 +80,7 @@
         facebookTooltip: 'Follow us on Facebook',
         twitterTooltip: 'Follow us on Twitter',
         instagramTooltip: 'Follow us on Instagram',
+        goToCompare: 'Go to compare products',
         isCheckoutActive: false,
         isMenuOpen: false
       }
@@ -80,6 +89,9 @@
     computed: {
       numProductsAdded () {
         return this.$store.getters.productsAdded.length;
+      },
+      quantifyCompareItems () {
+        return this.$store.getters.numbersOfCompareProducts
       }
     },
 

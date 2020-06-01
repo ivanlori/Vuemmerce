@@ -7,6 +7,7 @@ const state = [
     "ratings": 3,
     "reviews": 5,
     "isAddedToCart": false,
+    "isAddedToCompare": true,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -64,6 +65,7 @@ const state = [
     "ratings": 5,
     "reviews": 10,
     "isAddedToCart": false,
+    "isAddedToCompare": true,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -121,6 +123,7 @@ const state = [
     "ratings": 2,
     "reviews": 3,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -178,6 +181,7 @@ const state = [
     "ratings": 1,
     "reviews": 0,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -235,6 +239,7 @@ const state = [
     "ratings": 4,
     "reviews": 2,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -292,6 +297,7 @@ const state = [
     "ratings": 5,
     "reviews": 1,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -349,6 +355,7 @@ const state = [
     "ratings": 5,
     "reviews": 7,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -406,6 +413,7 @@ const state = [
     "ratings": 3,
     "reviews": 0,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -463,6 +471,7 @@ const state = [
     "ratings": 4,
     "reviews": 2,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -520,6 +529,7 @@ const state = [
     "ratings": 3,
     "reviews": 5,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -534,6 +544,7 @@ const state = [
     "ratings": 5,
     "reviews": 10,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -548,6 +559,7 @@ const state = [
     "ratings": 2,
     "reviews": 3,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -562,6 +574,7 @@ const state = [
     "ratings": 1,
     "reviews": 0,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -576,6 +589,7 @@ const state = [
     "ratings": 4,
     "reviews": 2,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -590,6 +604,7 @@ const state = [
     "ratings": 5,
     "reviews": 1,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -604,6 +619,7 @@ const state = [
     "ratings": 5,
     "reviews": 7,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -618,6 +634,7 @@ const state = [
     "ratings": 3,
     "reviews": 0,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -632,6 +649,7 @@ const state = [
     "ratings": 4,
     "reviews": 2,
     "isAddedToCart": false,
+    "isAddedToCompare": false,
     "isAddedBtn": false,
     "isFavourite": false,
     "quantity": 1,
@@ -653,6 +671,17 @@ const getters = {
     return state.filter(el => {
       return el.isFavourite;
     });
+  },
+  productAddedToCompare: state => {
+    return state.filter(el => {
+      return el.isAddedToCompare;
+    });
+  },
+  getCompareProducts: state => {
+    return state.filter(el => el.isAddedToCompare)
+  },
+  numbersOfCompareProducts: state => {
+    return state.filter(el => el.isAddedToCompare).length
   },
   getProductById: state => id => {
     return state.find(product => product.id == id);
@@ -752,6 +781,20 @@ const mutations = {
         el.isFavourite = false;
       }
     });
+  },
+  removeProductFromCompare: (state, id) => {
+    state.forEach(el => {
+      if (id == el.id) {
+        el.isAddedToCompare = false
+      }
+    })
+  },
+  addProductToCompare: (state, id) => {
+    state.forEach(el => {
+      if (id == el.id) {
+        el.isAddedToCompare = true
+      }
+    })
   },
   quantity: (state, data) => {
     state.forEach(el => {
