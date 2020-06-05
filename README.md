@@ -9,6 +9,7 @@
 [Как выполнять задачу:HOW_TO_OTUS.md](HOW_TO_OTUS.md)
 
 [Changelog проекта](CHANGELOG.md)
+
 ___
 
 ## Installing
