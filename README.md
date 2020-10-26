@@ -8,27 +8,22 @@ Responsive ecommerce template built with Vue.js and Nuxt.js
 [![GitHub license](https://img.shields.io/github/license/ivanlori/Vuemmerce.svg)](https://github.com/ivanlori/Vuemmerce/blob/master/LICENSE)
 [![](https://img.shields.io/twitter/url/https/github.com/ivanlori/Vuemmerce.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fivanlori%2FVuemmerce)
 
-![Bulma](http://svilpress.altervista.org/made-with-bulma.png)
-
 ---
 
 ## Installing
 
 ```
-# install Vue cli
-npm install -g @vue/cli
-
 # clone repository
 git clone https://github.com/ivanlori/Vuemmerce.git
 
 # install dependencies
-npm install
+yarn install
 
 # serve with hot reload at localhost:3000
-npm run dev
+yarn dev
 
 # prepare for production via webpack
-npm run production
+yarn build
 
 # generate static pages via nuxt.js for static hosting
 nuxt generate
@@ -39,7 +34,7 @@ nuxt generate
 
 ## Screenshot
 
-![Vuemmerce - Ecommerce Template](http://svilpress.altervista.org/screen.png "Vuemmerce - Ecommerce Browser Preview")
+![Vuemmerce - Ecommerce Template](screen.png "Vuemmerce - Ecommerce Browser Preview")
 
 **[Template Demo](https://vuemmerce-git-master.ivanlori.now.sh/)**
 
@@ -62,9 +57,8 @@ Follow the steps below.
 1. Follow the [Installing](#installing) instructions
 2. Check the open issues out
 3. Create your branch with a reference to the open issue
-4. Commit your changes: git commit -am 'Add some feature'
-5. Push to the branch: git push origin my-new-feature
-6. Submit a pull request
+4. Commit your changes
+5. Open a pull request
 
 If you have any questions, feel free to email me at [ivan.lori@protonmail.com](mailto:ivan.lori@protonmail.com).
 

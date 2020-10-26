@@ -1,5 +1,10 @@
 # Vuemmerce Changelog
 
+#### 0.9.5 - 26.10.2020
+
+- npm packages updated
+- add use of yarn package manager
+
 #### 0.9.4 - 03.01.2020
 
 - npm packages updated
