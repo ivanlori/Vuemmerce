@@ -1,8 +1,8 @@
 {
-  "name": "vuemmerce",
-  "version": "0.9.5",
-  "description": "Responsive ecommerce template built with Vue.js and Nuxt.js",
-  "author": "ivan lori <ivan.lori@protonmail.com>",
+  "name": "goshop",
+  "version": "0.0.1",
+  "description": "",
+  "author": "yasumitsuoomori@gmail.com",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ivanlori/Vuemmerce.git"
+    "url": "https://github.com/tochukaso/Vuemmerce.git"
   },
   "keywords": [
     "css",
@@ -29,7 +29,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "bulma": "^0.9.1",
-    "nuxt": "^2.8.1",
+    "nuxt": "^2.14.12",
     "vue": "^2.6.10",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.1"

@@ -1,13 +1,18 @@
 const pkg = require('./package')
 
 module.exports = {
-  mode: 'universal',
 
+  router: {
+    base: process.env.GOVUE_BASE || '/'
+  },
   /*
   ** Headers of the page
   */
   head: {
     title: pkg.description,
+    base: [
+      {href: process.env.BASE_URL || 'http://localhost:3001' }
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -16,7 +21,7 @@ module.exports = {
       { name: 'msapplication-TileColor',  content: '#ffffff' },
       { name: 'msapplication-TileImage',  content: '/ms-icon-144x144.png' },
       { name: 'theme-color',  content: '#ffffff' },
-      
+
       // Facebook open graph
       { property: 'og:type',  content: 'website' },
       { property: 'og:url',  content: 'https://example.com/page.html' },
