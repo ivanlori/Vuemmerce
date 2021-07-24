@@ -25,7 +25,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@nuxtjs/font-awesome": "^1.0.4",
     "babel-polyfill": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "bulma": "^0.9.1",
@@ -36,11 +35,12 @@
   },
   "devDependencies": {
     "@babel/preset-env": "~7.12.1",
+    "@nuxtjs/fontawesome": "^1.1.2",
     "@vue/cli-plugin-babel": "~4.5.8",
     "@vue/cli-service": "~4.5.8",
     "babel-plugin-transform-runtime": "~6.23.0",
     "node-sass": "^4.13.1",
-    "sass-loader": "~10.0.4",
+    "sass-loader": "^12.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
