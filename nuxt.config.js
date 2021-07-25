@@ -144,5 +144,9 @@ module.exports = {
    */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+  },
+
+  generate: {
+    dir: "docs"
   }
 };

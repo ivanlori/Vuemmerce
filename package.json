@@ -5,8 +5,7 @@
   "author": "ivan lori <ivan.lori@protonmail.com>",
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
-    "now-build": "nuxt generate"
+    "build": "nuxt generate"
   },
   "repository": {
     "type": "git",
