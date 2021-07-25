@@ -13,12 +13,12 @@
         <div>
           <button class="button is-small" :title="removeFromFavouriteLabel" v-show="product.isFavourite" @click="removeFromFavourite(product.id)">
             <span class="icon is-small">
-              <i class="fa fa-heart"></i>
+              <i class="fas fa-heart"></i>
             </span>
           </button>
           <button class="button is-small" :title="addToFavouriteLabel" v-show="!product.isFavourite" @click="saveToFavorite(product.id)">
             <span class="icon is-small">
-              <i class="fa fa-heart-o"></i>
+              <i class="far fa-heart"></i>
             </span>
           </button>
         </div>

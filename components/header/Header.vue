@@ -19,20 +19,20 @@
             <VmSearch></VmSearch>
           </div>
         </div>
-        
+
         <div class="navbar-end">
           <div class="navbar-item social">
             <a href="#" class="icon" :title="facebookTooltip">
-              <i class="fa fa-facebook"></i>
+              <i class="fab fa-facebook"></i>
             </a>
             <a href="#" class="icon" :title="twitterTooltip">
-              <i class="fa fa-twitter"></i>
+              <i class="fab fa-twitter"></i>
             </a>
             <a href="#" class="icon" :title="instagramTooltip">
-              <i class="fa fa-instagram"></i>
+              <i class="fab fa-instagram"></i>
             </a>
             <a href="#" class="icon" :title="linkedinTooltip">
-              <i class="fa fa-linkedin"></i>
+              <i class="fab fa-linkedin"></i>
             </a>
           </div>
           <div class="navbar-item shopping-cart" @click="showCheckoutModal">
