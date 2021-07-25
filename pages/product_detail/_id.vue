@@ -14,7 +14,7 @@
               </button>
               <button class="button is-small" :title="addToFavouriteLabel" v-show="!product.isFavourite" @click="saveToFavorite(product.id)">
                 <span class="icon is-small">
-                  <i class="fa fa-heart-o"></i>
+                  <i class="far fa-heart"></i>
                 </span>
               </button>
             </h2>
@@ -25,30 +25,22 @@
             Ut enim ad minim veniam, quis nostrud
             </p>
           </div>
-          <div class="card-content__ratings" v-if="product.rating === 1">
-            <i class="fa fa-star"></i>
-          </div>
-          <div class="card-content__ratings" v-else-if="product.rating === 2">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          <div class="card-content__ratings" v-else-if="product.rating === 3">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          <div class="card-content__ratings" v-else-if="product.rating === 4">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          <div class="card-content__ratings" v-else-if="product.rating === 5">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
+          <div class="card-content__ratings">
+            <i v-if="product.ratings === 1" class="fa fa-star"></i>
+            <i v-if="product.ratings === 2" class="fa fa-star"></i>
+            <i v-if="product.ratings === 2" class="fa fa-star"></i>
+            <i v-if="product.ratings === 3" class="fa fa-star"></i>
+            <i v-if="product.ratings === 3" class="fa fa-star"></i>
+            <i v-if="product.ratings === 3" class="fa fa-star"></i>
+            <i v-if="product.ratings === 4" class="fa fa-star"></i>
+            <i v-if="product.ratings === 4" class="fa fa-star"></i>
+            <i v-if="product.ratings === 4" class="fa fa-star"></i>
+            <i v-if="product.ratings === 4" class="fa fa-star"></i>
+            <i v-if="product.ratings === 5" class="fa fa-star"></i>
+            <i v-if="product.ratings === 5" class="fa fa-star"></i>
+            <i v-if="product.ratings === 5" class="fa fa-star"></i>
+            <i v-if="product.ratings === 5" class="fa fa-star"></i>
+            <i v-if="product.ratings === 5" class="fa fa-star"></i>
           </div>
           <div class="card-content__reviews">
             <div class="is-pulled-left">
@@ -56,7 +48,11 @@
             </div>
             <div class="select is-rounded is-small is-pulled-right">
               <select @change="onSelectQuantity(product.id)" v-model="selected">
-                <option v-for="quantity in quantityArray" :value="quantity">{{ quantity }}</option>
+                <option
+                  v-for="quantity in quantityArray"
+                  :key="quantity"
+                  :value="quantity"
+                >{{ quantity }}</option>
               </select>
             </div>
           </div>
@@ -79,7 +75,7 @@ export default {
   validate ({ params }) {
     return /^\d+$/.test(params.id)
   },
-  
+
   data () {
     return {
       addToCartLabel: 'Add to cart',
