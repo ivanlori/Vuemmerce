@@ -3,6 +3,10 @@ const pkg = require("./package");
 module.exports = {
   target: "static",
 
+  router: {
+    base: "/Vuemmerce/"
+  },
+
   /*
    ** Headers of the page
    */
