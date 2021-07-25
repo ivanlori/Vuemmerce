@@ -1,23 +1,30 @@
 # Vuemmerce Changelog
 
-#### 0.9.5 - 26.10.2020
+## 1.0.0 - 25.07.2021
+
+- npm packages updated
+- removed fontawesome npm library and added from CDN
+- removed obsolete configuration in nuxt config
+- fixed icons
+
+## 0.9.5 - 26.10.2020
 
 - npm packages updated
 - add use of yarn package manager
 
-#### 0.9.4 - 03.01.2020
+## 0.9.4 - 03.01.2020
 
 - npm packages updated
 
-#### 0.9.3 - 24.07.2019
+## 0.9.3 - 24.07.2019
 
 - npm packages updated
 
-#### 0.9.2 - 30.06.2019
+## 0.9.2 - 30.06.2019
 
 - npm packages updated
 
-#### 0.9.1 - 22.04.2019
+## 0.9.1 - 22.04.2019
 
 - fix readme file
 
@@ -25,21 +32,21 @@
 
 - Nuxt.js framework added
 
-#### 0.8.4 - 06.04.2019
+## 0.8.4 - 06.04.2019
 
 - components renamed
 - npm packages updated
 
-#### 0.8.3 - 06.01.2019
+## 0.8.3 - 06.01.2019
 
 - npm packages update for security issue
 
-#### 0.8.2 - 21.12.2018
+## 0.8.2 - 21.12.2018
 
 - added favourite button into product detail
 - minox css fixes into product detail
 
-#### 0.8.1 - 09.12.2018
+## 0.8.1 - 09.12.2018
 
 - fix menu on mobile
 - menu account removed
@@ -52,7 +59,7 @@
 - minor fix
 - npm packages updated
 
-#### 0.7.1 - 19.11.2018
+## 0.7.1 - 19.11.2018
 
 - checkout modal fix
 - inserted social logos
@@ -69,12 +76,12 @@
 
 - Added search functionality, now it's possible filters by product title
 
-#### 0.5.9 - 13.11.2018
+## 0.5.9 - 13.11.2018
 
 - Now it's possible to remove products directly from checkout modal
 - minor fix
 
-#### 0.5.8 - 12.11.2018
+## 0.5.8 - 12.11.2018
 
 - npm packages updated
 - responsive fix
@@ -84,12 +91,12 @@
 - inserted various dimensions for logo image in "index.html"
 - general fix
 
-#### 0.5.7 - 10.11.2018
+## 0.5.7 - 10.11.2018
 
 - Inserted validation in login modal
 - Now it is possible to log in
 
-#### 0.5.6 - 08.11.2018
+## 0.5.6 - 08.11.2018
 
 - Fixed bug on add/remove button into product detail
 
