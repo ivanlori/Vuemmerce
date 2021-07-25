@@ -107,6 +107,13 @@ module.exports = {
         rel: "stylesheet",
         href:
           "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
+      },
+      {
+        rel: "stylesheet",
+        integrity:
+          "sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p",
+        crossorigin: "anonymous",
+        href: "https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       }
     ]
   },
@@ -131,7 +138,6 @@ module.exports = {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    "@nuxtjs/fontawesome"
   ],
   /*
    ** Axios module configuration
