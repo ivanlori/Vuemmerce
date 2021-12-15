@@ -13,49 +13,50 @@ const state = [
     "quantity": 1,
     "category": 1,
     "brand": 1,
+    "tags": ["tag-1", "tag-3", "tag-5"],
     "images":
       [
         {
-            "title": "Slide #1",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #1",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #2",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #2",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #3",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #3",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #4",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #4",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #5",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #5",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #6",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #6",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #7",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #7",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #8",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #8",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #9",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #9",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #10",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #10",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         }
-    ]
+      ]
   },
   {
     "id": 2,
@@ -71,49 +72,50 @@ const state = [
     "quantity": 1,
     "category": 2,
     "brand": 1,
+    "tags": ["tag-1", "tag-3", "tag-6"],
     "images":
       [
         {
-            "title": "Slide #1",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #1",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #2",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #2",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #3",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #3",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #4",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #4",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #5",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #5",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #6",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #6",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #7",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #7",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #8",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #8",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #9",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #9",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #10",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #10",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         }
-    ]
+      ]
   },
   {
     "id": 3,
@@ -129,49 +131,50 @@ const state = [
     "quantity": 1,
     "category": 3,
     "brand": 1,
+    "tags": ["tag-1", "tag-3"],
     "images":
       [
         {
-            "title": "Slide #1",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #1",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #2",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #2",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #3",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #3",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #4",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #4",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #5",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #5",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #6",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #6",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #7",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #7",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #8",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #8",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #9",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #9",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #10",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #10",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         }
-    ]
+      ]
   },
   {
     "id": 4,
@@ -187,49 +190,50 @@ const state = [
     "quantity": 1,
     "category": 1,
     "brand": 2,
+    "tags": ["tag-1", "tag-7"],
     "images":
       [
         {
-            "title": "Slide #1",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #1",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #2",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #2",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #3",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #3",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #4",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #4",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #5",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #5",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #6",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #6",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #7",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #7",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #8",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #8",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #9",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #9",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #10",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #10",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         }
-    ]
+      ]
   },
   {
     "id": 5,
@@ -245,49 +249,50 @@ const state = [
     "quantity": 1,
     "category": 2,
     "brand": 2,
+    "tags": [],
     "images":
       [
         {
-            "title": "Slide #1",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #1",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #2",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #2",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #3",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #3",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #4",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #4",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #5",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #5",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #6",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #6",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #7",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #7",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #8",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #8",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #9",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #9",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #10",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #10",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         }
-    ]
+      ]
   },
   {
     "id": 6,
@@ -303,49 +308,50 @@ const state = [
     "quantity": 1,
     "category": 3,
     "brand": 2,
+    "tags": [],
     "images":
       [
         {
-            "title": "Slide #1",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #1",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #2",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #2",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #3",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #3",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #4",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #4",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #5",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #5",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #6",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #6",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #7",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #7",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #8",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #8",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #9",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #9",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #10",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #10",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         }
-    ]
+      ]
   },
   {
     "id": 7,
@@ -361,49 +367,50 @@ const state = [
     "quantity": 1,
     "category": 1,
     "brand": 3,
+    "tags": [],
     "images":
       [
         {
-            "title": "Slide #1",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #1",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #2",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #2",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #3",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #3",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #4",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #4",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #5",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #5",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #6",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #6",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #7",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #7",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #8",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #8",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #9",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #9",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #10",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #10",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         }
-    ]
+      ]
   },
   {
     "id": 8,
@@ -419,49 +426,50 @@ const state = [
     "quantity": 1,
     "category": 2,
     "brand": 3,
+    "tags": [],
     "images":
       [
         {
-            "title": "Slide #1",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #1",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #2",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #2",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #3",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #3",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #4",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #4",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #5",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #5",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #6",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #6",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #7",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #7",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #8",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #8",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #9",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #9",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #10",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #10",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         }
-    ]
+      ]
   },
   {
     "id": 9,
@@ -477,49 +485,50 @@ const state = [
     "quantity": 1,
     "category": 3,
     "brand": 3,
+    "tags": [],
     "images":
       [
         {
-            "title": "Slide #1",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #1",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #2",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #2",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #3",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #3",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #4",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #4",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #5",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #5",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #6",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #6",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #7",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #7",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #8",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #8",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #9",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #9",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         },
         {
-            "title": "Slide #10",
-            "src": "https://bulma.io/images/placeholders/128x128.png"
+          "title": "Slide #10",
+          "src": "https://bulma.io/images/placeholders/128x128.png"
         }
-    ]
+      ]
   },
   {
     "id": 10,
@@ -534,7 +543,8 @@ const state = [
     "isFavourite": false,
     "quantity": 1,
     "category": 1,
-    "brand": 4
+    "brand": 4,
+    "tags": []
   },
   {
     "id": 11,
@@ -549,6 +559,7 @@ const state = [
     "isFavourite": false,
     "quantity": 1,
     "category": 2,
+    "tags": [],
     "brand": 4
   },
   {
@@ -564,6 +575,7 @@ const state = [
     "isFavourite": false,
     "quantity": 1,
     "category": 1,
+    "tags": [],
     "brand": 5,
   },
   {
@@ -580,6 +592,7 @@ const state = [
     "quantity": 1,
     "category": 1,
     "brand": 1,
+    "tags": [],
   },
   {
     "id": 14,
@@ -595,6 +608,7 @@ const state = [
     "quantity": 1,
     "category": 2,
     "brand": 5,
+    "tags": [],
   },
   {
     "id": 15,
@@ -609,7 +623,8 @@ const state = [
     "isFavourite": false,
     "quantity": 1,
     "category": 3,
-    "brand": 4
+    "brand": 4,
+    "tags": [],
   },
   {
     "id": 16,
@@ -625,6 +640,7 @@ const state = [
     "quantity": 1,
     "category": 1,
     "brand": 2,
+    "tags": [],
   },
   {
     "id": 17,
@@ -640,6 +656,7 @@ const state = [
     "quantity": 1,
     "category": 1,
     "brand": 3,
+    "tags": [],
   },
   {
     "id": 18,
@@ -655,6 +672,7 @@ const state = [
     "quantity": 1,
     "category": 1,
     "brand": 4,
+    "tags": [],
   }
 ];
 
@@ -691,52 +709,65 @@ const getters = {
   },
   quantity: state => {
     return state.quantity;
+  },
+  getTags: state => id => {
+    return state.find(product => product.id == id).tags;
+  },
+  getProductsByTagId: state => tagId => {
+    return state.filter(product => product.tags.some(id => id === tagId))
   }
 };
 
 const actions = {
-  pseudoFetchProduct ({ commit, getters }, id) {
+  pseudoFetchProduct({commit, getters}, id) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(getters.getProductById(id));
       }, 2000);
     })
   },
-  pseudoFetchProducts ({ commit, getters }, id) {
+  pseudoFetchProducts({commit, getters}, id) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(getters.getProductsList.filter(product => String(product.category) === String(id)));
       }, 2000);
     })
   },
-  pseudoFetchProductsWithFilter ({ commit, getters }, params) {
-      return new Promise((resolve, reject) => {
-          setTimeout(() => {
-              resolve(getters.getProductsList.filter(product => String(product.category) === String(params.id)
-                  && (params.priceFrom === undefined || Number(product.price) >= params.priceFrom)
-                  && (params.priceTo === undefined || Number(product.price) <= params.priceTo)
-                  && (params.brands === undefined || params.brands.length === 0 || params.brands.includes(Number(product.brand)))));
-          }, 2000);
-      })
+  pseudoFetchProductsWithFilter({commit, getters}, params) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(getters.getProductsList.filter(product => String(product.category) === String(params.id)
+          && (params.priceFrom === undefined || Number(product.price) >= params.priceFrom)
+          && (params.priceTo === undefined || Number(product.price) <= params.priceTo)
+          && (params.brands === undefined || params.brands.length === 0 || params.brands.includes(Number(product.brand)))));
+      }, 2000);
+    })
   },
-  pseudoGetCategoryMaxPrice({ getters }, id) {
-      return new Promise((resolve, reject) => {
-          setTimeout(() => {
+  pseudoGetCategoryMaxPrice({getters}, id) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
 
-              let products = getters.getProductsList.filter(product => String(product.category) === String(id));
-              resolve(
-                  products.reduce(
-                  (max, product) => (product.price > max ? product.price : max),
-                      0));
-          }, 2000);
-      })
+        let products = getters.getProductsList.filter(product => String(product.category) === String(id));
+        resolve(
+          products.reduce(
+            (max, product) => (product.price > max ? product.price : max),
+            0));
+      }, 2000);
+    })
   },
 
-  addToCartAction ({ commit }, id) {
+  addToCartAction({commit}, id) {
     return new Promise((resolve, reject) => {
       commit('addToCart', id);
       commit('setAddedBtn', id);
       resolve();
+    })
+  },
+  pseudoFetchProductsByTag ({ getters }, id) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(getters.getProductsByTagId(id))
+      }, 2000)
     })
   }
 };

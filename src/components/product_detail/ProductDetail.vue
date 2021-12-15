@@ -115,6 +115,8 @@
           </div>
         </div>
       </div>
+
+      <ProductTagList :tags="tags" />
       <div>
         <p class="title is-4" style="padding-left: 120px">Similar products:</p>
         <OtherProductComponent :category="product.category" />
@@ -129,6 +131,7 @@ import ProductDetailImagesComponent from "./ProductDetailImages";
 import OtherProductComponent from "../other_product/OtherProduct";
 import CategoriesNavigation from "../categories_nav/CategoriesNavigation";
 import Tabs from "../tabs/Tabs";
+import ProductTagList from '../product_tags/ProductTagList';
 
 export default {
   name: "product-detail-component",
@@ -138,7 +141,8 @@ export default {
     ProductDetailImagesComponent,
     OtherProductComponent,
     CategoriesNavigation,
-    Tabs
+    Tabs,
+    ProductTagList,
   },
 
   data() {
@@ -152,6 +156,7 @@ export default {
       removeFormCompareLabel: 'Remove from compare',
       errorAddToCompare: 'only 4 or less products can add to compare',
       product: {},
+      tags:[],
       selected: 1,
       category: null,
       isLoaded: false,
@@ -203,6 +208,7 @@ export default {
         this.category = this.$store.getters.getCategoryById(
           currentProduct.category
         );
+        this.tags = this.$store.getters.getTagsById(currentProduct.tags);
         this.isLoaded = true;
 
         loadingComponent.close();

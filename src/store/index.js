@@ -77,6 +77,16 @@ export default new Vuex.Store({
         }
       }, 0);
       return count === 0 ? 0 : Math.floor(10 * sum / count) / 10;
+    },
+
+    getAllTags: state => {
+      return state.tags
+    },
+
+    getTagsById: state => idList => {
+      return state.tags.filter(item => {
+        return idList.find(id => item.id === id);
+      })
     }
   },
 
@@ -163,7 +173,7 @@ export default new Vuex.Store({
     search,
     products,
     orders,
-    brands
+    brands,
   },
   
   actions: {

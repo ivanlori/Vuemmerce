@@ -19,6 +19,36 @@
       "image": "http://lorempixel.com/640/480/technics/3/"
     }
   ],
+  "tags": [
+    {
+      "id": "tag-1",
+      "title": "Tag title 1"
+    },
+    {
+      "id": "tag-2",
+      "title": "Tag title 2"
+    },
+    {
+      "id": "tag-3",
+      "title": "Tag title 3"
+    },
+    {
+      "id": "tag-4",
+      "title": "Tag title 4"
+    },
+    {
+      "id": "tag-5",
+      "title": "Tag title 5"
+    },
+    {
+      "id": "tag-6",
+      "title": "Tag title 6"
+    },
+    {
+      "id": "tag-7",
+      "title": "Tag title 7"
+    }
+  ],
   "reviews": [
     {
       "id": 1,

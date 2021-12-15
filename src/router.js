@@ -13,6 +13,7 @@ import Profile from "./components/profile/Profile";
 import AllNews from "./components/news/AllNews";
 import SingleNew from "./components/news/SingleNew";
 import Compare from "./components/compare/Compare";
+import TagProducts from './components/tag_products/TagProducts';
 
 Vue.use(Router);
 
@@ -29,6 +30,12 @@ export default new Router({
       name: 'category-products-component',
       props: true,
       component: CategoryProducts,
+    },
+    {
+      path: '/tag-products/:id',
+      name: 'TagProducts',
+      props: true,
+      component: TagProducts,
     },
     {
       path: '/product-detail/:id',
