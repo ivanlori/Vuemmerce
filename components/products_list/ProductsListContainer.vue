@@ -2,7 +2,7 @@
   <div class="m-5">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <div v-for="product in products" :key="product.id">
-        <VmProducts :product="product"></VmProducts>
+        <Products :detail="false" :product="product" />
       </div>
     </div>
     <div class="text-center" v-if="products.length === 0">
@@ -12,38 +12,50 @@
 </template>
 
 <script>
-import VmProducts from '../Products';
+import Products from '../Products';
 import { getByTitle } from '@/assets/filters';
 
 export default {
   name: 'productsList',
 
-  components: { VmProducts },
+  components: {
+    Products
+  },
 
   data () {
     return {
       id: '',
-      noProductLabel: 'No product found',
-      productsFiltered: []
+      noProductLabel: 'No product found'
     };
   },
 
   computed: {
     products () {
-      if (this.$store.state.userInfo.hasSearched) {
+      const {
+        products,
+        userInfo: {
+          hasSearched
+        }
+      } = this.$store.state
+
+      if (hasSearched) {
         return this.getProductByTitle();
       } else {
-        return this.$store.state.products;
+        return products;
       }
     }
   },
 
   methods: {
     getProductByTitle () {
-      let listOfProducts = this.$store.state.products,
-          titleSearched = this.$store.state.userInfo.productTitleSearched;
+      const {
+        products,
+        userInfo: {
+          productTitleSearched
+        }
+      } = this.$store.state
 
-      return this.productsFiltered = getByTitle(listOfProducts, titleSearched);
+      return getByTitle(products, productTitleSearched);
     }
   }
 

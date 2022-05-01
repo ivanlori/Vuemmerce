@@ -33,7 +33,7 @@
                 }
               }"
             >
-            <p class="title is-4">{{ product.title }}</p>
+            <span :class="[detail ? 'text-3xl' : 'text-lg']">{{ product.title }}</span>
           </nuxt-link>
         </div>
         <button class="button text-lg" :title="removeFromFavouriteLabel" v-show="product.isFavourite" @click="removeFromFavourite(product.id)">
@@ -48,7 +48,7 @@
         </button>
       </div>
       <div class="content is-clearfix">
-        <p>{{ product.description }}</p>
+        <p :class="[detail ? 'text-2xl' : 'text-base']">{{ product.description }}</p>
         <div class="flex justify-between">
           <div class="flex items-center">
             <i v-if="product.ratings === 1" class="fa fa-star"></i>
