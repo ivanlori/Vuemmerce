@@ -7,6 +7,7 @@
 - Responsive mode improved
 - Added more items for footer
 - General fixes
+- npn packages updated
 
 ## 1.0.0 - 2021.07.25
 
