@@ -1,16 +1,11 @@
 <template>
-	<p class="control has-icons-left">
-		<input
-			class="input is-rounded"
-			type="text"
-			v-model="value"
-			:placeholder="placeholder"
-			@keyup="search(value)"
-		>
-		<span class="icon is-small is-left">
-			<i class="fa fa-search"></i>
-		</span>
-	</p>
+	<input
+    class="input"
+    type="search"
+    v-model="value"
+    :placeholder="placeholder"
+    @keyup="search(value)"
+  />
 </template>
 
 <script>
