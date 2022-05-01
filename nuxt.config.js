@@ -1,4 +1,5 @@
 const pkg = require("./package");
+const path = require('path')
 
 module.exports = {
   target: "static",
@@ -130,7 +131,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ["bulma"],
+  css: ['@/assets/css/main.css'],
 
   /*
    ** Plugins to load before mounting the App
@@ -141,7 +142,8 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxt/postcss8',
+    'nuxt-purgecss',
   ],
   /*
    ** Axios module configuration
@@ -152,5 +154,20 @@ module.exports = {
 
   generate: {
     dir: "docs"
+  },
+
+  purgeCSS: {
+    mode: 'postcss',
+    enabled: (process.env.NODE_ENV === 'production')
+  },
+
+  build: {
+    postcss: {
+      plugins: {
+        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
+        'postcss-import': {},
+        'postcss-nested': {}
+      },
+    },
   }
 };
