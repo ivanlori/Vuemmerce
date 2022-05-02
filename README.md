@@ -53,5 +53,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📣 Sveltemmerce is here
 
-Searching an ecommerce template build with SvelteJs?
+Searching an ecommerce template built with SvelteJs?
 Check [Sveltemmerce](https://github.com/ivanlori/Sveltemmerce) out!
