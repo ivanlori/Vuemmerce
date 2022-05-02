@@ -21,6 +21,7 @@
 ## 🚀 Installation
 
 ```
+
 # clone repository
 git clone https://github.com/ivanlori/Vuemmerce.git
 
@@ -39,6 +40,7 @@ yarn build
 Have you found a bug? Feel free to open an <a href="https://github.com/ivanlori/Vuemmerce/issues/new?assignees=&labels=&template=bug_report.md&title=">issue here</a>.
 
 ## 🙋 Discussions
+
 Do you have questions, ideas or any request related to Vuemmerce? Start a <a href="https://github.com/ivanlori/Vuemmerce/discussions">discussion here</a>.
 
 ## 📌 Changelog
@@ -47,4 +49,9 @@ See the release notes into [changelog.md](changelog.md)
 
 ## 🏷️ License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## 📣 Sveltemmerce is here
+
+Searching an ecommerce template build with SvelteJs?
+Check [Sveltemmerce](https://github.com/ivanlori/Sveltemmerce) out!
