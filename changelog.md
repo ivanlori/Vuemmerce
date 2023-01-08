@@ -120,4 +120,4 @@
 - Added Bulma framework css
 - First revision of the graphic
 - Update README.md file with instructions about contributions
-- Update package.json informations
+- Update package.json information

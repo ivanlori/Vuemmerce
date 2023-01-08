@@ -76,7 +76,7 @@
         </div>
       </div>
       <p class="mt-8 text-xs text-gray-800">
-        © 2022 Comany Name
+        © 2023 Company Name
       </p>
     </div>
   </footer>
