@@ -1,5 +1,5 @@
 <template>
-  <div :class="[detail ? 'detail' : '']" class="rounded-2xl shadow-xl shadow-slate-300/60">
+  <div :class="[detail ? 'detail' : '']" class="rounded-2xl shadow-custom bg-white p-4">
     <div class="img-wrapper rounded-t-2xl">
       <nuxt-link
         :to="{
@@ -14,7 +14,7 @@
           }
         }"
       >
-        <img class="rounded-t-2xl" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+        <img class="rounded-2xl" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
       </nuxt-link>
     </div>
     <div class="text-wrapper p-4">
@@ -33,17 +33,17 @@
                 }
               }"
             >
-            <span :class="[detail ? 'text-3xl' : 'text-lg']">{{ product.title }}</span>
+            <span :class="[detail ? 'text-3xl' : 'text-lg']" class="font-medium">{{ product.title }}</span>
           </nuxt-link>
         </div>
         <button class="button text-lg" :title="removeFromFavouriteLabel" v-show="product.isFavourite" @click="removeFromFavourite(product.id)">
           <span class="icon">
-            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart text-red"></i>
           </span>
         </button>
         <button class="button text-lg" :title="addToFavouriteLabel" v-show="!product.isFavourite" @click="saveToFavorite(product.id)">
           <span class="icon">
-            <i class="far fa-heart"></i>
+            <i class="far fa-heart text-red"></i>
           </span>
         </button>
       </div>
@@ -51,21 +51,7 @@
         <p :class="[detail ? 'text-2xl' : 'text-base']">{{ product.description }}</p>
         <div class="flex justify-between">
           <div class="flex items-center">
-            <i v-if="product.ratings === 1" class="fa fa-star"></i>
-            <i v-if="product.ratings === 2" class="fa fa-star"></i>
-            <i v-if="product.ratings === 2" class="fa fa-star"></i>
-            <i v-if="product.ratings === 3" class="fa fa-star"></i>
-            <i v-if="product.ratings === 3" class="fa fa-star"></i>
-            <i v-if="product.ratings === 3" class="fa fa-star"></i>
-            <i v-if="product.ratings === 4" class="fa fa-star"></i>
-            <i v-if="product.ratings === 4" class="fa fa-star"></i>
-            <i v-if="product.ratings === 4" class="fa fa-star"></i>
-            <i v-if="product.ratings === 4" class="fa fa-star"></i>
-            <i v-if="product.ratings === 5" class="fa fa-star"></i>
-            <i v-if="product.ratings === 5" class="fa fa-star"></i>
-            <i v-if="product.ratings === 5" class="fa fa-star"></i>
-            <i v-if="product.ratings === 5" class="fa fa-star"></i>
-            <i v-if="product.ratings === 5" class="fa fa-star"></i>
+            <i v-for="(item,index) in product.ratings" :key="`stars-${index}`" class="fa fa-star text-gold"></i>
             <p class="ml-2 text-lg">{{ product.reviews > 0 ? `${product.reviews} Reviews` : 'No reviews' }}</p>
           </div>
           <p class="text-3xl font-medium">
